@@ -1,6 +1,7 @@
 import React from 'react';
 import { Skill, Element } from '../types/skills';
 import styles from './SkillCard.module.css';
+import { colorizeDescription } from '../utils/colorizeDescription';
 
 interface SkillCardProps {
   skill: Skill;
@@ -19,8 +20,10 @@ export const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
     ? `/assets/actions/${skill.iconFilename}`
     : `/assets/traits/${skill.iconFilename}`;
 
+  const colorizedDescription = colorizeDescription(skill.description);
+
   return (
-    <div className={`${styles.themeBox} p-2.5 bg-theme-box text-white w-full max-w-[600px] aspect-[3/1] flex items-center`}>
+    <div className={styles.themeBox}>
       <table className="w-full h-full border-spacing-0">
         <tbody>
           <tr>
@@ -29,7 +32,8 @@ export const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
               <img
                 src={iconPath}
                 alt={skill.name}
-                className="w-12 h-12"
+                className="w-12 h-12 flex-shrink-0"
+                style={{ minWidth: '48px', minHeight: '48px' }}
               />
             </td>
 
@@ -52,7 +56,8 @@ export const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
                       key={idx}
                       src={elementIcons[element]}
                       alt={element}
-                      className="w-4 h-4 inline-block"
+                      className="w-4 h-4 inline-block flex-shrink-0"
+                      style={{ minWidth: '16px', minHeight: '16px' }}
                     />
                   ))}
                 </p>
@@ -63,7 +68,7 @@ export const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
           {/* Description row */}
           <tr>
             <td colSpan={3} className="font-figtree leading-[125%] py-2 text-card-text text-left">
-              <span dangerouslySetInnerHTML={{ __html: skill.description }} />
+              <span dangerouslySetInnerHTML={{ __html: colorizedDescription }} />
             </td>
           </tr>
 

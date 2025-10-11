@@ -5,10 +5,12 @@ import actionsData from '../data/actions.json';
 import './index.css';
 
 function App() {
-  // Load and validate actions, then take first 5 for demo
+  // Load and validate actions, then take 5 random for demo
   const sampleSkills = useMemo(() => {
     const allActions = loadActions(actionsData);
-    return allActions.slice(0, 5);
+    // Shuffle and take 5 random actions
+    const shuffled = [...allActions].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, 5);
   }, []);
 
   return (
