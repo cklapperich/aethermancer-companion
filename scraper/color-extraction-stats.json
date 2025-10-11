@@ -1,0 +1,69 @@
+{
+  "totalTerms": 114,
+  "totalOccurrences": 1513,
+  "colorUsage": {
+    "#f5bf5e": 430,
+    "#abdfaf": 266,
+    "#ff9700": 260,
+    "#db7c80": 129,
+    "#a96dcb": 94,
+    "#fe783c": 69,
+    "#c28b32": 59,
+    "#76abff": 55,
+    "#9cff68": 55,
+    "#83c1d3": 52,
+    "#e1545a": 34,
+    "#ff99cc": 10
+  },
+  "termsByColor": {
+    "text-yellow": 40,
+    "text-orange": 42,
+    "text-purple": 1,
+    "text-green": 8,
+    "text-cyan": 18,
+    "text-red": 4,
+    "text-weakness": 1
+  },
+  "sampleTerms": {
+    "text-yellow": [
+      "On Action",
+      "Wild Aether",
+      "Wild",
+      "Purges",
+      "Steals"
+    ],
+    "text-orange": [
+      "Action",
+      "Aether",
+      "Hits",
+      "Hit",
+      "Wind"
+    ],
+    "text-purple": [
+      "Aura:"
+    ],
+    "text-green": [
+      "Regeneration",
+      "Power",
+      "Dodge",
+      "Force",
+      "Age"
+    ],
+    "text-cyan": [
+      "Healing",
+      "Terror Application",
+      "Crit Chance",
+      "Crit Damage",
+      "Evasion"
+    ],
+    "text-red": [
+      "Terror",
+      "Burn",
+      "Poison",
+      "Bleed"
+    ],
+    "text-weakness": [
+      "Weakness"
+    ]
+  }
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aethermancer Card Prototype</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Figtree', sans-serif;
+            background: #1a1a1a;
+            color: #fff;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card-container {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        /* Card styling - based on wiki structure */
+        .trait-card {
+            background: #2a2a2a;
+            /* NO BORDER - matches game */
+            border-radius: 8px;
+            padding: 16px;
+            width: 400px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            /* NO background - shows through transparent icons */
+            background: none;
+            flex-shrink: 0;
+        }
+
+        .card-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .card-title-wrapper {
+            flex: 1;
+        }
+
+        .card-title {
+            font-family: 'Alegreya', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #cba79f;
+            margin-bottom: 4px;
+        }
+
+        .card-subtitle {
+            font-family: 'Figtree', sans-serif;
+            font-size: 12px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .card-description {
+            font-family: 'Figtree', sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+            color: #d4d4d4;
+        }
+
+        .card-types {
+            display: flex;
+            justify-content: flex-end;
+            gap: 8px;
+        }
+
+        .type-badge {
+            font-family: 'Figtree', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 4px;
+            background: #3a3a3a;
+            border: 1px solid #555;
+        }
+
+        /* Color classes for description text */
+        .color-orange { color: #ff9700; }
+        .color-purple { color: #a96dcb; }
+        .color-yellow { color: #f5bf5e; }
+        .color-green { color: #abdfaf; }
+        .color-cyan { color: #83c1d3; }
+
+        /* Notes section */
+        .notes {
+            margin-top: 40px;
+            padding: 20px;
+            background: #252525;
+            border-radius: 8px;
+            max-width: 600px;
+        }
+
+        .notes h3 {
+            color: #f5bf5e;
+            margin-bottom: 12px;
+        }
+
+        .notes ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .notes li {
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .notes li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #ff9700;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <!-- Example Trait Card 1: Single Type -->
+        <div class="trait-card">
+            <div class="card-header">
+                <div class="card-icon">
+                    <img src="public/assets/traits/accelerated_generation.png" alt="Accelerated Generation icon">
+                </div>
+                <div class="card-title-wrapper">
+                    <div class="card-title">Accelerated Generation</div>
+                    <div class="card-subtitle">Trait</div>
+                </div>
+            </div>
+            <div class="card-description">
+                <span class="color-yellow">On Action</span>, if it was this monster's second <span class="color-orange">Action</span> of the same turn: Generates <span class="color-yellow">Wild Aether</span>.
+            </div>
+            <div class="card-types">
+                <div class="type-badge">Aether</div>
+            </div>
+        </div>
+
+        <!-- Example Trait Card 2: Two Types -->
+        <div class="trait-card">
+            <div class="card-header">
+                <div class="card-icon">
+                    <img src="public/assets/traits/aether_shield.png" alt="Aether Shield icon">
+                </div>
+                <div class="card-title-wrapper">
+                    <div class="card-title">Aether Shield</div>
+                    <div class="card-subtitle">Trait</div>
+                </div>
+            </div>
+            <div class="card-description">
+                Whenever this monster generates or consumes <span class="color-orange">Aether</span>: <span class="color-yellow">Shields</span> self equal to the amount.
+            </div>
+            <div class="card-types">
+                <div class="type-badge">Aether</div>
+                <div class="type-badge">Shield</div>
+            </div>
+        </div>
+
+        <!-- Example Action Card -->
+        <div class="trait-card">
+            <div class="card-header">
+                <div class="card-icon">
+                    <img src="public/assets/actions/aqua_pounce.png" alt="Aqua Pounce icon">
+                </div>
+                <div class="card-title-wrapper">
+                    <div class="card-title">Aqua Pounce</div>
+                    <div class="card-subtitle">Action</div>
+                </div>
+            </div>
+            <div class="card-description">
+                Deal <span class="color-orange">8</span> damage. <span class="color-cyan">Critical</span>.
+            </div>
+            <div class="card-types">
+                <div class="type-badge">Water</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="notes">
+        <h3>⚠️ Styling Notes - Game Accuracy Required</h3>
+        <ul>
+            <li><strong>FIXED</strong>: ✓ Removed grey background from icon containers</li>
+            <li><strong>FIXED</strong>: ✓ No borders on cards</li>
+            <li><strong>FIXED</strong>: ✓ Using actual game assets from wiki</li>
+            <li><strong>VERIFY</strong>: "Trait" subtitle color/appearance vs game</li>
+            <li><strong>VERIFY</strong>: Card title color (#cba79f) - is this correct for all traits?</li>
+            <li><strong>VERIFY</strong>: Text highlight colors (orange, purple, yellow, green, cyan)</li>
+        </ul>
+        <p style="margin-top: 16px; color: #888;">
+            This prototype uses the wiki's HTML structure but needs visual adjustments to match the actual game.
+            Compare against game screenshots and adjust colors, fonts, spacing accordingly.
+        </p>
+    </div>
+</body>
+</html>

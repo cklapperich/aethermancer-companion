@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=Figtree:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Font families */
+  --font-family-alegreya: 'Alegreya', serif;
+  --font-family-figtree: 'Figtree', sans-serif; 
+
+  /* Wiki color palette */
+  --color-wiki-bg: #12011c;
+  --color-theme-box: #281b42;
+  --color-card-text: #cba79f;
+  --color-card-subtitle: #888888;
+
+  /* Tier colors */
+  --color-tier-basic: #cba79f;
+  --color-tier-maverick: #ffdb00;
+
+  /* Semantic colors from wiki */
+  --color-orange: #ff9700;
+  --color-purple: #a96dcb;
+  --color-yellow: #f5bf5e;
+  --color-green: #abdfaf;
+  --color-cyan: #83c1d3;
+  --color-red: #db7c80;
+  --color-water: #76abff;
+  --color-fire: #fe783c;
+  --color-earth: #c28b32;
+  --color-nature: #9cff68;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Figtree', sans-serif;
+}
