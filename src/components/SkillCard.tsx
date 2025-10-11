@@ -23,12 +23,12 @@ export const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
   const colorizedDescription = colorizeDescription(skill.description);
 
   return (
-    <div className={styles.themeBox}>
+    <div className={`${styles.themeBox} bg-theme-box text-white w-full max-w-[600px] aspect-[3/1] flex items-center`}>
       <table className="w-full h-full border-spacing-0">
         <tbody>
           <tr>
             {/* Icon cell */}
-            <td className="w-[1px] h-12 text-center align-middle pr-3">
+            <td className="w-[1px] h-12 text-center align-middle pr-3 align-top">
               <img
                 src={iconPath}
                 alt={skill.name}
@@ -74,7 +74,7 @@ export const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
 
           {/* Type tags row */}
           <tr>
-            <td colSpan={3} className="text-right font-figtree text-[13px] text-card-text font-bold">
+            <td colSpan={3} className="text-right font-figtree text-[13px] text-card-text font-bold align-top">
               {skill.types.join(' + ')}
             </td>
           </tr>

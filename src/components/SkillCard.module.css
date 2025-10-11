@@ -1,29 +1,10 @@
 /* Theme box border styling - matches wiki card-prototype-v2.html */
+/* Border-image and related box model properties that need to work together */
 .themeBox {
   padding: 10px;
-  background-color: #281b42;
   border-image-source: url('/assets/theme-box.png');
   border-image-slice: 50 fill;
   border-image-width: 30px;
   border-width: unset;
   border-style: solid;
-  color: #fff;
-  width: 100%;
-  max-width: 600px;
-  aspect-ratio: 3 / 1;
-  display: flex;
-  align-items: center;
-}
-
-/* Ensure table fills the card properly */
-.themeBox table {
-  width: 100%;
-  height: 100%;
-  border-spacing: 0;
-}
-
-.themeBox td,
-.themeBox th {
-  vertical-align: top;
-  text-align: left;
 }
