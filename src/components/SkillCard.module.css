@@ -1,5 +1,10 @@
 /* Theme box border styling - matches wiki card-prototype-v2.html */
-/* Border-image and related box model properties that need to work together */
+/*
+ * IMPORTANT: padding must be defined here alongside border-image properties
+ * for the box model to work correctly. The border-image-width (30px) extends
+ * inward from the edges, so padding (10px) keeps content from overlapping it.
+ * Tailwind doesn't support border-image, so these stay in CSS module.
+ */
 .themeBox {
   padding: 10px;
   border-image-source: url('/assets/theme-box.png');

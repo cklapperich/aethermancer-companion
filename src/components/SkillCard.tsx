@@ -8,11 +8,11 @@ interface SkillCardProps {
 }
 
 const elementIcons: Record<Element, string> = {
-  [Element.Fire]: '/assets/actions/16px-Fire_element.webp',
-  [Element.Water]: '/assets/actions/16px-Water_element.webp',
-  [Element.Earth]: '/assets/actions/16px-Earth_element.webp',
-  [Element.Wind]: '/assets/actions/16px-Wind_element.webp',
-  [Element.Wild]: '/assets/actions/16px-Wild_element.webp',
+  [Element.Fire]: '/assets/actions/32px-fire.png',
+  [Element.Water]: '/assets/actions/32px-water.png',
+  [Element.Earth]: '/assets/actions/32px-earth.png',
+  [Element.Wind]: '/assets/actions/32px-wind.png',
+  [Element.Wild]: '/assets/actions/32px-wild.png', // TODO: Replace with 32px PNG when available
 };
 
 export const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
@@ -50,13 +50,13 @@ export const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
             {/* Element/Mana cost cell */}
             <td className="w-16 align-top text-center">
               {skill.manaCost.length > 0 && (
-                <p className="leading-4 m-0">
+                <p className="leading-4 m-0 flex gap-0.5 justify-center">
                   {skill.manaCost.map((element, idx) => (
                     <img
                       key={idx}
                       src={elementIcons[element]}
                       alt={element}
-                      className="w-4 h-4 inline-block flex-shrink-0"
+                      className="w-4 h-4 flex-shrink-0"
                       style={{ minWidth: '16px', minHeight: '16px' }}
                     />
                   ))}
