@@ -91,9 +91,9 @@ function App() {
           {[0, 1, 2].map((index) => {
             const i = index as 0 | 1 | 2;
             return (
-              <div key={index} className="flex flex-col min-w-0 pr-2 md:pr-4">
-                <div className="flex items-center gap-4">
-                  <div className="flex-1">
+              <div key={index} className="flex flex-col min-w-0">
+                <div className="flex items-center gap-6 w-full">
+                  <div>
                     <MonsterSelect
                       monsters={monsters}
                       value={selectedMonsters[i]}
@@ -104,11 +104,11 @@ function App() {
                   {selectedMonsterObjects[i] && (
                     <button
                       onClick={handleToggleCollapse(i)}
-                      className="flex-shrink-0 p-2 bg-gray-800 hover:bg-gray-700 rounded-md transition-colors border border-gray-600"
+                      className="flex-shrink-0 p-2.5 bg-gray-800 hover:bg-gray-700 rounded-md transition-colors border border-gray-600 mr-6"
                       aria-label={collapsedStates[i] ? "Expand skills" : "Collapse skills"}
                     >
                       <svg
-                        className={`w-6 h-6 text-gray-300 transition-transform duration-200 ${
+                        className={`w-8 h-8 text-gray-300 transition-transform duration-200 ${
                           collapsedStates[i] ? 'rotate-0' : 'rotate-90'
                         }`}
                         viewBox="0 0 24 24"
