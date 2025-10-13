@@ -91,8 +91,8 @@ function App() {
           {[0, 1, 2].map((index) => {
             const i = index as 0 | 1 | 2;
             return (
-              <div key={index} className="flex flex-col min-w-0">
-                <div className="flex items-center gap-4 pr-4">
+              <div key={index} className="flex flex-col min-w-0 pr-2 md:pr-4">
+                <div className="flex items-center gap-4">
                   <div className="flex-1">
                     <MonsterSelect
                       monsters={monsters}
@@ -108,7 +108,7 @@ function App() {
                       aria-label={collapsedStates[i] ? "Expand skills" : "Collapse skills"}
                     >
                       <svg
-                        className={`w-4 h-4 text-gray-300 transition-transform duration-200 ${
+                        className={`w-6 h-6 text-gray-300 transition-transform duration-200 ${
                           collapsedStates[i] ? 'rotate-0' : 'rotate-90'
                         }`}
                         viewBox="0 0 24 24"
