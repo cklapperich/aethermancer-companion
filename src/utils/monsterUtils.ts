@@ -466,28 +466,30 @@ export function filterCookingSkills(
 }
 
 /**
- * Get all maverick skills (2-type actions + traits) available to a monster, with enabling information
+ * Get all type-related skills (single-type and 2-type maverick) available to a monster, with enabling information.
  *
  * @param targetMonster - The monster to get skills for
  * @param allMonsters - Array of 1-3 Monster objects (the party, must include targetMonster)
  * @param allActions - Array of all available Action skills
  * @param allTraits - Array of all available Trait skills
- * @returns Array of EnabledSkill objects representing available maverick skills (2-type only)
+ * @param maverickOnly - If true (default), only returns 2-type maverick skills. If false, also includes single-type skills.
+ * @returns Array of EnabledSkill objects representing available skills.
  *
  * Skill availability rules:
- * - Only returns skills with exactly 2 types (Maverick actions and Maverick traits)
- * - Skills are available if the 2 types can be formed by targetMonster + teammates
+ * - Single-type skills are available if the monster has that type (and `maverickOnly` is false).
+ * - 2-type (Maverick) skills are available if the 2 types can be formed by targetMonster + teammates.
+ * - Actions (both single and 2-type) also require the monster to have at least one of the action's mana cost elements.
  *
  * The enabledBy array shows which monsters contribute to enabling the skill:
- * - [targetMonster]: Skill enabled by target monster alone (monster has both types)
- * - [targetMonster, otherMonster(s)]: Skill enabled by combination of target + teammates
- * - [otherMonster(s)]: Skill enabled by teammates only (target doesn't have either type)
+ * - For single-type skills, this is `[targetMonster]`.
+ * - For 2-type skills, it's the monster(s) that form the type combination.
  */
 export function getMonsterSkills(
   targetMonster: Monster,
   allMonsters: Monster[],
   allActions: Skill[],
-  allTraits: Skill[]
+  allTraits: Skill[],
+  maverickOnly: boolean = true
 ): EnabledSkill[] {
   if (allMonsters.length < 1 || allMonsters.length > 3) {
     throw new Error(`Expected 1-3 monsters, got ${allMonsters.length}`);
@@ -503,8 +505,12 @@ export function getMonsterSkills(
     allMonsters.length === 3
       ? (allMonsters as [Monster, Monster, Monster])
       : allMonsters.length === 2
-      ? [...allMonsters, targetMonster] as [Monster, Monster, Monster]
-      : [targetMonster, targetMonster, targetMonster] as [Monster, Monster, Monster];
+      ? ([...allMonsters, targetMonster] as [Monster, Monster, Monster])
+      : ([targetMonster, targetMonster, targetMonster] as [
+          Monster,
+          Monster,
+          Monster
+        ]);
 
   // Get all enabled combos for this monster
   const monsterCombos = getMonsterEnabledCombos(targetMonster, paddedMonsters);
@@ -557,6 +563,43 @@ export function getMonsterSkills(
       }
     }
   });
+
+  if (!maverickOnly) {
+    // Process single-type Actions
+    allActions.forEach(action => {
+      if (action.types.length === 1) {
+        const [type1] = action.types;
+        if (targetMonster.hasType(type1)) {
+          // Check if target monster has at least one element from the action's mana cost
+          const hasElementMatch = action.manaCost.some(element =>
+            targetMonster.elements.includes(element)
+          );
+
+          if (hasElementMatch) {
+            enabledSkills.push({
+              skill: action,
+              enabledBy: [targetMonster],
+              isAlwaysAvailable: false
+            });
+          }
+        }
+      }
+    });
+
+    // Process single-type Traits
+    allTraits.forEach(trait => {
+      if (trait.types.length === 1) {
+        const [type1] = trait.types;
+        if (targetMonster.hasType(type1)) {
+          enabledSkills.push({
+            skill: trait,
+            enabledBy: [targetMonster],
+            isAlwaysAvailable: false
+          });
+        }
+      }
+    });
+  }
 
   // Sort skills by enabler type (also filters cooking skills)
   return sortEnabledSkillsBySource(enabledSkills, targetMonster);

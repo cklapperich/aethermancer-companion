@@ -154,6 +154,92 @@ try {
     }
   });
 
+  // Test getMonsterSkills with a single monster and the maverickOnly flag
+  console.log('\n\n' + '='.repeat(60));
+  console.log('SINGLE MONSTER SKILLS TEST (CHERUFE)');
+  console.log('='.repeat(60));
+
+  {
+    const singleMonster = cherufe;
+
+    if (!singleMonster) {
+      throw new Error('Could not find Cherufe for single monster test');
+    }
+
+    console.log(`\nTesting with single monster: ${singleMonster.name}`);
+    console.log(`Types: [${singleMonster.types.join(', ')}]`);
+    console.log(`Elements: [${singleMonster.elements.join(', ')}]`);
+
+    // Test with maverickOnly = true (default)
+    const maverickSkills = getMonsterSkills(
+      singleMonster,
+      [singleMonster],
+      allActions,
+      allTraits,
+      true
+    );
+    console.log(`\n--- Maverick Skills Only (maverickOnly: true) ---`);
+    console.log(`Found ${maverickSkills.length} skills.`);
+    maverickSkills.slice(0, 10).forEach(({ skill }) => {
+      const manaInfo =
+        skill.skillType === 'Action' ? ` mana:[${skill.manaCost.join(',')}]` : '';
+      console.log(
+        `  • ${skill.name.padEnd(30)} [${skill.types.join(
+          '+'
+        )}] (${skill.skillType})${manaInfo}`
+      );
+    });
+    if (maverickSkills.length > 10) {
+      console.log(`  ... and ${maverickSkills.length - 10} more`);
+    }
+
+    // Test with maverickOnly = false
+    const allSkillsResult = getMonsterSkills(
+      singleMonster,
+      [singleMonster],
+      allActions,
+      allTraits,
+      false
+    );
+    console.log(`\n--- All Skills (maverickOnly: false) ---`);
+    console.log(`Found ${allSkillsResult.length} skills.`);
+
+    const singleTypeSkills = allSkillsResult.filter(
+      s => s.skill.types.length === 1
+    );
+    const multiTypeSkills = allSkillsResult.filter(
+      s => s.skill.types.length === 2
+    );
+
+    console.log(`\n  [SINGLE-TYPE SKILLS: ${singleTypeSkills.length}]`);
+    singleTypeSkills.slice(0, 15).forEach(({ skill }) => {
+      const manaInfo =
+        skill.skillType === 'Action' ? ` mana:[${skill.manaCost.join(',')}]` : '';
+      console.log(
+        `    • ${skill.name.padEnd(30)} [${skill.types[0]}] (${
+          skill.skillType
+        })${manaInfo}`
+      );
+    });
+    if (singleTypeSkills.length > 15) {
+      console.log(`    ... and ${singleTypeSkills.length - 15} more`);
+    }
+
+    console.log(`\n  [MAVERICK (2-TYPE) SKILLS: ${multiTypeSkills.length}]`);
+    multiTypeSkills.slice(0, 5).forEach(({ skill }) => {
+      const manaInfo =
+        skill.skillType === 'Action' ? ` mana:[${skill.manaCost.join(',')}]` : '';
+      console.log(
+        `    • ${skill.name.padEnd(30)} [${skill.types.join(
+          '+'
+        )}] (${skill.skillType})${manaInfo}`
+      );
+    });
+    if (multiTypeSkills.length > 5) {
+      console.log(`    ... and ${multiTypeSkills.length - 5} more`);
+    }
+  }
+
   console.log('\n\n' + '='.repeat(60));
   console.log('✓ All tests completed successfully!');
 
