@@ -74,7 +74,7 @@ function App() {
   const selectedMonstersList = selectedMonsterObjects.filter((m) => m !== undefined) as Monster[];
 
   return (
-    <div className="min-h-screen text-white p-4 md:p-6 lg:p-10" style={{ backgroundColor: '#000000' }}>
+    <div className="min-h-screen text-white p-4 md:p-6 lg:p-10">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-2">
           <div className="flex-1">
