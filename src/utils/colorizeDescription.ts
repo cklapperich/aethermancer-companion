@@ -1,4 +1,4 @@
-import termDictionary from '../../public/data/term-dictionary.json';
+import termDictionary from '../data/term-dictionary.json';
 
 /**
  * Colorizes terms in skill descriptions based on the term dictionary.
