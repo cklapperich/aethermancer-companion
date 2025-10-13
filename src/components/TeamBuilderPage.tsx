@@ -89,7 +89,7 @@ export function TeamBuilderPage() {
     <div className="min-h-screen text-white p-4 md:p-6 lg:p-10 overflow-x-hidden">
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-3 items-center mb-2">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center justify-center gap-2">
             <input
               type="checkbox"
               id="show-all-skills"
