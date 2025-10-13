@@ -9,6 +9,7 @@ interface MonsterSkillsListProps {
   allMonsters: Monster[]; // Can be 1, 2, or 3 monsters
   allActions: Skill[];
   allTraits: Skill[];
+  showAllSkills: boolean;
 }
 
 export function MonsterSkillsList({
@@ -16,13 +17,15 @@ export function MonsterSkillsList({
   allMonsters,
   allActions,
   allTraits,
+  showAllSkills,
 }: MonsterSkillsListProps) {
   // Get all enabled skills for this monster (works with 1, 2, or 3 monsters)
   const enabledSkills = getMonsterSkills(
     targetMonster,
     allMonsters,
     allActions,
-    allTraits
+    allTraits,
+    { maverickOnly: !showAllSkills }
   );
 
   // Group skills by individual enabling monsters (duplicates skills with multiple enablers)

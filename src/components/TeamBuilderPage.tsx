@@ -45,6 +45,8 @@ export function TeamBuilderPage() {
     false,
   ]);
 
+  const [showAllSkills, setShowAllSkills] = useState(false);
+
   // Effect to update URL when selection changes
   const [m1, m2, m3] = selectedMonsters;
   useEffect(() => {
@@ -90,6 +92,18 @@ export function TeamBuilderPage() {
           <div className="flex-1">
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-alegreya font-bold text-center text-tier-maverick" style={{ fontVariant: 'small-caps' }}>Tiberion's Monster Scroll</h1>
             <h2 className="text-lg md:text-xl font-alegreya text-center text-tier-basic" style={{ fontVariant: 'small-caps' }}>search for Maverick Skills</h2>
+            <div className="flex items-center justify-center gap-2 mt-2">
+              <input
+                type="checkbox"
+                id="show-all-skills"
+                className="h-4 w-4 rounded border-gray-600 bg-gray-800 text-blue-600 focus:ring-blue-500"
+                checked={showAllSkills}
+                onChange={(e) => setShowAllSkills(e.target.checked)}
+              />
+              <label htmlFor="show-all-skills" className="text-sm text-gray-300">
+                Show all skills
+              </label>
+            </div>
           </div>
           <img src="/assets/TiberionIcon.webp" alt="Tiberion Icon" className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 ml-4" />
         </div>
@@ -132,10 +146,11 @@ export function TeamBuilderPage() {
                 {/* Skills List */}
                 {selectedMonsterObjects[i] && !collapsedStates[i] && (
                   <MonsterSkillsList
-                    targetMonster={selectedMonsterObjects[i]}
+                    targetMonster={selectedMonsterObjects[i]!}
                     allMonsters={selectedMonstersList}
                     allActions={actions}
                     allTraits={traits}
+                    showAllSkills={showAllSkills}
                   />
                 )}
               </div>

@@ -489,8 +489,9 @@ export function getMonsterSkills(
   allMonsters: Monster[],
   allActions: Skill[],
   allTraits: Skill[],
-  maverickOnly: boolean = true
+  options: { maverickOnly?: boolean } = {}
 ): EnabledSkill[] {
+  const { maverickOnly = true } = options;
   if (allMonsters.length < 1 || allMonsters.length > 3) {
     throw new Error(`Expected 1-3 monsters, got ${allMonsters.length}`);
   }

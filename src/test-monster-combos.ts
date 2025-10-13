@@ -176,7 +176,7 @@ try {
       [singleMonster],
       allActions,
       allTraits,
-      true
+      { maverickOnly: true }
     );
     console.log(`\n--- Maverick Skills Only (maverickOnly: true) ---`);
     console.log(`Found ${maverickSkills.length} skills.`);
@@ -199,7 +199,7 @@ try {
       [singleMonster],
       allActions,
       allTraits,
-      false
+      { maverickOnly: false }
     );
     console.log(`\n--- All Skills (maverickOnly: false) ---`);
     console.log(`Found ${allSkillsResult.length} skills.`);
