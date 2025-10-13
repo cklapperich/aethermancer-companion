@@ -90,7 +90,7 @@ function App() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
           {/* Column 1 */}
           <div className="flex flex-col min-w-0">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-4 pr-4">
               <div className="flex-1">
                 <MonsterSelect
                   monsters={monsters}
@@ -102,18 +102,17 @@ function App() {
               {selectedMonsterObjects[0] && (
                 <button
                   onClick={handleToggleCollapse(0)}
-                  className="flex-shrink-0 p-2 hover:bg-gray-800 rounded-md transition-colors"
+                  className="flex-shrink-0 p-2 bg-gray-800 hover:bg-gray-700 rounded-md transition-colors border border-gray-600"
                   aria-label={collapsedStates[0] ? "Expand skills" : "Collapse skills"}
                 >
                   <svg
-                    className={`w-5 h-5 text-gray-400 transition-transform duration-200 ${
+                    className={`w-4 h-4 text-gray-300 transition-transform duration-200 ${
                       collapsedStates[0] ? 'rotate-0' : 'rotate-90'
                     }`}
-                    fill="none"
-                    stroke="currentColor"
                     viewBox="0 0 24 24"
+                    fill="currentColor"
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    <path d="M9 5l7 7-7 7V5z" />
                   </svg>
                 </button>
               )}
@@ -131,7 +130,7 @@ function App() {
 
           {/* Column 2 */}
           <div className="flex flex-col min-w-0">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-4 pr-4">
               <div className="flex-1">
                 <MonsterSelect
                   monsters={monsters}
@@ -143,18 +142,17 @@ function App() {
               {selectedMonsterObjects[1] && (
                 <button
                   onClick={handleToggleCollapse(1)}
-                  className="flex-shrink-0 p-2 hover:bg-gray-800 rounded-md transition-colors"
+                  className="flex-shrink-0 p-2 bg-gray-800 hover:bg-gray-700 rounded-md transition-colors border border-gray-600"
                   aria-label={collapsedStates[1] ? "Expand skills" : "Collapse skills"}
                 >
                   <svg
-                    className={`w-5 h-5 text-gray-400 transition-transform duration-200 ${
+                    className={`w-4 h-4 text-gray-300 transition-transform duration-200 ${
                       collapsedStates[1] ? 'rotate-0' : 'rotate-90'
                     }`}
-                    fill="none"
-                    stroke="currentColor"
                     viewBox="0 0 24 24"
+                    fill="currentColor"
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    <path d="M9 5l7 7-7 7V5z" />
                   </svg>
                 </button>
               )}
@@ -172,7 +170,7 @@ function App() {
 
           {/* Column 3 */}
           <div className="flex flex-col min-w-0">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-4 pr-4">
               <div className="flex-1">
                 <MonsterSelect
                   monsters={monsters}
@@ -184,18 +182,17 @@ function App() {
               {selectedMonsterObjects[2] && (
                 <button
                   onClick={handleToggleCollapse(2)}
-                  className="flex-shrink-0 p-2 hover:bg-gray-800 rounded-md transition-colors"
+                  className="flex-shrink-0 p-2 bg-gray-800 hover:bg-gray-700 rounded-md transition-colors border border-gray-600"
                   aria-label={collapsedStates[2] ? "Expand skills" : "Collapse skills"}
                 >
                   <svg
-                    className={`w-5 h-5 text-gray-400 transition-transform duration-200 ${
+                    className={`w-4 h-4 text-gray-300 transition-transform duration-200 ${
                       collapsedStates[2] ? 'rotate-0' : 'rotate-90'
                     }`}
-                    fill="none"
-                    stroke="currentColor"
                     viewBox="0 0 24 24"
+                    fill="currentColor"
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    <path d="M9 5l7 7-7 7V5z" />
                   </svg>
                 </button>
               )}
