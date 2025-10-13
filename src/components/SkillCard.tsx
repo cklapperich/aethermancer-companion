@@ -69,7 +69,7 @@ export const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
                     {rows.map((row, rowIdx) => (
                       <div
                         key={rowIdx}
-                        className="flex gap-0.5 justify-center"
+                        className="flex gap-1 justify-center"
                         style={count === 4 && rowIdx === 1 ? { transform: 'translateX(calc(0.5rem + 1px))' } : undefined}
                       >
                         {row.map((element, idx) => (
