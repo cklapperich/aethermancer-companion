@@ -40,12 +40,11 @@ export function MonsterSkillsList({
             {/* Actions in this group */}
             {actions.length > 0 && (
               <div>
-                <div className="flex items-center justify-center gap-3 mb-2">
-                  <EnablerMonsterIcons monsters={group.enablers} />
-                  <h3 className="text-lg font-bold text-orange-400">
-                    Actions ({actions.length})
-                  </h3>
-                </div>
+                {/* Enabler Monster Icons for Actions */}
+                <EnablerMonsterIcons monsters={group.enablers} />
+                <h3 className="text-lg font-bold mb-2 text-orange-400 text-center">
+                  Actions ({actions.length})
+                </h3>
                 <div className="space-y-2 flex flex-col items-center">
                   {actions.map((enabledSkill) => (
                     <SkillCard key={enabledSkill.skill.name} skill={enabledSkill.skill} />
@@ -57,12 +56,11 @@ export function MonsterSkillsList({
             {/* Traits in this group */}
             {traits.length > 0 && (
               <div>
-                <div className="flex items-center justify-center gap-3 mb-2">
-                  <EnablerMonsterIcons monsters={group.enablers} />
-                  <h3 className="text-lg font-bold text-purple-400">
-                    Traits ({traits.length})
-                  </h3>
-                </div>
+                {/* Enabler Monster Icons for Traits */}
+                <EnablerMonsterIcons monsters={group.enablers} />
+                <h3 className="text-lg font-bold mb-2 text-purple-400 text-center">
+                  Traits ({traits.length})
+                </h3>
                 <div className="space-y-2 flex flex-col items-center">
                   {traits.map((enabledSkill) => (
                     <SkillCard key={enabledSkill.skill.name} skill={enabledSkill.skill} />
