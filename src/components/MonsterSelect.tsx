@@ -21,7 +21,7 @@ export function MonsterSelect({
   placeholder = 'Select a monster...',
 }: MonsterSelectProps) {
   const selectedMonster = monsters.find(
-    (m) => `${m.name}-${m.shifted}` === value
+    (m) => (m.shifted ? `${m.name}-shifted` : m.name) === value
   );
 
   return (
@@ -52,7 +52,7 @@ export function MonsterSelect({
         </SelectTrigger>
         <SelectContent className="bg-gray-800 border-gray-600 text-white max-h-[400px]">
           {monsters.map((monster) => {
-            const key = `${monster.name}-${monster.shifted}`;
+            const key = monster.shifted ? `${monster.name}-shifted` : monster.name;
             const displayName = monster.shifted
               ? `${monster.name} (Shifted)`
               : monster.name;
