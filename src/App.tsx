@@ -88,125 +88,49 @@ function App() {
         </div>
         {/* Responsive Monster Selection Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
-          {/* Column 1 */}
-          <div className="flex flex-col min-w-0">
-            <div className="flex items-center gap-4 pr-4">
-              <div className="flex-1">
-                <MonsterSelect
-                  monsters={monsters}
-                  value={selectedMonsters[0]}
-                  onChange={handleMonsterChange(0)}
-                  placeholder="Select Monster 1"
-                />
+          {[0, 1, 2].map((index) => {
+            const i = index as 0 | 1 | 2;
+            return (
+              <div key={index} className="flex flex-col min-w-0">
+                <div className="flex items-center gap-4 pr-4">
+                  <div className="flex-1">
+                    <MonsterSelect
+                      monsters={monsters}
+                      value={selectedMonsters[i]}
+                      onChange={handleMonsterChange(i)}
+                      placeholder={`Select Monster ${index + 1}`}
+                    />
+                  </div>
+                  {selectedMonsterObjects[i] && (
+                    <button
+                      onClick={handleToggleCollapse(i)}
+                      className="flex-shrink-0 p-2 bg-gray-800 hover:bg-gray-700 rounded-md transition-colors border border-gray-600"
+                      aria-label={collapsedStates[i] ? "Expand skills" : "Collapse skills"}
+                    >
+                      <svg
+                        className={`w-4 h-4 text-gray-300 transition-transform duration-200 ${
+                          collapsedStates[i] ? 'rotate-0' : 'rotate-90'
+                        }`}
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M9 5l7 7-7 7V5z" />
+                      </svg>
+                    </button>
+                  )}
+                </div>
+                {/* Skills List */}
+                {selectedMonsterObjects[i] && !collapsedStates[i] && (
+                  <MonsterSkillsList
+                    targetMonster={selectedMonsterObjects[i]}
+                    allMonsters={selectedMonstersList}
+                    allActions={actions}
+                    allTraits={traits}
+                  />
+                )}
               </div>
-              {selectedMonsterObjects[0] && (
-                <button
-                  onClick={handleToggleCollapse(0)}
-                  className="flex-shrink-0 p-2 bg-gray-800 hover:bg-gray-700 rounded-md transition-colors border border-gray-600"
-                  aria-label={collapsedStates[0] ? "Expand skills" : "Collapse skills"}
-                >
-                  <svg
-                    className={`w-4 h-4 text-gray-300 transition-transform duration-200 ${
-                      collapsedStates[0] ? 'rotate-0' : 'rotate-90'
-                    }`}
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path d="M9 5l7 7-7 7V5z" />
-                  </svg>
-                </button>
-              )}
-            </div>
-            {/* Skills List */}
-            {selectedMonsterObjects[0] && !collapsedStates[0] && (
-              <MonsterSkillsList
-                targetMonster={selectedMonsterObjects[0]}
-                allMonsters={selectedMonstersList}
-                allActions={actions}
-                allTraits={traits}
-              />
-            )}
-          </div>
-
-          {/* Column 2 */}
-          <div className="flex flex-col min-w-0">
-            <div className="flex items-center gap-4 pr-4">
-              <div className="flex-1">
-                <MonsterSelect
-                  monsters={monsters}
-                  value={selectedMonsters[1]}
-                  onChange={handleMonsterChange(1)}
-                  placeholder="Select Monster 2"
-                />
-              </div>
-              {selectedMonsterObjects[1] && (
-                <button
-                  onClick={handleToggleCollapse(1)}
-                  className="flex-shrink-0 p-2 bg-gray-800 hover:bg-gray-700 rounded-md transition-colors border border-gray-600"
-                  aria-label={collapsedStates[1] ? "Expand skills" : "Collapse skills"}
-                >
-                  <svg
-                    className={`w-4 h-4 text-gray-300 transition-transform duration-200 ${
-                      collapsedStates[1] ? 'rotate-0' : 'rotate-90'
-                    }`}
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path d="M9 5l7 7-7 7V5z" />
-                  </svg>
-                </button>
-              )}
-            </div>
-            {/* Skills List */}
-            {selectedMonsterObjects[1] && !collapsedStates[1] && (
-              <MonsterSkillsList
-                targetMonster={selectedMonsterObjects[1]}
-                allMonsters={selectedMonstersList}
-                allActions={actions}
-                allTraits={traits}
-              />
-            )}
-          </div>
-
-          {/* Column 3 */}
-          <div className="flex flex-col min-w-0">
-            <div className="flex items-center gap-4 pr-4">
-              <div className="flex-1">
-                <MonsterSelect
-                  monsters={monsters}
-                  value={selectedMonsters[2]}
-                  onChange={handleMonsterChange(2)}
-                  placeholder="Select Monster 3"
-                />
-              </div>
-              {selectedMonsterObjects[2] && (
-                <button
-                  onClick={handleToggleCollapse(2)}
-                  className="flex-shrink-0 p-2 bg-gray-800 hover:bg-gray-700 rounded-md transition-colors border border-gray-600"
-                  aria-label={collapsedStates[2] ? "Expand skills" : "Collapse skills"}
-                >
-                  <svg
-                    className={`w-4 h-4 text-gray-300 transition-transform duration-200 ${
-                      collapsedStates[2] ? 'rotate-0' : 'rotate-90'
-                    }`}
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path d="M9 5l7 7-7 7V5z" />
-                  </svg>
-                </button>
-              )}
-            </div>
-            {/* Skills List */}
-            {selectedMonsterObjects[2] && !collapsedStates[2] && (
-              <MonsterSkillsList
-                targetMonster={selectedMonsterObjects[2]}
-                allMonsters={selectedMonstersList}
-                allActions={actions}
-                allTraits={traits}
-              />
-            )}
-          </div>
+            );
+          })}
         </div>
       </div>
     </div>
