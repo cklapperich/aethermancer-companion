@@ -33,9 +33,14 @@ export class Monster {
     this.signatureTrait = data.signatureTrait;
     this.startingHP = data.startingHP;
 
-    // Construct image path deterministically from name and shifted status
-    const shiftedSuffix = data.shifted ? '_Shifted' : '';
-    this.imagePath = `/assets/monsters/${data.name}${shiftedSuffix}_Portrait.webp`;
+    // Use portraitFilename if provided, otherwise construct from name
+    if (data.portraitFilename) {
+      this.imagePath = `/assets/monsters/${data.portraitFilename}`;
+    } else {
+      const shiftedSuffix = data.shifted ? '_Shifted' : '';
+      const nameForPath = data.name.replace(/ /g, '_');
+      this.imagePath = `/assets/monsters/${nameForPath}${shiftedSuffix}_Portrait.webp`;
+    }
   }
 
   /**

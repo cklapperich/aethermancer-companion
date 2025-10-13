@@ -24,8 +24,13 @@ function App() {
     const allTraits = loadTraits(traitsData);
     const allMonsters = loadMonsters(monstersData);
 
+    // Sort monsters alphabetically by name
+    const sortedMonsters = [...allMonsters].sort((a, b) =>
+      a.name.localeCompare(b.name)
+    );
+
     return {
-      monsters: allMonsters,
+      monsters: sortedMonsters,
       actions: allActions,
       traits: allTraits
     };
@@ -55,12 +60,12 @@ function App() {
   return (
     <div className="min-h-screen text-white p-10" style={{ backgroundColor: '#000000' }}>
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-8">Aethermancer's Friend</h1>
+        <h1 className="text-4xl font-alegreya font-bold text-center mb-8 text-tier-maverick" style={{ fontVariant: 'small-caps' }}>Alioth's Monster Scroll</h1>
         {/* 3-Column Monster Selection Grid */}
         <div className="grid grid-cols-3 gap-8">
           {/* Column 1 */}
           <div className="flex flex-col">
-            <h2 className="text-xl font-bold mb-4 text-center">Monster 1</h2>
+            <h2 className="text-xl font-alegreya font-bold mb-4 text-center text-tier-basic" style={{ fontVariant: 'small-caps' }}>Monster 1</h2>
             <MonsterSelect
               monsters={monsters}
               value={selectedMonsters[0]}
@@ -80,7 +85,7 @@ function App() {
 
           {/* Column 2 */}
           <div className="flex flex-col">
-            <h2 className="text-xl font-bold mb-4 text-center">Monster 2</h2>
+            <h2 className="text-xl font-alegreya font-bold mb-4 text-center text-tier-basic" style={{ fontVariant: 'small-caps' }}>Monster 2</h2>
             <MonsterSelect
               monsters={monsters}
               value={selectedMonsters[1]}
@@ -100,7 +105,7 @@ function App() {
 
           {/* Column 3 */}
           <div className="flex flex-col">
-            <h2 className="text-xl font-bold mb-4 text-center">Monster 3</h2>
+            <h2 className="text-xl font-alegreya font-bold mb-4 text-center text-tier-basic" style={{ fontVariant: 'small-caps' }}>Monster 3</h2>
             <MonsterSelect
               monsters={monsters}
               value={selectedMonsters[2]}
