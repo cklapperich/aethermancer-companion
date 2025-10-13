@@ -1,0 +1,784 @@
+[
+  {
+    "name": "Jotunn",
+    "types": [
+      "Tank",
+      "Shield",
+      "Age"
+    ],
+    "elements": [
+      "Water",
+      "Wind"
+    ],
+    "portraitFilename": "Jotunn_Portrait.webp",
+    "shifted": false
+  },
+  {
+    "name": "Cherufe",
+    "types": [
+      "Critical",
+      "Purge",
+      "Burn"
+    ],
+    "elements": [
+      "Earth",
+      "Fire"
+    ],
+    "portraitFilename": "Cherufe_Portrait.webp",
+    "shifted": false
+  },
+  {
+    "name": "Minokawa",
+    "types": [
+      "Sidekick",
+      "Dodge",
+      "Force"
+    ],
+    "elements": [
+      "Fire",
+      "Wind"
+    ],
+    "portraitFilename": "Minokawa_Portrait.webp",
+    "shifted": false
+  },
+  {
+    "name": "Nixe",
+    "types": [
+      "Heal",
+      "Aether",
+      "Poison"
+    ],
+    "elements": [
+      "Earth",
+      "Water"
+    ],
+    "portraitFilename": "Nixe_Portrait.webp",
+    "shifted": false
+  },
+  {
+    "name": "Ooze",
+    "types": [
+      "Poison",
+      "Tank",
+      "Affliction"
+    ],
+    "elements": [
+      "Earth",
+      "Water"
+    ],
+    "portraitFilename": "Ooze_Portrait.webp",
+    "shifted": false
+  },
+  {
+    "name": "Tatzelwurm",
+    "types": [
+      "Critical",
+      "Regeneration",
+      "Poison"
+    ],
+    "elements": [
+      "Earth",
+      "Fire"
+    ],
+    "portraitFilename": "Tatzelwurm_Portrait.webp",
+    "shifted": false
+  },
+  {
+    "name": "Wolpertinger",
+    "types": [
+      "Critical",
+      "Purge",
+      "Sidekick"
+    ],
+    "elements": [
+      "Water",
+      "Wind"
+    ],
+    "portraitFilename": "Wolpertinger_Portrait.webp",
+    "shifted": false
+  },
+  {
+    "name": "Mandragora",
+    "types": [
+      "Heal",
+      "Regeneration",
+      "Weakness"
+    ],
+    "elements": [
+      "Earth",
+      "Water"
+    ],
+    "portraitFilename": "Mandragora_Portrait.webp",
+    "shifted": false
+  },
+  {
+    "name": "Orthrus",
+    "types": [
+      "Sidekick",
+      "Power",
+      "Heal"
+    ],
+    "elements": [
+      "Fire",
+      "Water"
+    ],
+    "portraitFilename": "Orthrus_Portrait.webp",
+    "shifted": false
+  },
+  {
+    "name": "Wyrmling",
+    "types": [
+      "Heal",
+      "Aether",
+      "Power"
+    ],
+    "elements": [
+      "Fire",
+      "Wind"
+    ],
+    "portraitFilename": "Wyrmling_Portrait.webp",
+    "shifted": false
+  },
+  {
+    "name": "Cockatrice",
+    "types": [
+      "Tank",
+      "Burn",
+      "Dodge"
+    ],
+    "elements": [
+      "Fire",
+      "Wind"
+    ],
+    "portraitFilename": "Cockatrice_Portrait.webp",
+    "shifted": false
+  },
+  {
+    "name": "Warden",
+    "types": [
+      "Tank",
+      "Weakness",
+      "Purge"
+    ],
+    "elements": [
+      "Earth",
+      "Wind"
+    ],
+    "portraitFilename": "Warden_Portrait.webp",
+    "shifted": false
+  },
+  {
+    "name": "Catzerker",
+    "types": [
+      "Critical",
+      "Regeneration",
+      "Sidekick"
+    ],
+    "elements": [
+      "Fire",
+      "Wind"
+    ],
+    "portraitFilename": "Catzerker_Portrait.webp",
+    "shifted": false
+  },
+  {
+    "name": "Gargoyle",
+    "types": [
+      "Sidekick",
+      "Shield",
+      "Power"
+    ],
+    "elements": [
+      "Earth",
+      "Wind"
+    ],
+    "portraitFilename": "Gargoyle_Portrait.webp",
+    "shifted": false
+  },
+  {
+    "name": "Nosferatu",
+    "types": [
+      "Dodge",
+      "Heal",
+      "Terror"
+    ],
+    "elements": [
+      "Water",
+      "Wind"
+    ],
+    "portraitFilename": "Nosferatu_Portrait.webp",
+    "shifted": false
+  },
+  {
+    "name": "Domovoy",
+    "types": [
+      "Heal",
+      "Regeneration",
+      "Burn"
+    ],
+    "elements": [
+      "Fire",
+      "Water"
+    ],
+    "portraitFilename": "Domovoy_Portrait.webp",
+    "shifted": false
+  },
+  {
+    "name": "Mephisto",
+    "types": [
+      "Affliction",
+      "Terror",
+      "Burn"
+    ],
+    "elements": [
+      "Fire",
+      "Water"
+    ],
+    "portraitFilename": "Mephisto_Portrait.webp",
+    "shifted": false
+  },
+  {
+    "name": "Shambler",
+    "types": [
+      "Tank",
+      "Aether",
+      "Age"
+    ],
+    "elements": [
+      "Water",
+      "Wind"
+    ],
+    "portraitFilename": "Shambler_Portrait.webp",
+    "shifted": false
+  },
+  {
+    "name": "Grimoire",
+    "types": [
+      "Purge",
+      "Burn",
+      "Aether"
+    ],
+    "elements": [
+      "Wild"
+    ],
+    "portraitFilename": "Grimoire_Portrait.webp",
+    "shifted": false
+  },
+  {
+    "name": "Star Spawn",
+    "types": [
+      "Aether",
+      "Power",
+      "Age"
+    ],
+    "elements": [
+      "Fire",
+      "Water"
+    ],
+    "portraitFilename": "Star_Spawn_Portrait.webp",
+    "shifted": false
+  },
+  {
+    "name": "Dark Elder",
+    "types": [
+      "Age",
+      "Summon",
+      "Terror"
+    ],
+    "elements": [
+      "Earth",
+      "Fire"
+    ],
+    "portraitFilename": "Dark_Elder_Portrait.webp",
+    "shifted": false
+  },
+  {
+    "name": "Naga",
+    "types": [
+      "Tank",
+      "Shield",
+      "Force"
+    ],
+    "elements": [
+      "Water",
+      "Fire"
+    ],
+    "portraitFilename": "65px-Naga_Portrait.webp",
+    "shifted": false
+  },
+  {
+    "name": "Sphinx",
+    "types": [
+      "Sidekick",
+      "Heal",
+      "Summon"
+    ],
+    "elements": [
+      "Earth",
+      "Wind"
+    ],
+    "portraitFilename": "Sphinx_Portrait.webp",
+    "shifted": false
+  },
+  {
+    "name": "Djinn",
+    "types": [
+      "Dodge",
+      "Force",
+      "Aether"
+    ],
+    "elements": [
+      "Fire",
+      "Wind"
+    ],
+    "portraitFilename": "Djinn_Portrait.webp",
+    "shifted": false
+  },
+  {
+    "name": "Ammit",
+    "types": [
+      "Tank",
+      "Summon",
+      "Regeneration"
+    ],
+    "elements": [
+      "Earth",
+      "Fire"
+    ],
+    "portraitFilename": "Ammit_Portrait.webp",
+    "shifted": false
+  },
+  {
+    "name": "Medusa",
+    "types": [
+      "Poison",
+      "Affliction",
+      "Terror"
+    ],
+    "elements": [
+      "Earth",
+      "Water"
+    ],
+    "portraitFilename": "Medusa_Portrait.webp",
+    "shifted": false
+  },
+  {
+    "name": "Serket",
+    "types": [
+      "Poison",
+      "Shield",
+      "Force"
+    ],
+    "elements": [
+      "Earth",
+      "Wind"
+    ],
+    "portraitFilename": "Serket_Portrait.webp",
+    "shifted": false
+  },
+  {
+    "name": "Hecatoncheires",
+    "types": [
+      "Age",
+      "Weakness",
+      "Summon"
+    ],
+    "elements": [
+      "Fire",
+      "Wind"
+    ],
+    "portraitFilename": "Hecatoncheires_Portrait.webp",
+    "shifted": false
+  },
+  {
+    "name": "Jotunn",
+    "types": [
+      "Tank",
+      "Shield",
+      "Poison"
+    ],
+    "elements": [
+      "Earth",
+      "Wind"
+    ],
+    "portraitFilename": "Jotunn_Shifted_Portrait.webp",
+    "shifted": true
+  },
+  {
+    "name": "Cherufe",
+    "types": [
+      "Critical",
+      "Purge",
+      "Terror"
+    ],
+    "elements": [
+      "Fire",
+      "Water"
+    ],
+    "portraitFilename": "Cherufe_Shifted_Portrait.webp",
+    "shifted": true
+  },
+  {
+    "name": "Minokawa",
+    "types": [
+      "Sidekick",
+      "Age",
+      "Force"
+    ],
+    "elements": [
+      "Earth",
+      "Wind"
+    ],
+    "portraitFilename": "Minokawa_Shifted_Portrait.webp",
+    "shifted": true
+  },
+  {
+    "name": "Nixe",
+    "types": [
+      "Heal",
+      "Regeneration",
+      "Poison"
+    ],
+    "elements": [
+      "Earth",
+      "Water"
+    ],
+    "portraitFilename": "Nixe_Shifted_Portrait.webp",
+    "shifted": true
+  },
+  {
+    "name": "Ooze",
+    "types": [
+      "Burn",
+      "Tank",
+      "Affliction"
+    ],
+    "elements": [
+      "Fire",
+      "Water"
+    ],
+    "portraitFilename": "Ooze_Shifted_Portrait.webp",
+    "shifted": true
+  },
+  {
+    "name": "Tatzelwurm",
+    "types": [
+      "Critical",
+      "Dodge",
+      "Poison"
+    ],
+    "elements": [
+      "Earth",
+      "Wind"
+    ],
+    "portraitFilename": "Tatzelwurm_Shifted_Portrait.webp",
+    "shifted": true
+  },
+  {
+    "name": "Wolpertinger",
+    "types": [
+      "Critical",
+      "Purge",
+      "Dodge"
+    ],
+    "elements": [
+      "Fire",
+      "Wind"
+    ],
+    "portraitFilename": "Wolpertinger_Shifted_Portrait.webp",
+    "shifted": true
+  },
+  {
+    "name": "Mandragora",
+    "types": [
+      "Heal",
+      "Regeneration",
+      "Terror"
+    ],
+    "elements": [
+      "Earth",
+      "Wind"
+    ],
+    "portraitFilename": "Mandragora_Shifted_Portrait.webp",
+    "shifted": true
+  },
+  {
+    "name": "Orthrus",
+    "types": [
+      "Sidekick",
+      "Power",
+      "Weakness"
+    ],
+    "elements": [
+      "Fire",
+      "Earth"
+    ],
+    "portraitFilename": "Orthrus_Shifted_Portrait.webp",
+    "shifted": true
+  },
+  {
+    "name": "Wyrmling",
+    "types": [
+      "Heal",
+      "Force",
+      "Power"
+    ],
+    "elements": [
+      "Fire",
+      "Wind"
+    ],
+    "portraitFilename": "Wyrmling_Shifted_Portrait.webp",
+    "shifted": true
+  },
+  {
+    "name": "Cockatrice",
+    "types": [
+      "Tank",
+      "Burn",
+      "Shield"
+    ],
+    "elements": [
+      "Fire",
+      "Wind"
+    ],
+    "portraitFilename": "Cockatrice_Shifted_Portrait.webp",
+    "shifted": true
+  },
+  {
+    "name": "Warden",
+    "types": [
+      "Power",
+      "Weakness",
+      "Purge"
+    ],
+    "elements": [
+      "Earth",
+      "Fire"
+    ],
+    "portraitFilename": "Warden_Shifted_Portrait.webp",
+    "shifted": true
+  },
+  {
+    "name": "Catzerker",
+    "types": [
+      "Critical",
+      "Force",
+      "Sidekick"
+    ],
+    "elements": [
+      "Fire",
+      "Wind"
+    ],
+    "portraitFilename": "Catzerker_Shifted_Portrait.webp",
+    "shifted": true
+  },
+  {
+    "name": "Gargoyle",
+    "types": [
+      "Sidekick",
+      "Shield",
+      "Tank"
+    ],
+    "elements": [
+      "Earth",
+      "Wind"
+    ],
+    "portraitFilename": "65px-Gargoyle_Shifted_Portrait.webp",
+    "shifted": true
+  },
+  {
+    "name": "Nosferatu",
+    "types": [
+      "Critical",
+      "Heal",
+      "Terror"
+    ],
+    "elements": [
+      "Fire",
+      "Wind"
+    ],
+    "portraitFilename": "Nosferatu_Shifted_Portrait.webp",
+    "shifted": true
+  },
+  {
+    "name": "Domovoy",
+    "types": [
+      "Summon",
+      "Regeneration",
+      "Burn"
+    ],
+    "elements": [
+      "Fire",
+      "Water"
+    ],
+    "portraitFilename": "Domovoy_Shifted_Portrait.webp",
+    "shifted": true
+  },
+  {
+    "name": "Mephisto",
+    "types": [
+      "Affliction",
+      "Poison",
+      "Burn"
+    ],
+    "elements": [
+      "Fire",
+      "Earth"
+    ],
+    "portraitFilename": "Mephisto_Shifted_Portrait.webp",
+    "shifted": true
+  },
+  {
+    "name": "Shambler",
+    "types": [
+      "Tank",
+      "Aether",
+      "Power"
+    ],
+    "elements": [
+      "Earth",
+      "Wind"
+    ],
+    "portraitFilename": "Shambler_Portrait.webp",
+    "shifted": true
+  },
+  {
+    "name": "Grimoire",
+    "types": [
+      "Purge",
+      "Summon",
+      "Aether"
+    ],
+    "elements": [
+      "Wild"
+    ],
+    "portraitFilename": "Grimoire_Shifted_Portrait.webp",
+    "shifted": true
+  },
+  {
+    "name": "Star Spawn",
+    "types": [
+      "Aether",
+      "Heal",
+      "Age"
+    ],
+    "elements": [
+      "Fire",
+      "Wind"
+    ],
+    "portraitFilename": "Star_Spawn_Shifted_Portrait.webp",
+    "shifted": true
+  },
+  {
+    "name": "Dark Elder",
+    "types": [
+      "Age",
+      "Summon",
+      "Burn"
+    ],
+    "elements": [
+      "Earth",
+      "Fire"
+    ],
+    "portraitFilename": "65px-Dark_Elder_Shifted_Portrait.webp",
+    "shifted": true
+  },
+  {
+    "name": "Naga",
+    "types": [
+      "Tank",
+      "Shield",
+      "Power"
+    ],
+    "elements": [
+      "Earth",
+      "Fire"
+    ],
+    "portraitFilename": "Naga_Shifted_Portrait.webp",
+    "shifted": true
+  },
+  {
+    "name": "Sphinx",
+    "types": [
+      "Sidekick",
+      "Aether",
+      "Summon"
+    ],
+    "elements": [
+      "Water",
+      "Wind"
+    ],
+    "portraitFilename": "Sphinx_Shifted_Portrait.webp",
+    "shifted": true
+  },
+  {
+    "name": "Djinn",
+    "types": [
+      "Dodge",
+      "Purge",
+      "Aether"
+    ],
+    "elements": [
+      "Earth",
+      "Wind"
+    ],
+    "portraitFilename": "65px-Djinn_Shifted_Portrait.webp",
+    "shifted": true
+  },
+  {
+    "name": "Ammit",
+    "types": [
+      "Tank",
+      "Critical",
+      "Regeneration"
+    ],
+    "elements": [
+      "Earth",
+      "Water"
+    ],
+    "portraitFilename": "Ammit_Shifted_Portrait.webp",
+    "shifted": true
+  },
+  {
+    "name": "Medusa",
+    "types": [
+      "Poison",
+      "Affliction",
+      "Weakness"
+    ],
+    "elements": [
+      "Earth",
+      "Wind"
+    ],
+    "portraitFilename": "Medusa_Shifted_Portrait.webp",
+    "shifted": true
+  },
+  {
+    "name": "Serket",
+    "types": [
+      "Poison",
+      "Tank",
+      "Force"
+    ],
+    "elements": [
+      "Earth",
+      "Water"
+    ],
+    "portraitFilename": "Serket_Shifted_Portrait.webp",
+    "shifted": true
+  },
+  {
+    "name": "Hecatoncheires",
+    "types": [
+      "Age",
+      "Burn",
+      "Summon"
+    ],
+    "elements": [
+      "Fire",
+      "Water"
+    ],
+    "portraitFilename": "Hecatoncheires_Shifted_Portrait.webp",
+    "shifted": true
+  }
+]

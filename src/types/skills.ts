@@ -54,13 +54,12 @@ export interface SkillData {
   types: TypeTag[];
   description: string;
   iconFilename: string;
-
   // Action-specific properties (only used when skillType === SkillType.Action)
   freeAction?: boolean;
   isSupport?: boolean;  // true if this action can be used for support (affects categorization)
 
   // Trait-specific properties (only used when skillType === SkillType.Trait)
-  signatureTrait?: boolean;
+  signatureMonster?: string;  // The monster this signature trait belongs to
 }
 
 // Single Skill class with convenience methods
@@ -71,13 +70,12 @@ export class Skill {
   types: TypeTag[];
   description: string;
   iconFilename: string;
-
   // Action-specific properties
   freeAction?: boolean;
   isSupport?: boolean;
 
   // Trait-specific properties
-  signatureTrait?: boolean;
+  signatureMonster?: string;
 
   constructor(data: SkillData) {
     this.name = data.name;
@@ -88,7 +86,7 @@ export class Skill {
     this.iconFilename = data.iconFilename;
     this.freeAction = data.freeAction;
     this.isSupport = data.isSupport;
-    this.signatureTrait = data.signatureTrait;
+    this.signatureMonster = data.signatureMonster;
   }
 
   /**
@@ -96,6 +94,50 @@ export class Skill {
    */
   isMaverick(): boolean {
     return this.types.length === 2;
+  }
+
+  /**
+   * Get the category of a trait (derived from properties)
+   * Returns 'Signature', 'Maverick', or 'Basic' for Traits, null for Actions
+   */
+  getTraitCategory(): 'Signature' | 'Maverick' | 'Basic' | null {
+    if (this.skillType !== SkillType.Trait) {
+      return null;
+    }
+
+    // Signature traits have a signatureMonster property
+    if (this.signatureMonster) {
+      return 'Signature';
+    }
+
+    // Maverick traits have exactly 2 types
+    if (this.types.length === 2) {
+      return 'Maverick';
+    }
+
+    // Basic traits have 1 or 0 types
+    return 'Basic';
+  }
+
+  /**
+   * Check if this is a signature trait
+   */
+  isSignatureTrait(): boolean {
+    return this.getTraitCategory() === 'Signature';
+  }
+
+  /**
+   * Check if this is a basic trait
+   */
+  isBasicTrait(): boolean {
+    return this.getTraitCategory() === 'Basic';
+  }
+
+  /**
+   * Check if this is a maverick trait
+   */
+  isMaverickTrait(): boolean {
+    return this.getTraitCategory() === 'Maverick';
   }
 
   /**
@@ -142,5 +184,12 @@ export class Skill {
    */
   isDedicatedSupport(): boolean {
     return this.getActionCategory() === ActionCategory.DedicatedSupport;
+  }
+
+  /**
+   * Check if this is a cooking action (description contains "Cooking")
+   */
+  isCookingAction(): boolean {
+    return this.description.includes('Cooking');
   }
 }

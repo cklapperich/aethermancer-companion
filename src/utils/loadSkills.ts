@@ -51,17 +51,25 @@ function validateSkillData(data: any, _index: number): void {
     throw new Error(`Invalid skillType: ${data.skillType}`);
   }
 
-  if (!Array.isArray(data.manaCost)) {
-    throw new Error('Missing or invalid "manaCost" field (must be array)');
-  }
-
-  // Validate mana cost elements
-  const validElements = ['Fire', 'Water', 'Earth', 'Wind', 'Wild'];
-  data.manaCost.forEach((element: any) => {
-    if (!validElements.includes(element)) {
-      throw new Error(`Invalid element in manaCost: ${element}`);
+  // Validate manaCost (only for Actions, Traits may not have it)
+  if (data.skillType === 'Action') {
+    if (!Array.isArray(data.manaCost)) {
+      throw new Error('Missing or invalid "manaCost" field (must be array)');
     }
-  });
+
+    // Validate mana cost elements
+    const validElements = ['Fire', 'Water', 'Earth', 'Wind', 'Wild'];
+    data.manaCost.forEach((element: any) => {
+      if (!validElements.includes(element)) {
+        throw new Error(`Invalid element in manaCost: ${element}`);
+      }
+    });
+  } else if (data.skillType === 'Trait') {
+    // Traits should have an empty manaCost array
+    if (!Array.isArray(data.manaCost)) {
+      data.manaCost = []; // Set default empty array for traits
+    }
+  }
 
   if (!Array.isArray(data.types)) {
     throw new Error('Missing or invalid "types" field (must be array)');
@@ -95,6 +103,14 @@ function validateSkillData(data: any, _index: number): void {
     }
     if (data.isSupport !== undefined && typeof data.isSupport !== 'boolean') {
       throw new Error('isSupport must be a boolean');
+    }
+  }
+
+  // Trait-specific validation
+  if (data.skillType === 'Trait') {
+    // Validate signatureMonster field
+    if (data.signatureMonster !== undefined && typeof data.signatureMonster !== 'string') {
+      throw new Error('signatureMonster must be a string');
     }
   }
 }
