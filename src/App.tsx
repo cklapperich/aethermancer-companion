@@ -58,14 +58,18 @@ function App() {
   const selectedMonstersList = selectedMonsterObjects.filter((m) => m !== undefined) as Monster[];
 
   return (
-    <div className="min-h-screen text-white p-10" style={{ backgroundColor: '#000000' }}>
+    <div className="min-h-screen text-white p-4 md:p-6 lg:p-10" style={{ backgroundColor: '#000000' }}>
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-alegreya font-bold text-center mb-8 text-tier-maverick" style={{ fontVariant: 'small-caps' }}>Alioth's Monster Scroll</h1>
-        {/* 3-Column Monster Selection Grid */}
-        <div className="grid grid-cols-3 gap-8">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-alegreya font-bold text-center mb-2 text-tier-maverick" style={{ fontVariant: 'small-caps' }}>Tiberion's Monster Scroll</h1>
+        <h2 className="text-lg md:text-xl font-alegreya text-center text-tier-basic" style={{ fontVariant: 'small-caps' }}>search for Maverick Skills</h2>
+        <div className="pt-6 md:pt-8 lg:pt-12">
+          <hr className="border-tier-basic" />
+        </div>
+        {/* Responsive Monster Selection Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
           {/* Column 1 */}
           <div className="flex flex-col">
-            <h2 className="text-xl font-alegreya font-bold mb-4 text-center text-tier-basic" style={{ fontVariant: 'small-caps' }}>Monster 1</h2>
+            <h2 className="text-lg md:text-xl font-alegreya font-bold mb-4 text-center text-tier-basic" style={{ fontVariant: 'small-caps' }}>Monster 1</h2>
             <MonsterSelect
               monsters={monsters}
               value={selectedMonsters[0]}
@@ -85,7 +89,7 @@ function App() {
 
           {/* Column 2 */}
           <div className="flex flex-col">
-            <h2 className="text-xl font-alegreya font-bold mb-4 text-center text-tier-basic" style={{ fontVariant: 'small-caps' }}>Monster 2</h2>
+            <h2 className="text-lg md:text-xl font-alegreya font-bold mb-4 text-center text-tier-basic" style={{ fontVariant: 'small-caps' }}>Monster 2</h2>
             <MonsterSelect
               monsters={monsters}
               value={selectedMonsters[1]}
@@ -105,7 +109,7 @@ function App() {
 
           {/* Column 3 */}
           <div className="flex flex-col">
-            <h2 className="text-xl font-alegreya font-bold mb-4 text-center text-tier-basic" style={{ fontVariant: 'small-caps' }}>Monster 3</h2>
+            <h2 className="text-lg md:text-xl font-alegreya font-bold mb-4 text-center text-tier-basic" style={{ fontVariant: 'small-caps' }}>Monster 3</h2>
             <MonsterSelect
               monsters={monsters}
               value={selectedMonsters[2]}
