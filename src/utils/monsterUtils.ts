@@ -3,7 +3,7 @@
  */
 
 import { Monster } from '../types/monsters';
-import { Skill, TypeTag } from '../types/skills';
+import { Element, Skill, TypeTag } from '../types/skills';
 
 /**
  * Get all 2-type combinations from a list of monsters
@@ -466,6 +466,21 @@ export function filterCookingSkills(
 }
 
 /**
+ * Check if a monster's elements match an action's mana cost, or if the monster has the 'Wild' element.
+ * @param monster - The monster to check
+ * @param action - The action with the mana cost
+ * @returns True if the monster has the 'Wild' element or if any of its elements match the action's mana cost.
+ */
+export function checkElementMatch(monster: Monster, action: Skill): boolean {
+  // Monster with 'Wild' element can always use any action
+  if (monster.elements.includes(Element.Wild)) {
+    return true;
+  }
+  // Otherwise, check for at least one matching element
+  return action.manaCost.some(element => monster.elements.includes(element));
+}
+
+/**
  * Get all type-related skills (single-type and 2-type maverick) available to a monster, with enabling information.
  *
  * @param targetMonster - The monster to get skills for
@@ -534,9 +549,7 @@ export function getMonsterSkills(
       // Check if combo is valid AND at least one element matches
       if (validCombos.has(combination)) {
         // Check if target monster has at least one element from the action's mana cost
-        const hasElementMatch = action.manaCost.some(element =>
-          targetMonster.elements.includes(element)
-        );
+        const hasElementMatch = checkElementMatch(targetMonster, action);
 
         if (hasElementMatch) {
           enabledSkills.push({
@@ -572,9 +585,7 @@ export function getMonsterSkills(
         const [type1] = action.types;
         if (targetMonster.hasType(type1)) {
           // Check if target monster has at least one element from the action's mana cost
-          const hasElementMatch = action.manaCost.some(element =>
-            targetMonster.elements.includes(element)
-          );
+          const hasElementMatch = checkElementMatch(targetMonster, action);
 
           if (hasElementMatch) {
             enabledSkills.push({
