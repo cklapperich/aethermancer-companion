@@ -1,4 +1,4 @@
-1. Sphinx cant learn attacks
-2. Grimoire can learn all elements
 3. option to clear dropdown. (X button?)
 4. save checkbox settings as URL or cookies?
+5. Visual bug: 4-element summons are too close to top of border, sometimes, depending on screen zoom. :)
+6. Actions need to display category

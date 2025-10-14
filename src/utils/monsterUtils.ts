@@ -3,7 +3,7 @@
  */
 
 import { Monster } from '../types/monsters';
-import { Element, Skill, TypeTag } from '../types/skills';
+import { ActionCategory, Element, Skill, TypeTag } from '../types/skills';
 
 /**
  * Get all 2-type combinations from a list of monsters
@@ -271,8 +271,8 @@ export function sortEnabledSkillsBySource(
   skills: EnabledSkill[],
   targetMonster: Monster
 ): EnabledSkill[] {
-  // Filter out cooking skills first
-  const filteredSkills = filterCookingSkills(targetMonster, skills);
+  // Apply all edge-case filtering
+  const filteredSkills = FilterForEdgeCaseMonsters(targetMonster, skills);
 
   // Then sort
   return [...filteredSkills].sort((a, b) => {
@@ -319,8 +319,8 @@ export function groupSkillsByEnablers(
   skills: EnabledSkill[],
   targetMonster: Monster
 ): SkillGroup[] {
-  // Filter out cooking skills first
-  const filteredSkills = filterCookingSkills(targetMonster, skills);
+  // Apply all edge-case filtering
+  const filteredSkills = FilterForEdgeCaseMonsters(targetMonster, skills);
 
   // Create a map to group skills by their enablers
   const groupMap = new Map<string, SkillGroup>();
@@ -397,8 +397,8 @@ export function groupSkillsByIndividualEnablers(
   skills: EnabledSkill[],
   targetMonster: Monster
 ): SkillGroup[] {
-  // Filter out cooking skills first
-  const filteredSkills = filterCookingSkills(targetMonster, skills);
+  // Apply all edge-case filtering
+  const filteredSkills = FilterForEdgeCaseMonsters(targetMonster, skills);
 
   // Create a map to group skills by individual monsters
   const groupMap = new Map<string, SkillGroup>();
@@ -463,6 +463,49 @@ export function filterCookingSkills(
 
   // For other monsters, filter out cooking skills
   return skills.filter(enabledSkill => !enabledSkill.skill.isCookingAction());
+}
+
+/**
+ * Filter out attack actions for Sphinx, as it can only use Support and Dedicated Support actions.
+ * @param monster The monster to filter skills for
+ * @param skills The skills to filter
+ * @returns Filtered array of EnabledSkill objects
+ */
+export function filterSphinxAttackActions(
+  monster: Monster,
+  skills: EnabledSkill[]
+): EnabledSkill[] {
+  if (monster.name !== 'Sphinx') {
+    return skills;
+  }
+
+  return skills.filter(enabledSkill => {
+    // Keep traits and non-attack actions
+    return enabledSkill.skill.getActionCategory() !== ActionCategory.Attack;
+  });
+}
+
+/**
+ * Applies all edge-case filtering rules for monsters.
+ * - Domovoy: Can use Cooking skills.
+ * - Sphinx: Cannot use Attack actions.
+ * @param monster The monster to filter skills for
+ * @param skills The skills to filter
+ * @returns Filtered array of EnabledSkill objects
+ */
+export function FilterForEdgeCaseMonsters(
+  monster: Monster,
+  skills: EnabledSkill[]
+): EnabledSkill[] {
+  let filteredSkills = skills;
+
+  // Handle Domovoy's cooking skills
+  filteredSkills = filterCookingSkills(monster, filteredSkills);
+
+  // Handle Sphinx's action restrictions
+  filteredSkills = filterSphinxAttackActions(monster, filteredSkills);
+
+  return filteredSkills;
 }
 
 /**
