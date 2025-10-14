@@ -43,7 +43,7 @@ export const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
                 {skill.name}
               </span>
               <p className="font-figtree text-sm text-card-subtitle">
-                {skill.skillType}
+                {skill.skillType === 'Action' ? skill.getActionCategory() : skill.skillType}
               </p>
             </th>
 

@@ -18,8 +18,8 @@ export enum SkillType {
 
 export enum ActionCategory {
   Attack = "Attack",
-  Support = "Support",
-  DedicatedSupport = "DedicatedSupport"
+  Support = "Support Action",
+  DedicatedSupport = "Dedicated Support Action"
 }
 
 export enum TypeTag {
