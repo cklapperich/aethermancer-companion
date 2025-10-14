@@ -9,7 +9,7 @@
     "description": "3 x 2 Water damage against target enemy.",
     "iconFilename": "Action_aqua_pounce.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Aquatic Armor",
@@ -22,7 +22,7 @@
     "description": "Shields self for 2 x 6.<br>Applies 2 Force to self.",
     "iconFilename": "Action_aquatic_armor.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Boiling Soup",
@@ -35,7 +35,7 @@
     "description": "2 x 4 Water/Fire damage against target enemy.<br>Consume all Cooking stacks to apply 4 Burn to target enemy for each consumed stack.",
     "iconFilename": "Action_boiling_soup.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Bolster",
@@ -47,7 +47,7 @@
     "description": "Heals target ally for 2 x 6.<br>Permanently increases their Max Health by 1 when used for the first time each combat.",
     "iconFilename": "Action_bolster.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Brace",
@@ -59,7 +59,7 @@
     "description": "Shields self for 2 x 4.<br>Retaliate: Triggers a 1 x 4 Wind damage Attack against the enemy.",
     "iconFilename": "Action_brace.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Breeze",
@@ -72,7 +72,7 @@
     "description": "Heals target ally for 3 x 5.<br>Generates Wild Aether.",
     "iconFilename": "Action_breeze.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Bubble Trick",
@@ -84,7 +84,7 @@
     "description": "2 x 2 Water damage against target enemy.<br>Applies Sidekick to self.",
     "iconFilename": "Action_bubble_trick.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Char",
@@ -96,7 +96,7 @@
     "description": "2 x 3 Fire damage against target enemy.<br>Applies 2 Terror to target enemy.",
     "iconFilename": "Action_char.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Cleansing Strike",
@@ -109,7 +109,7 @@
     "description": "3 x 3 Water damage against target enemy.<br>Cleanses 3 debuffs from self.",
     "iconFilename": "Action_cleansing_strike.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Crystal Smash",
@@ -122,7 +122,7 @@
     "description": "2 x 4 Wind/Earth damage against target enemy.<br>Applies 3 Poison to target enemy.",
     "iconFilename": "Action_crystal_smash.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Drift Punch",
@@ -135,7 +135,7 @@
     "description": "2 x 5 Water damage against target enemy.<br>Applies Redirect to self.",
     "iconFilename": "Action_drift_punch.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Echo",
@@ -147,7 +147,7 @@
     "description": "2 x 3 Wind damage against target enemy.<br>Purges 1 enemy Aether.",
     "iconFilename": "Action_echo.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Endure",
@@ -159,7 +159,7 @@
     "description": "Heals all allies for 2 x 5.<br>Applies 3 Poison to self.<br>Cleanses 1 Corruption from all allies on first use each combat.",
     "iconFilename": "Action_endure.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Explosion",
@@ -172,7 +172,7 @@
     "description": "3 x 3 Water/Fire damage against target enemy.",
     "iconFilename": "Action_explosion.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Fiery Stabs",
@@ -184,7 +184,7 @@
     "description": "2 x 3 Fire damage against target enemy.<br>Applies Force to self.",
     "iconFilename": "Action_fiery_stabs.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Fire Claws",
@@ -197,7 +197,7 @@
     "description": "4 x 2 Fire damage against target enemy.",
     "iconFilename": "Action_fire_claws.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Fire Dash",
@@ -209,7 +209,7 @@
     "description": "3 x 2 Fire damage against target enemy.",
     "iconFilename": "Action_fire_dash.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Fire Fang",
@@ -222,7 +222,7 @@
     "description": "2 x 5 Fire damage against target enemy.<br>Applies Sidekick to self.",
     "iconFilename": "Action_fire_fang.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Flare Strike",
@@ -235,7 +235,7 @@
     "description": "1 x 10 Fire damage against target enemy.<br>Applies Force &amp; Dodge to self.",
     "iconFilename": "Action_flare_strike.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Flurry",
@@ -248,7 +248,7 @@
     "description": "3 x 2 Wind damage against target enemy.<br>Applies Dodge to self.",
     "iconFilename": "Action_flurry.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Foul Shield",
@@ -260,7 +260,7 @@
     "description": "Shields target ally for 2 x 3.<br>Applies 3 Poison to random enemy.",
     "iconFilename": "Action_foul_shield.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Grapple",
@@ -272,7 +272,7 @@
     "description": "2 x 3 Earth damage against target enemy.<br>Purges 1 enemy Aether.",
     "iconFilename": "Action_grapple.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Hardening",
@@ -284,7 +284,7 @@
     "description": "Applies Sidekick, Force &amp; Age to self.",
     "iconFilename": "Action_hardening.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Healing Slime",
@@ -297,7 +297,7 @@
     "description": "Heals all allies for 3 x 6.<br>Applies 2 Poison to all allies.",
     "iconFilename": "Action_healing_slime.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Heat",
@@ -309,7 +309,7 @@
     "description": "1 x 2 Fire damage against self.<br>Free Action.",
     "iconFilename": "Action_heat.webp",
     "freeAction": true,
-    "isSupport": false
+    "actionCategory": "Support Action"
   },
   {
     "name": "Holy Breath",
@@ -322,7 +322,7 @@
     "description": "Heals target ally for 3 x 5.<br>Applies 2 Force to target ally.",
     "iconFilename": "Action_holy_breath.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Hurricane Punch",
@@ -335,7 +335,7 @@
     "description": "3 x 3 Wind damage against target enemy.<br>Shields self for 6.",
     "iconFilename": "Action_hurricane_punch.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Ice Smash",
@@ -348,7 +348,7 @@
     "description": "3 x 3 Water/Wind damage against target enemy.",
     "iconFilename": "Action_ice_smash.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Ignite",
@@ -361,7 +361,7 @@
     "description": "3 x 3 Fire damage against target enemy.<br>Applies 2 Burn to target enemy.",
     "iconFilename": "Action_ignite.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Invigorate",
@@ -373,7 +373,7 @@
     "description": "Heals all allies for 5.<br>Applies Regeneration to all allies.",
     "iconFilename": "Action_invigorate.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Leeching Strike",
@@ -385,7 +385,7 @@
     "description": "2 x 3 Water damage against target enemy.<br>Heals all allies for 5.",
     "iconFilename": "Action_leeching_strike.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Long Slash",
@@ -398,7 +398,7 @@
     "description": "1 x 10 Wind damage against all enemies.<br>+20% Crit Chance.<br>On Crit: Applies Bleed to target enemy.",
     "iconFilename": "Action_long_slash.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Mineralize",
@@ -410,7 +410,7 @@
     "description": "Shields all allies for 4.<br>Applies Temporary Power to all allies.",
     "iconFilename": "Action_mineralize.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Molten Stabs",
@@ -423,7 +423,7 @@
     "description": "2 x 5 Fire/Earth damage against target enemy.<br>On Interrupt: Applies Power to self.",
     "iconFilename": "Action_molten_stabs.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Nourish",
@@ -435,7 +435,7 @@
     "description": "Heals all allies for 5.<br>Applies Regeneration to all allies.",
     "iconFilename": "Action_nourish.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Refreshment",
@@ -448,7 +448,7 @@
     "description": "Heals target ally for 3 x 6.<br>Applies Regeneration to all allies.",
     "iconFilename": "Action_refreshment.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Restore",
@@ -461,7 +461,7 @@
     "description": "Heals target ally for 3 x 3.<br>Target geneerates 3 Random Aether.",
     "iconFilename": "Action_restore.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Roar",
@@ -473,7 +473,7 @@
     "description": "Shields self for 2 x 3.<br>Applies Redirect to self.",
     "iconFilename": "Action_roar.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Sacrifice",
@@ -485,7 +485,7 @@
     "description": "Sacrifices the Minion attached to target ally with the lowest Essence.<br>Shields all allies for 2 x 3.<br>Heals all allies for 2 x 5.",
     "iconFilename": "Action_sacrifice.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Scald",
@@ -498,7 +498,7 @@
     "description": "2 x 3 Water/Fire damage against target enemy.<br>Applies 3 Burn to target enemy.",
     "iconFilename": "Action_scald.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Shriek",
@@ -511,7 +511,7 @@
     "description": "2 x 4 Wind damage against target enemy.<br>Applies 3 Terror to target enemy.",
     "iconFilename": "Action_shriek.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Smoke",
@@ -523,7 +523,7 @@
     "description": "Purges 1 enemy Aether.<br>On Interrupt: Applies Dodge to all allies.",
     "iconFilename": "Action_smoke.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Spore",
@@ -535,7 +535,7 @@
     "description": "2 x 3 Earth damage against target enemy.<br>Applies 3 Weakness to target enemy.",
     "iconFilename": "Action_spore.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Sprout",
@@ -547,7 +547,7 @@
     "description": "Applies Redirect to self.<br>Applies 2 Regeneration to self.<br>Permanently increases Max Health by 1 when used for the first time each combat.",
     "iconFilename": "Action_sprout.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Star Beam",
@@ -563,7 +563,7 @@
     "description": "2 x 10 Wild damage against all enemies.<br>Applies Power to self.",
     "iconFilename": "Action_star_beam.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Stone Punch",
@@ -576,7 +576,7 @@
     "description": "4 x 2 Earth damage against target enemy.",
     "iconFilename": "Action_stone_punch.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Sudden Splash",
@@ -588,7 +588,7 @@
     "description": "3 x 2 Water damage against target enemy.<br>Applies 2 Terror to random enemy and random ally.",
     "iconFilename": "Action_sudden_splash.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Supersonic Strike",
@@ -601,7 +601,7 @@
     "description": "1 x 8 Wind damage against target enemy.<br>Applies Sidekick &amp; Force to self.",
     "iconFilename": "Action_supersonic_strike.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Support",
@@ -613,7 +613,7 @@
     "description": "Applies Regeneration to all allies.<br>Applies Sidekick to self.",
     "iconFilename": "Action_support.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Swipe",
@@ -626,7 +626,7 @@
     "description": "2 x 3 Wind/Earth damage against target enemy.<br>Steals 1 enemy Aether.",
     "iconFilename": "Action_swipe.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Tempering",
@@ -638,7 +638,7 @@
     "description": "Applies Sidekick, Force &amp; Dodge to self.",
     "iconFilename": "Action_tempering.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Three Wishes",
@@ -650,7 +650,7 @@
     "description": "Choose one of three Wish Actions that have not been used in this combat yet.",
     "iconFilename": "Action_three_wishes.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Toxic Slash",
@@ -662,7 +662,7 @@
     "description": "2 x 4 Earth damage against target enemy.<br>Applies 2 Poison to target enemy.",
     "iconFilename": "Action_toxic_slash.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Wind Kick",
@@ -675,7 +675,7 @@
     "description": "2 x 6 Wind damage against target enemy.",
     "iconFilename": "Action_wind_kick.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Windswept Strike",
@@ -688,7 +688,7 @@
     "description": "3 x 3 Wind damage against target enemy.<br>Cleanses 3 debuffs from self.",
     "iconFilename": "Action_windswept_strike.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Zephyr Punch",
@@ -700,7 +700,7 @@
     "description": "2 x 4 Wind damage against target enemy.<br>If this monster has 3 or fewer Age, applies Age to self.",
     "iconFilename": "Action_zephyr_punch.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Aerial Strike",
@@ -715,7 +715,7 @@
     "description": "3 x 2 Wind damage against target enemy.<br>Applies Sidekick to self.",
     "iconFilename": "Action_aerial_strike.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Air Dart",
@@ -730,7 +730,7 @@
     "description": "2 x 2 Wind damage against target enemy.<br>Free Action.",
     "iconFilename": "Action_air_dart.webp",
     "freeAction": true,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Air Shield",
@@ -745,7 +745,7 @@
     "description": "Applies 2 Force to target ally.<br>Then Shields for 3 for each Force stack.",
     "iconFilename": "Action_air_shield.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Alchemical Blast",
@@ -762,7 +762,7 @@
     "description": "4 x 3 Water/Fire damage against target enemy.<br>Applies 4 Affliction to target enemy and self.",
     "iconFilename": "Action_alchemical_blast.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Alchemical Charge",
@@ -779,7 +779,7 @@
     "description": "3 x 4 Water/Fire damage against target enemy.<br>Purges 2 enemy Aether if target has Burn. Otherwise applies 3 Burn.",
     "iconFilename": "Action_alchemical_charge.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Ball Lightning",
@@ -796,7 +796,7 @@
     "description": "2 x 4 Fire/Wind damage against target enemy.<br>Purges 2 enemy Aether.<br>On Interrupt: Deals 2 damage Hit to all enemies.",
     "iconFilename": "Action_ball_lightning.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Blood Drain",
@@ -812,7 +812,7 @@
     "description": "4 x 4 Water damage against target enemy.<br>Heals self for 3 x 4.",
     "iconFilename": "Action_blood_drain.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Blossoming Strike",
@@ -828,7 +828,7 @@
     "description": "3 x 4 Water/Earth damage against target enemy.<br>Applies 2 Regeneration to all allies.",
     "iconFilename": "Action_blossoming_strike.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Boil",
@@ -843,7 +843,7 @@
     "description": "Generates Wild Aether.<br>Applies Cooking to self.<br>Free Action.",
     "iconFilename": "Action_boil.webp",
     "freeAction": true,
-    "isSupport": true
+    "actionCategory": "Support Action"
   },
   {
     "name": "Bone Chill",
@@ -859,7 +859,7 @@
     "description": "Applies 6 Terror to target enemy.<br>Purges 1 enemy Aether.",
     "iconFilename": "Action_bone_chill.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Bonfire",
@@ -874,7 +874,7 @@
     "description": "Heals all allies for 2 x 4.<br>Applies 2 Burn to all enemies.",
     "iconFilename": "Action_bonfire.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Burn Conversion",
@@ -888,7 +888,7 @@
     "description": "Consumes 2 Burn among enemies as additional cost.<br>Generates Fire/Fire/Fire Aether.<br>Free Action.",
     "iconFilename": "Action_burn_conversion.webp",
     "freeAction": true,
-    "isSupport": true
+    "actionCategory": "Support Action"
   },
   {
     "name": "Burn Wave",
@@ -905,7 +905,7 @@
     "description": "3 x 4 Fire damage against all enemies.<br>Applies 3 Burn to all enemies.",
     "iconFilename": "Action_burn_wave.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Chain Lightning",
@@ -921,7 +921,7 @@
     "description": "2 x 6 Fire/Wind damage against target enemy.<br>On Crit: Additional deals 1 x 8 additional damage to the enemy with the lowest health that didn't receive additional damage this way yet.",
     "iconFilename": "Action_chain_lightning.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Charge Up",
@@ -936,7 +936,7 @@
     "description": "Applies Sidekick to self.<br>Free Action.",
     "iconFilename": "Action_charge_up.webp",
     "freeAction": true,
-    "isSupport": true
+    "actionCategory": "Support Action"
   },
   {
     "name": "Cleansing Flame",
@@ -951,7 +951,7 @@
     "description": "3 x 5 Fire damage against target enemy.<br>Heals all allies with Age for 4 and cleanses 4 debuffs from them.",
     "iconFilename": "Action_cleansing_flame.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Cleansing Rain",
@@ -966,7 +966,7 @@
     "description": "Heals all allies for 2 x 5.<br>Cleanses 4 debuffs from all allies.<br>Cleanses 2 Corruption from all allies on first use each combat.",
     "iconFilename": "Action_cleansing_rain.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Crystal Charge",
@@ -982,7 +982,7 @@
     "description": "3 x 3 Wind/Earth damage against target enemy.<br>If this monster has 3 or fewer Age, applies Age to self. Otherwise deals an additional 2 x 3 damage.",
     "iconFilename": "Action_crystal_charge.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Crystalize",
@@ -997,7 +997,7 @@
     "description": "Applies 2 Regeneration to all allies.<br>Then Shields for 2 for each Regeneration stack on them.",
     "iconFilename": "Action_crystalize.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Deep Breath",
@@ -1012,7 +1012,7 @@
     "description": "Applies Temporary Power to self.<br>Heals self for 4.<br>Cleanses 2 debuffs from self.<br>Free Action.",
     "iconFilename": "Action_deep_breath.webp",
     "freeAction": true,
-    "isSupport": true
+    "actionCategory": "Support Action"
   },
   {
     "name": "Dissolve",
@@ -1027,7 +1027,7 @@
     "description": "Target generates 5 Random Aether.<br>Sacrifices the Minion attached to the target ally with the lowest Essence.<br>Free Action.",
     "iconFilename": "Action_dissolve.webp",
     "freeAction": true,
-    "isSupport": true
+    "actionCategory": "Support Action"
   },
   {
     "name": "Doom Bloom",
@@ -1042,7 +1042,7 @@
     "description": "Applies 3 Terror to target enemy.<br>Free Action.",
     "iconFilename": "Action_doom_bloom.webp",
     "freeAction": true,
-    "isSupport": true
+    "actionCategory": "Support Action"
   },
   {
     "name": "Drift Guard",
@@ -1057,7 +1057,7 @@
     "description": "Shields self for 2 x 6.<br>Applies Redirect to self.",
     "iconFilename": "Action_drift_guard.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Drown",
@@ -1073,7 +1073,7 @@
     "description": "4 x 3 Water damage against target enemy.<br>Purges 2 enemy Aether.",
     "iconFilename": "Action_drown.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Dust Grasp",
@@ -1088,7 +1088,7 @@
     "description": "Applies 3 Weakness to target enemy.<br>Free Action.",
     "iconFilename": "Action_dust_grasp.webp",
     "freeAction": true,
-    "isSupport": true
+    "actionCategory": "Support Action"
   },
   {
     "name": "Dust Strike",
@@ -1104,7 +1104,7 @@
     "description": "3 x 3 Wind/Earth damage against target enemy.<br>On Interrupt: Applies Power to self.<br>Then Shields for 2 for each Power stack.",
     "iconFilename": "Action_dust_strike.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Earth Bolt",
@@ -1118,7 +1118,7 @@
     "description": "1 x 9 Earth damage against target enemy.<br>Consumes all Earth Aether: +4 damage and +1 Poise Damage for each.",
     "iconFilename": "Action_earth_bolt.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Electrical Jolt",
@@ -1134,7 +1134,7 @@
     "description": "Applies 2 Sidekick to self.<br>Applies 2 Temporary Power to all allies.",
     "iconFilename": "Action_electrical_jolt.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Elixir",
@@ -1149,7 +1149,7 @@
     "description": "Heals target ally for 2 x 6.<br>Applies 2 Dodge to target ally.",
     "iconFilename": "Action_elixir.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Ember Dart",
@@ -1164,7 +1164,7 @@
     "description": "2 x 2 Fire damage against target enemy.<br>Free Action.",
     "iconFilename": "Action_ember_dart.webp",
     "freeAction": true,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Energizing Strike",
@@ -1180,7 +1180,7 @@
     "description": "4 x 2 Fire/Wind damage against target enemy.<br>Applies 3 Regeneration to self.<br>Cleanses 4 debuffs from self.",
     "iconFilename": "Action_energizing_strike.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Energy Charm",
@@ -1196,7 +1196,7 @@
     "description": "Heals target ally for 2 x 3.<br>Target generates 1 Random Aether.<br>Free Action.",
     "iconFilename": "Action_energy_charm.webp",
     "freeAction": true,
-    "isSupport": false
+    "actionCategory": "Support Action"
   },
   {
     "name": "Energy Rush",
@@ -1213,7 +1213,7 @@
     "description": "4 x 3 Fire/Wind damage against target enemy.<br>On Interrupt: Applies 2 Sidekick to self.",
     "iconFilename": "Action_energy_rush.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Envenom",
@@ -1229,7 +1229,7 @@
     "description": "3 x 4 Earth damage against target enemy.<br>Applies 8 Poison to target enemy.",
     "iconFilename": "Action_envenom.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Eon Shield",
@@ -1246,7 +1246,7 @@
     "description": "Shields all allies for 2 x 6.<br>Applies Age to all allies with Age.",
     "iconFilename": "Action_eon_shield.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Explosive Burst",
@@ -1261,7 +1261,7 @@
     "description": "2 x 5 Water/Fire damage against target enemy.<br>+15% Crit Chance,<br>Critical hits Purge 1 enemy Aether.",
     "iconFilename": "Action_explosive_burst.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Explosive Exhale",
@@ -1276,7 +1276,7 @@
     "description": "Applies 2 Regeneration to self.<br>Then consume all Regeneration stacks to deal 6 damage to target enemy for every stack consumed.",
     "iconFilename": "Action_explosive_exhale.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Explosive Rush",
@@ -1292,7 +1292,7 @@
     "description": "4 x 5 Water/Fire damage against target enemy.<br>Deals 5 damage hit to self.",
     "iconFilename": "Action_explosive_rush.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Fire Blast",
@@ -1308,7 +1308,7 @@
     "description": "4 x 4 Fire damage against target enemy.<br>+25% Crit Chance.",
     "iconFilename": "Action_fire_blast.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Fire Bolt",
@@ -1322,7 +1322,7 @@
     "description": "1 x 9 Fire damage against target enemy.<br>Consumes all Fire Aether: +4 damage and +1 Poise Damage for each.",
     "iconFilename": "Action_fire_bolt.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Fire Charm",
@@ -1337,7 +1337,7 @@
     "description": "Applies 2 Regeneration to target ally.<br>Target generates 1 Random Aether.<br>Free Action.",
     "iconFilename": "Action_fire_charm.webp",
     "freeAction": true,
-    "isSupport": true
+    "actionCategory": "Support Action"
   },
   {
     "name": "Flame Skewer",
@@ -1353,7 +1353,7 @@
     "description": "1 x 25 Fire damage against target enemy.<br>+5 damage for every stack of Force. Deals 5 additional damage if the target has a Shield.",
     "iconFilename": "Action_flame_skewer.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Flash Burn",
@@ -1368,7 +1368,7 @@
     "description": "Applies 3 Burn to target enemy.<br>Free Action.",
     "iconFilename": "Action_flash_burn.webp",
     "freeAction": true,
-    "isSupport": true
+    "actionCategory": "Support Action"
   },
   {
     "name": "Flash Guard",
@@ -1383,7 +1383,7 @@
     "description": "Applies Redirect to self.<br>Free Action.",
     "iconFilename": "Action_flash_guard.webp",
     "freeAction": true,
-    "isSupport": true
+    "actionCategory": "Support Action"
   },
   {
     "name": "Foreboding Rain",
@@ -1398,7 +1398,7 @@
     "description": "Heals all allies for 2 x 5.<br>Applies 2 Terror to all enemies.",
     "iconFilename": "Action_foreboding_rain.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Fortify",
@@ -1413,7 +1413,7 @@
     "description": "Heals target ally for 2 x 2.<br>Applies 2 Essence to Minions attached to target ally.<br>Free Action.",
     "iconFilename": "Action_fortify.webp",
     "freeAction": true,
-    "isSupport": false
+    "actionCategory": "Support Action"
   },
   {
     "name": "Frightful Lightning",
@@ -1429,7 +1429,7 @@
     "description": "3 x 3 Fire/Wind damage against target enemy.<br>Applies 3 Terror to all other enemies.",
     "iconFilename": "Action_frightful_lightning.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Gem Chaos",
@@ -1445,7 +1445,7 @@
     "description": "2 x 4 Wind/Earth damage against all enemies.<br>Applies 3 Affliction to all monsters.",
     "iconFilename": "Action_gem_chaos.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Gemstone Healing",
@@ -1461,7 +1461,7 @@
     "description": "Heals target ally for 4 x 7.<br>Permanently increases their Max Health by 3 when used for the first time each combat.",
     "iconFilename": "Action_gemstone_healing.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Generate Force",
@@ -1477,7 +1477,7 @@
     "description": "Applies 2 Force to self.<br>Free Action.",
     "iconFilename": "Action_generate_force.webp",
     "freeAction": true,
-    "isSupport": true
+    "actionCategory": "Support Action"
   },
   {
     "name": "Glacier Shield",
@@ -1493,7 +1493,7 @@
     "description": "Shields self for 2 x 4.<br>Deals damage to target enemy equal to the amount of Shield on this monster.",
     "iconFilename": "Action_glacier_shield.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Hail Storm",
@@ -1510,7 +1510,7 @@
     "description": "2 x 2 Water/Wind damage against all enemies.<br>Applies 2 Terror to all enemies.",
     "iconFilename": "Action_hail_storm.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Healing Brew",
@@ -1526,7 +1526,7 @@
     "description": "Heals all allies for 2 x 5.<br>Generates Water/Fire/Wind/Earth Aether.",
     "iconFilename": "Action_healing_brew.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Healing Dust",
@@ -1542,7 +1542,7 @@
     "description": "Applies 4 Weakness to target enemy.<br>Heals all allies for 2 x 6.",
     "iconFilename": "Action_healing_dust.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Hellfire Bolt",
@@ -1558,7 +1558,7 @@
     "description": "1 x 15 Fire/Earth damage against target enemy.<br>+1 Poise Damage for every Terror stack on the enemy.",
     "iconFilename": "Action_hellfire_bolt.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Hibernation",
@@ -1573,7 +1573,7 @@
     "description": "Heals target ally for 3 x 5.<br>Cleanses 3 debuffs from target. Then, if it has no debuffs, applies Age to it.",
     "iconFilename": "Action_hibernation.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Ice Spears",
@@ -1590,7 +1590,7 @@
     "description": "2 x 4 Water/Wind damage against all enemies.<br>Critical Hits deal 4 additional damage.",
     "iconFilename": "Action_ice_spears.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Icy Assault",
@@ -1606,7 +1606,7 @@
     "description": "5 x 3 Water/Wind damage against target enemy.",
     "iconFilename": "Action_icy_assault.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Immersion",
@@ -1621,7 +1621,7 @@
     "description": "Applies 3 Regeneration to target ally.<br>Then trigger all Regeneration stacks on them at once.",
     "iconFilename": "Action_immersion.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Jewel Charm",
@@ -1637,7 +1637,7 @@
     "description": "Heals all allies for 5.<br>Shields all allies for 3.<br>Free Action.",
     "iconFilename": "Action_jewel_charm.webp",
     "freeAction": true,
-    "isSupport": true
+    "actionCategory": "Support Action"
   },
   {
     "name": "Jewel Cutter",
@@ -1653,7 +1653,7 @@
     "description": "4 x 2 Wind/Earth damage against target enemy.<br>Critical Hits deal 4 additional damage.",
     "iconFilename": "Action_jewel_cutter.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Lava Bolt",
@@ -1668,7 +1668,7 @@
     "description": "1 x 13 Fire/Earth damage against target enemy.<br>Consumes all Fire Aether: +1 Poise Damage and applies 2 Burn for each.",
     "iconFilename": "Action_lava_bolt.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Lava Surge",
@@ -1685,7 +1685,7 @@
     "description": "2 x 4 Fire/Earth damage against all enemies.<br>On Interrupt: Applies Power to self.",
     "iconFilename": "Action_lava_surge.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Lava Tide",
@@ -1701,7 +1701,7 @@
     "description": "2 x 2 Fire/Earth damage against all enemies.<br>Purges 1 enemy Aether.<br>On Interrupt: Generates 1 Random Aether.",
     "iconFilename": "Action_lava_tide.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Leech Soup",
@@ -1717,7 +1717,7 @@
     "description": "3 x 5 Water/Earth damage against target enemy.<br>Consume all Cooking stacks to apply 2 Regeneration to all allies for each consumed stack.",
     "iconFilename": "Action_leech_soup.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Lightning Shield",
@@ -1734,7 +1734,7 @@
     "description": "Shields all allies for 5.<br>Deals damage to all enemies equal to the amount of Shield on this monster.",
     "iconFilename": "Action_lightning_shield.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Moisturize",
@@ -1748,7 +1748,7 @@
     "description": "Applies Age to self if it has 3 or fewer Age stacks.<br>Then Shields for 1 for each Age stack.<br>Free Action.",
     "iconFilename": "Action_moisturize.webp",
     "freeAction": true,
-    "isSupport": true
+    "actionCategory": "Support Action"
   },
   {
     "name": "Mud Fist",
@@ -1765,7 +1765,7 @@
     "description": "1 x 20 Water/Earth damage against target enemy.<br>+6 damage and +1 Poise Damage for every Regeneration stack.",
     "iconFilename": "Action_mud_fist.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Mud Fling",
@@ -1781,7 +1781,7 @@
     "description": "Purges 2 enemy Aether.<br>Heals all allies for 5.<br>On Interrupt: Applies Temporary Power to all allies.",
     "iconFilename": "Action_mud_fling.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Mud Tide",
@@ -1798,7 +1798,7 @@
     "description": "2 x 5 Water/Earth damage against all enemies.<br>Heals all allies with Age for 2 x 6.",
     "iconFilename": "Action_mud_tide.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Natural Cure",
@@ -1813,7 +1813,7 @@
     "description": "Heals target ally for 3 x 6.<br>Cleanses 4 debuffs from target ally.<br>Cleanses 4 Corruption from target ally on first use each combat.",
     "iconFilename": "Action_natural_cure.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Nature Guard",
@@ -1828,7 +1828,7 @@
     "description": "Heals all allies for 2 x 6.<br>Applies Redirect to self.<br>Permanently increases Max Health by 2 when used for the first time each combat.",
     "iconFilename": "Action_nature_guard.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Overheated Smash",
@@ -1844,7 +1844,7 @@
     "description": "4 x 4 Fire damage against target enemy.<br>On Interrupt: Applies Power to self.",
     "iconFilename": "Action_overheated_smash.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Petal Burst",
@@ -1859,7 +1859,7 @@
     "description": "3 x 2 Water/Earth damage against target enemy.<br>Deal an additional 2 x 2 damage if the enemy has Weakness.",
     "iconFilename": "Action_petal_burst.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Petal Cleanse",
@@ -1874,7 +1874,7 @@
     "description": "Cleanses 3 debuffs from all allies.<br>Cleanses 1 Corruption from all allies on first use each combat.<br>Free Action.",
     "iconFilename": "Action_petal_cleanse.webp",
     "freeAction": true,
-    "isSupport": true
+    "actionCategory": "Support Action"
   },
   {
     "name": "Petal Shield",
@@ -1889,7 +1889,7 @@
     "description": "Shields target ally for 2 x 4.<br>Applies Force to target ally.<br>Cleanses 3 debuffs from target ally.",
     "iconFilename": "Action_petal_shield.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Petal Spell",
@@ -1904,7 +1904,7 @@
     "description": "2 x 3 Water/Earth damage against target enemy.<br>Cleanses 2 debuffs from self.<br>Applies Sidekick to self.",
     "iconFilename": "Action_petal_spell.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Polar Wind",
@@ -1920,7 +1920,7 @@
     "description": "2 x 7 Water/Wind damage against target enemy.<br>Applies Force to all allies.",
     "iconFilename": "Action_polar_wind.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Pollen Blast",
@@ -1936,7 +1936,7 @@
     "description": "4 x 3 Earth damage against target enemy.<br>Applies 4 Weakness to target enemy.",
     "iconFilename": "Action_pollen_blast.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Pollen Shield",
@@ -1951,7 +1951,7 @@
     "description": "Shields target ally for 2 x 5.<br>Applies 2 Weakness to all enemies.",
     "iconFilename": "Action_pollen_shield.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Power Brand",
@@ -1967,7 +1967,7 @@
     "description": "Heals target ally for 3 x 5.<br>Applies 3 Temporary Power to target ally.",
     "iconFilename": "Action_power_brand.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Precision Meteor",
@@ -1983,7 +1983,7 @@
     "description": "1 x 15 Fire/Earth damage against target enemy.<br>On first Hit Crit: +2 Poise Damage.",
     "iconFilename": "Action_precision_meteor.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Rain of Life",
@@ -1999,7 +1999,7 @@
     "description": "Heals all allies for 4 x 5.<br>Applies 2 Regeneration to all allies.",
     "iconFilename": "Action_rain_of_life.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Reactive Trap",
@@ -2015,7 +2015,7 @@
     "description": "Shields target ally for 2 x 6.<br>Retaliate: Generates 1 Random Aether and cleanses 3 debuffs from this monster.",
     "iconFilename": "Action_reactive_trap.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Reflective Strike",
@@ -2031,7 +2031,7 @@
     "description": "4 x 2 Wind/Earth damage against target enemy.<br>Applies Redirect to self.",
     "iconFilename": "Action_reflective_strike.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Reflective Trap",
@@ -2047,7 +2047,7 @@
     "description": "Applies 2 Dodge to target ally.<br>Retaliate: Triggers 2 x 5 Earth/Wind damage Attack against the enemy.",
     "iconFilename": "Action_reflective_trap.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Regeneration Bloom",
@@ -2062,7 +2062,7 @@
     "description": "Applies Regeneration to all allies.<br>Free Action.",
     "iconFilename": "Action_regeneration_bloom.webp",
     "freeAction": true,
-    "isSupport": true
+    "actionCategory": "Support Action"
   },
   {
     "name": "Slime Shot",
@@ -2077,7 +2077,7 @@
     "description": "3 x 3 Water/Earth damage against target enemy.<br>Applies 3 Poison to target enemy and self.<br>Generates 1 Random Aether.",
     "iconFilename": "Action_slime_shot.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Slime Volley",
@@ -2094,7 +2094,7 @@
     "description": "3 x 3 Water/Earth damage against all enemies.<br>Applies 3 Poison to all enemies and self.<br>Generates 1 Random Aether",
     "iconFilename": "Action_slime_volley.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Smog",
@@ -2108,7 +2108,7 @@
     "description": "Applies 2 Poison to all monsters.<br>Free Action.",
     "iconFilename": "Action_smog.webp",
     "freeAction": true,
-    "isSupport": true
+    "actionCategory": "Support Action"
   },
   {
     "name": "Snow Charm",
@@ -2124,7 +2124,7 @@
     "description": "Heals target ally for 2 x 3.<br>Shields target ally for 2 x 3.<br>Free Action.",
     "iconFilename": "Action_snow_charm.webp",
     "freeAction": true,
-    "isSupport": false
+    "actionCategory": "Support Action"
   },
   {
     "name": "Snowy Embrace",
@@ -2140,7 +2140,7 @@
     "description": "Shields all allies for 2 x 4.<br>Heals all allies with a debuff for 2 x 4.",
     "iconFilename": "Action_snowy_embrace.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Solar Wind",
@@ -2157,7 +2157,7 @@
     "description": "2 x 4 Fire/Wind damage against all enemies.<br>On Interrupt: Applies Dodge to all allies.",
     "iconFilename": "Action_solar_wind.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Sound Wave",
@@ -2173,7 +2173,7 @@
     "description": "2 x 4 Wind damage against all enemies.<br>Applies 2 Weakness to all enemies.",
     "iconFilename": "Action_sound_wave.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Speed of Sound",
@@ -2189,7 +2189,7 @@
     "description": "4 x 3 Wind damage against target enemy.<br>Applies 2 Dodge to self.",
     "iconFilename": "Action_speed_of_sound.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Stardust",
@@ -2204,7 +2204,7 @@
     "description": "If this Monster has 3 or fewer Age stacks, applies Age on it. Otherwise generates Wild/Wild Aether.<br>Free Action.",
     "iconFilename": "Action_stardust.webp",
     "freeAction": true,
-    "isSupport": true
+    "actionCategory": "Support Action"
   },
   {
     "name": "Stealing Dust",
@@ -2219,7 +2219,7 @@
     "description": "Steals 1 enemy Aether.<br>Free Action.",
     "iconFilename": "Action_stealing_dust.webp",
     "freeAction": true,
-    "isSupport": true
+    "actionCategory": "Support Action"
   },
   {
     "name": "Stone Edge",
@@ -2235,7 +2235,7 @@
     "description": "3 x 8 Earth damage against target enemy.<br>First Hit is a Critical Hit.",
     "iconFilename": "Action_stone_edge.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Stone Fist",
@@ -2251,7 +2251,7 @@
     "description": "Shields self for 2 x 3.<br>1 x 14 Earth damage against target enemy. Deals additional damage equal to the amount of Shield on this monster.",
     "iconFilename": "Action_stone_fist.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Summon Earth Lance",
@@ -2266,7 +2266,7 @@
     "description": "Summons Minion: Earth Lance with 4 Essence on target ally.<br>Earth Lance: Earth Damage +1.<br>Action: 1 x 5 Earth damage against target enemy.",
     "iconFilename": "Action_summon_earth_lance.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Summon Earth Totem",
@@ -2281,7 +2281,7 @@
     "description": "Summons Minion: Earth Totem with 5 Essence on target ally.<br>Earth Totem:<br>Action: Shields self for 4.<br>Generates Earth Aether.",
     "iconFilename": "Action_summon_earth_totem.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Summon Fire Lance",
@@ -2296,7 +2296,7 @@
     "description": "Summons Minion: Fire Lance with 4 Essence on target ally.<br>Fire Lance: Fire Damage +1.<br>Action: 1 x 5 Fire damage against target enemy.",
     "iconFilename": "Action_summon_fire_lance.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Summon Fire Totem",
@@ -2311,7 +2311,7 @@
     "description": "Summons Minion: Fire Totem with 5 Essence on target ally.<br>Fire Totem:<br>Action: Shields self for 4.<br>Generates Fire Aether.",
     "iconFilename": "Action_summon_fire_totem.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Summon Water Lance",
@@ -2326,7 +2326,7 @@
     "description": "Summons Minion: Water Lance with 4 Essence on target ally.<br>Water Lance: Water Damage +1.<br>Action: 1 x 5 Water damage against target enemy.",
     "iconFilename": "Action_summon_water_lance.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Summon Water Totem",
@@ -2341,7 +2341,7 @@
     "description": "Summons Minion: Water Totem with 5 Essence on target ally.<br>Water Totem:<br>Action: Shields self for 4.<br>Generates Water Aether.",
     "iconFilename": "Action_summon_water_totem.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Summon Wind Lance",
@@ -2356,7 +2356,7 @@
     "description": "Summons Minion: Wind Lance with 4 Essence on target ally.<br>Wind Lance: Wind Damage +1.<br>Action: 1 x 5 Wind damage against target enemy.",
     "iconFilename": "Action_summon_wind_lance.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Summon Wind Totem",
@@ -2371,7 +2371,7 @@
     "description": "Summons Minion: Wind Totem with 5 Essence on target ally.<br>Wind Totem:<br>Action: Shields self for 4.<br>Generates Wind Aether.",
     "iconFilename": "Action_summon_wind_totem.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Temporal Borealis",
@@ -2386,7 +2386,7 @@
     "description": "Applies Sidekick to self. Reactivates target ally.",
     "iconFilename": "Action_temporal_borealis.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Thorn of Ages",
@@ -2401,7 +2401,7 @@
     "description": "1 x 5 Water/Earth damage against target enemy.<br>+3 damage and +1 Poise Damage for every Age stack.",
     "iconFilename": "Action_thorn_of_ages.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Thorns",
@@ -2416,7 +2416,7 @@
     "description": "Retaliate: Triggers a 2 x 4 Earth/Water damage Attack against the enemy.<br>Free Action.",
     "iconFilename": "Action_thorns.webp",
     "freeAction": true,
-    "isSupport": false
+    "actionCategory": "Support Action"
   },
   {
     "name": "Torment Eruption",
@@ -2432,7 +2432,7 @@
     "description": "2 x 3 Fire/Earth damage against target enemy.<br>Deals an additional 0 damage hit. <i>(3 for each Debuff stack on this monster)</i>",
     "iconFilename": "Action_torment_eruption.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Torment Flux",
@@ -2448,7 +2448,7 @@
     "description": "Cleanses up to 6 debuff stacks from this Monster to deal 5 damage to target enemy for every stack cleansed.",
     "iconFilename": "Action_torment_flux.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Toxic Eruption",
@@ -2463,7 +2463,7 @@
     "description": "2 x 2 Fire/Earth damage against target enemy.<br>Deals an additional X damage hit. <i>(2 for each Poison stack on the enemy)</i>",
     "iconFilename": "Action_toxic_eruption.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Toxic Healing",
@@ -2479,7 +2479,7 @@
     "description": "Heals target ally for 3 x 6.<br>Applies 3 Poison to all enemies.<br>Triggers Poison on all enemies",
     "iconFilename": "Action_toxic_healing.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Transmutation",
@@ -2494,7 +2494,7 @@
     "description": "Consumes 1 Power on target ally as additional cost.<br>Generates Wild/Wild/Wild Aether.<br>Free Action.",
     "iconFilename": "Action_transmutation.webp",
     "freeAction": true,
-    "isSupport": true
+    "actionCategory": "Support Action"
   },
   {
     "name": "Vampiric Seed",
@@ -2509,7 +2509,7 @@
     "description": "3 x 2 Water/Earth damage against target enemy.<br>Heals all allies for 2 x 4.",
     "iconFilename": "Action_vampiric_seed.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Viral Bloom",
@@ -2524,7 +2524,7 @@
     "description": "Triggers Poison on all monsters.<br>Free Action.",
     "iconFilename": "Action_viral_bloom.webp",
     "freeAction": true,
-    "isSupport": true
+    "actionCategory": "Support Action"
   },
   {
     "name": "Volcanic Essence",
@@ -2540,7 +2540,7 @@
     "description": "Heals all allies for 3 x 7.<br>Then, if all allies have full health: Applies Power to self.",
     "iconFilename": "Action_volcanic_essence.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Volcanic Growth",
@@ -2555,7 +2555,7 @@
     "description": "Consumes 1 Weakness among enemies as additional cost.<br>Applies Power to target ally.<br>Free Action.",
     "iconFilename": "Action_volcanic_growth.webp",
     "freeAction": true,
-    "isSupport": true
+    "actionCategory": "Support Action"
   },
   {
     "name": "Volcanic Guard",
@@ -2571,7 +2571,7 @@
     "description": "Shields self for 2 x 6.<br>Applies Redirect to self.<br>Retaliate: Triggers a 2 x 5 Earth/Fire damage Attack against the enemy.",
     "iconFilename": "Action_volcanic_guard.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Water Bolt",
@@ -2585,7 +2585,7 @@
     "description": "1 x 9 Water damage against target enemy.<br>Consumes all Water Aether: +4 damage and +1 Poise Damage for each.",
     "iconFilename": "Action_water_bolt.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Water Charm",
@@ -2599,7 +2599,7 @@
     "description": "Heals target ally for 2 x 4.<br>Free Action.",
     "iconFilename": "Action_water_charm.webp",
     "freeAction": true,
-    "isSupport": false
+    "actionCategory": "Support Action"
   },
   {
     "name": "Whirlpool",
@@ -2615,7 +2615,7 @@
     "description": "4 x 4 Water damage against target enemy.<br>On Interrupt: Applies 2 Age to self.",
     "iconFilename": "Action_whirlpool.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Wild Ritual",
@@ -2632,7 +2632,7 @@
     "description": "Generates Wild/Wild/Wild Aether.<br>Applies Power to self.",
     "iconFilename": "Action_wild_ritual.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Wind Bolt",
@@ -2646,7 +2646,7 @@
     "description": "1 x 9 Wind damage against target enemy.<br>Consumes all Wind Aether: +4 damage and +1 Poise Damage for each.",
     "iconFilename": "Action_wind_bolt.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Wind Charm",
@@ -2660,7 +2660,7 @@
     "description": "Applies Dodge to target ally.<br>Free Action.",
     "iconFilename": "Action_wind_charm.webp",
     "freeAction": true,
-    "isSupport": true
+    "actionCategory": "Support Action"
   },
   {
     "name": "Wind Heist",
@@ -2676,7 +2676,7 @@
     "description": "3 x 3 Wind damage against target enemy.<br>Steals 2 enemy Aether.",
     "iconFilename": "Action_wind_heist.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Windfall",
@@ -2691,7 +2691,7 @@
     "description": "Heals all allies for 2 x 6.<br>Additionally heals each ally that doesn't have full health for 1 x 6.",
     "iconFilename": "Action_windfall.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Winter Guard",
@@ -2707,7 +2707,7 @@
     "description": "Shields all allies for 3 x 3.<br>Cleanses 3 debuffs from all allies.<br>Applies Redirect to self.",
     "iconFilename": "Action_winter_guard.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Ancient Blast",
@@ -2726,7 +2726,7 @@
     "description": "4 x 5 Water/Fire damage against target enemy.<br>Deals an additional 5 damage Hit for every 3 Age stacks.",
     "iconFilename": "Action_ancient_blast.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Charge Beam",
@@ -2745,7 +2745,7 @@
     "description": "2 x 8 Fire/Wind damage against target enemy.<br>Applies 2 Force to all allies.<br>Applies 2 Temporary Power to all allies.",
     "iconFilename": "Action_charge_beam.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Chilling Trap",
@@ -2762,7 +2762,7 @@
     "description": "Applies 2 Dodge to target ally.<br>Retaliate: Applies 5 Terror to the enemy.",
     "iconFilename": "Action_chilling_trap.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Comet Rush",
@@ -2781,7 +2781,7 @@
     "description": "3 x 7 Fire/Earth damage against target enemy.<br>Applies Sidekick to self.<br>On Interrupt: Applies Power to all allies.",
     "iconFilename": "Action_comet_rush.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Cutting Wind",
@@ -2797,7 +2797,7 @@
     "description": "1 x 1 Wind damage against all enemies.<br>+25% Crit Chance.<br>Free Action.",
     "iconFilename": "Action_cutting_wind.webp",
     "freeAction": true,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Diamond Charm",
@@ -2813,7 +2813,7 @@
     "description": "Shields target ally for 3 x 3.<br>Free Action.",
     "iconFilename": "Action_diamond_charm.webp",
     "freeAction": true,
-    "isSupport": false
+    "actionCategory": "Support Action"
   },
   {
     "name": "Diamond Shield",
@@ -2831,7 +2831,7 @@
     "description": "Shields target ally for 2 x 5.<br>Shields all allies for 3.<br>Applies 3 Force to allies.",
     "iconFilename": "Action_diamond_shield.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Earth Ritual",
@@ -2846,7 +2846,7 @@
     "description": "Applies 5 Poison to target enemy.<br>Generates Earth/Earth/Earth Aether.",
     "iconFilename": "Action_earth_ritual.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Epic Broth",
@@ -2863,7 +2863,7 @@
     "description": "Applies Force to target ally. Reactivates that ally. Applies 2 Cooking to self.",
     "iconFilename": "Action_epic_broth.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Fire Ritual",
@@ -2878,7 +2878,7 @@
     "description": "Purges 2 enemy Aether.<br>Generates Fire/Fire/Fire Aether.",
     "iconFilename": "Action_fire_ritual.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Fire Storm",
@@ -2895,7 +2895,7 @@
     "description": "2 x 3 Fire damage against all enemies.<br>+25% Crit Chance.<br>On Crit: Triggers Burn on target enemy.",
     "iconFilename": "Action_fire_storm.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Force Of Flowers",
@@ -2912,7 +2912,7 @@
     "description": "Heals all allies for 2 x 7.<br>Applies 2 Force to all allies.<br>Cleanse 2 Corruption from all allies on first use each combat,",
     "iconFilename": "Action_force_of_flowers.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Forever Soup",
@@ -2930,7 +2930,7 @@
     "description": "4 x 4 Water/Fire damage against target enemy.<br>Consume all Cooking stacks to apply 1 Age to all allies with Age for each consumed stack.",
     "iconFilename": "Action_forever_soup.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Gas Burner",
@@ -2949,7 +2949,7 @@
     "description": "4 x 4 Fire/Earth damage against target enemy.<br>Applies 1 Burn for every 4 debuff stacks among all monsters in combat.",
     "iconFilename": "Action_gas_burner.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Gemstone Crash",
@@ -2967,7 +2967,7 @@
     "description": "5 x 3 Wind/Earth damage against target enemy.<br>Deals 5 damage Hit to self.<br>Purges 2 enemy Aether.",
     "iconFilename": "Action_gemstone_crash.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Gemstone Fist",
@@ -2985,7 +2985,7 @@
     "description": "Shields self for 2 x 2. Applies additional Shield equal to the remaining Aether.<br>Deals damage to target enemy equal to the amount of Shield on this monster.",
     "iconFilename": "Action_gemstone_fist.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Glacier Smash",
@@ -3004,7 +3004,7 @@
     "description": "4 x 5 Water/Wind damage against target enemy.<br>Applies Age to self.<br>Shields all allies with Age for 5.",
     "iconFilename": "Action_glacier_smash.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Glimmer",
@@ -3020,7 +3020,7 @@
     "description": "Applies 2 Dodge to target ally.<br>Target generates 2 Random Aether.",
     "iconFilename": "Action_glimmer.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Hex Shock",
@@ -3036,7 +3036,7 @@
     "description": "Consumes 2 Weakness among enemies as additional cost.<br>Purges 2 enemy Aether.<br>Free Action.",
     "iconFilename": "Action_hex_shock.webp",
     "freeAction": true,
-    "isSupport": true
+    "actionCategory": "Support Action"
   },
   {
     "name": "Icy Purge",
@@ -3053,7 +3053,7 @@
     "description": "3 x 3 Water/Wind damage against target enemy.<br>Purges 1 enemy Aether.<br>On Interrupt: Shields all allies for 4.",
     "iconFilename": "Action_icy_purge.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Lava Fling",
@@ -3070,7 +3070,7 @@
     "description": "Purges 2 enemy Aether.<br>On Interrupt: Applies 3 Burn to all enemies.",
     "iconFilename": "Action_lava_fling.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Lava Soup",
@@ -3087,7 +3087,7 @@
     "description": "3 x 5 Fire/Earth damage against target enemy.<br>Consume all Cooking stacks to apply 1 Weakness &amp; 3 Burn to target enemy for each consumed stack.",
     "iconFilename": "Action_lava_soup.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Leaves in the Wind",
@@ -3105,7 +3105,7 @@
     "description": "Applies 3 Sidekick to self.<br>Applies Dodge to all allies.<br>Cleanses 3 Corruption from all allies on first use each combat.",
     "iconFilename": "Action_leaves_in_the_wind.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Lightning Bolt Trap",
@@ -3122,7 +3122,7 @@
     "description": "Applies Dodge &amp; 2 Force to target ally.<br>Retaliate: Deals 1 x 10 Fire/Wind damage attack against the enemy.",
     "iconFilename": "Action_lightning_bolt_trap.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Lightning Chaos",
@@ -3141,7 +3141,7 @@
     "description": "2 x 5 Fire/Wind damage against all enemies.<br>+15% Crit Chance.<br>Critical hits Purge 1 enemy Aether.",
     "iconFilename": "Action_lightning_chaos.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Lightning Charge",
@@ -3159,7 +3159,7 @@
     "description": "3 x 4 Fire/Wind damage against target enemy.<br>If target enemy has Burn: Applies Dodge to all allies. Otherwise applies 3 Burn.",
     "iconFilename": "Action_lightning_charge.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Meteor Charm",
@@ -3175,7 +3175,7 @@
     "description": "Applies Temporary Power to target ally.<br>Then Shields for 2 for each Power stack.<br>Free Action.",
     "iconFilename": "Action_meteor_charm.webp",
     "freeAction": true,
-    "isSupport": true
+    "actionCategory": "Support Action"
   },
   {
     "name": "Overslime",
@@ -3194,7 +3194,7 @@
     "description": "3 x 5 Water/Earth damage against target enemy.<br>For every 3 debuff stacks on this Monster, trigger Poison on the enemy. <i>Up to 3 times.</i>",
     "iconFilename": "Action_overslime.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Petal Storm",
@@ -3212,7 +3212,7 @@
     "description": "2 x 5 Water/Earth damage against all enemies.<br>Applies 1 Weakness to all enemies.<br>Applies 2 Regeneration to all allies.",
     "iconFilename": "Action_petal_storm.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Pheromone Trap",
@@ -3229,7 +3229,7 @@
     "description": "Applies 3 Weakness to target enemy.<br>Retaliate: Triggers a 2 x 6 Earth/Water damage Attack against the enemy and applies 1 Weakness to them.",
     "iconFilename": "Action_pheromone_trap.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Poison Wave",
@@ -3246,7 +3246,7 @@
     "description": "2 x 3 Earth damage against all enemies.<br>Applies 2 Poison &amp; 1 Weakness to all enemies.",
     "iconFilename": "Action_poison_wave.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Poisoned Soup",
@@ -3263,7 +3263,7 @@
     "description": "3 x 5 Fire/Earth damage against target enemy.<br>Consume all Cooking stacks to apply 3 Poison and 2 Burn to target enemy for each consumed stack.",
     "iconFilename": "Action_poisoned_soup.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Reactive Shield",
@@ -3280,7 +3280,7 @@
     "description": "Shields target ally for 2 x 7.<br>Retaliate: Applies 4 Affliction to the enemy and 2 Affliction to this monster.",
     "iconFilename": "Action_reactive_shield.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Reactive Storm",
@@ -3299,7 +3299,7 @@
     "description": "3 x 3 Water/Fire damage against all enemies.<br>+15% Crit Chance.<br>On Crit: Triggers Regeneration on Lowest health ally.",
     "iconFilename": "Action_reactive_storm.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Regrow",
@@ -3314,7 +3314,7 @@
     "description": "Applies Regeneration to self.<br>Applies Temporary Power to self.<br>Cleanses 2 debuffs from self.<br>Free Action.",
     "iconFilename": "Action_regrow.webp",
     "freeAction": true,
-    "isSupport": true
+    "actionCategory": "Support Action"
   },
   {
     "name": "Snow Mark",
@@ -3331,7 +3331,7 @@
     "description": "Heals target ally for 2 x 7.<br>Shields target ally for 2 x 5.<br>Applies Redirect to target ally.",
     "iconFilename": "Action_snow_mark.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Snow Support",
@@ -3348,7 +3348,7 @@
     "description": "Heals all allies for 2 x 6.<br>Cleanses 2 debuffs from all allies.<br>Applies 2 Sidekick to self.",
     "iconFilename": "Action_snow_support.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Solar Ray",
@@ -3366,7 +3366,7 @@
     "description": "4 x 6 Fire/Wind damage against target enemy.<br>Applies 4 Burn &amp; 3 Weakness to target enemy.",
     "iconFilename": "Action_solar_ray.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Stoke the Fire",
@@ -3382,7 +3382,7 @@
     "description": "3 x 3 Fire damage against target enemy.<br>Generates Fire Aether for each Burn stack on the target. <i>(Up to 5.)</i>",
     "iconFilename": "Action_stoke_the_fire.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Stolen Gemstone",
@@ -3399,7 +3399,7 @@
     "description": "Steals 2 enemy Aether.<br>Applies 2 Sidekick to self.",
     "iconFilename": "Action_stolen_gemstone.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Summon Faun",
@@ -3417,7 +3417,7 @@
     "description": "Summons Minion: Faun with 5 Essence on target ally.<br>Faun: Health +5<br>Action: Heals self for 3 x 2.<br>Then deals Earth/Water damage to target enemy equal to 10% of the attached monster's current health, rounded up.",
     "iconFilename": "Action_summon_faun.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Summon Impundulu",
@@ -3435,7 +3435,7 @@
     "description": "Summons Minion: Impundulu with 5 Essence on target ally.<br>Impundulu: Sidekick Damage +1.<br>Action: 2 x 3 Wind/Fire damage against target enemy.<br>On Interrupt: Applies 1 Essence to self.",
     "iconFilename": "Action_summon_impundulu.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Summon Kami",
@@ -3453,7 +3453,7 @@
     "description": "Summons Minion: Kami with 5 Essence on target ally.<br>Kami: Aether +1<br>Action: 1 x 1 Wild damage against target enemy.<br>Deals additional damage for each Aether of any element.",
     "iconFilename": "Action_summon_kami.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Summon Salamander",
@@ -3471,7 +3471,7 @@
     "description": "Summons Minion: Salamander with 5 Essence on target ally.<br>Salamander: Burn Damage +1.<br>Action: 1 x 5 Earth/Fire damage against target enemy.<br>Triggers Burn on target enemy.",
     "iconFilename": "Action_summon_salamander.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Summon Wisp",
@@ -3489,7 +3489,7 @@
     "description": "Summons Minion: Wisp with 5 Essence on target ally.<br>Wisp: Shield Generator +2.<br>Action: 1 x 5 Fire/Water damage against target enemy.<br>+1 damage for every stack of Age.",
     "iconFilename": "Action_summon_wisp.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Summon Yokai",
@@ -3507,7 +3507,7 @@
     "description": "Summons Minion: Yokai with 5 Essence on target ally.<br>Yokai: Evasion +15%.<br>Action: 1 x 5 Earth/Wind damage against target enemy.<br>Applies 2 Weakness to target enemy.",
     "iconFilename": "Action_summon_yokai.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Torment Nexus",
@@ -3523,7 +3523,7 @@
     "description": "Transfers the Terror stacks of all allies and enemies onto target enemy.<br><i>Transferring triggers Cleansing effects.</i>",
     "iconFilename": "Action_torment_nexus.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Toxic Sprawl",
@@ -3540,7 +3540,7 @@
     "description": "2 x 5 Water/Earth damage against target enemy.<br>Applies X Poison to target enemy. (1 for each Regeneration stack consumed by allies in this combat)",
     "iconFilename": "Action_toxic_sprawl.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Unstable Charm",
@@ -3556,7 +3556,7 @@
     "description": "Applies 2 Force to target ally.<br>1 x 4 Water/Fire damage against target ally.<br>Free Action.",
     "iconFilename": "Action_unstable_charm.webp",
     "freeAction": true,
-    "isSupport": false
+    "actionCategory": "Support Action"
   },
   {
     "name": "Vampiric Bite",
@@ -3572,7 +3572,7 @@
     "description": "1 x 3 Water damage against target enemy.<br>If this action kills an enemy: Heals self for 10 and increases this action's damage by 2. <i>For the rest of the run.</i>",
     "iconFilename": "Action_vampiric_bite.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Viral Bloom Guard",
@@ -3589,7 +3589,7 @@
     "description": "Shields self for 2 x 7.<br>Applies Redirect to self.<br>Retaliate: Triggers Poison on all enemies.",
     "iconFilename": "Action_viral_bloom_guard.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Viral Burst",
@@ -3605,7 +3605,7 @@
     "description": "3 x 3 Water/Earth damage against target enemy.<br>On Crit: Applies 2 Poison to target enemy.<br>Triggers Poison on target enemy.",
     "iconFilename": "Action_viral_burst.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Void Lightning",
@@ -3623,7 +3623,7 @@
     "description": "5 x 3 Fire/Wind damage against target enemy.<br>Consumes 1 Wild Aether: Applies Power to self.",
     "iconFilename": "Action_void_lightning.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Volcanic Unity",
@@ -3641,7 +3641,7 @@
     "description": "Heals all allies for 3 x 7.<br>Allies gain: \"Retaliate: {heals} self for 8 and generates random Aether.\"",
     "iconFilename": "Action_volcanic_unity.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Water Ritual",
@@ -3656,7 +3656,7 @@
     "description": "Applies 2 Age to target ally.<br>Generates Water/Water/Water Aether.",
     "iconFilename": "Action_water_ritual.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Water Tone",
@@ -3672,7 +3672,7 @@
     "description": "Consumes 1 Regeneration on target ally as additional cost.<br>Applies 2 Weakness to all enemies.<br>Free Action.",
     "iconFilename": "Action_water_tone.webp",
     "freeAction": true,
-    "isSupport": true
+    "actionCategory": "Support Action"
   },
   {
     "name": "Wild Mark",
@@ -3690,7 +3690,7 @@
     "description": "Applies Redirect to target ally.<br>Retaliate: Triggers a 2 x 4 Wild damage attack against the enemy and applies 3 Terror to them.",
     "iconFilename": "Action_wild_mark.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Wildflower Harvest",
@@ -3709,7 +3709,7 @@
     "description": "3 x 5 Water/Earth damage against target enemy.<br>Purges 2 enemy Aether.<br>On Interrupt: Generates Wild Aether.",
     "iconFilename": "Action_wildflower_harvest.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Attack"
   },
   {
     "name": "Wildflower Shield",
@@ -3726,7 +3726,7 @@
     "description": "Shields all allies for 2 x 4.<br>Generates Wild Aether for every 8 debuff stacks among all monsters in combat.",
     "iconFilename": "Action_wildflower_shield.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Wind Ritual",
@@ -3741,17 +3741,7 @@
     "description": "Applies 2 Sidekick to target ally.<br>Generates Wind/Wind/Wind Aether.",
     "iconFilename": "Action_wind_ritual.webp",
     "freeAction": false,
-    "isSupport": true
-  },
-  {
-    "name": "Basic Attack",
-    "skillType": "Action",
-    "manaCost": [],
-    "types": [],
-    "description": "2 x 2 damage against target enemy.<br>Generates [x] Aether.",
-    "iconFilename": "Action_basic_attack.webp",
-    "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Basic Heal",
@@ -3761,7 +3751,7 @@
     "description": "Heals target ally for 2 x 3<br>Generates [x] Aether.",
     "iconFilename": "Action_basic_heal.webp",
     "freeAction": false,
-    "isSupport": false
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Bountiful Wish",
@@ -3773,7 +3763,7 @@
     "description": "Generates Water/Fire/Wind/Earth.",
     "iconFilename": "Action_bountiful_wish.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Fierce Wish",
@@ -3785,7 +3775,7 @@
     "description": "Applies 2 Force to all allies.",
     "iconFilename": "Action_fierce_wish.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Protective Wish",
@@ -3797,6 +3787,6 @@
     "description": "Applies 3 Dodge to target ally.",
     "iconFilename": "Action_protective_wish.webp",
     "freeAction": false,
-    "isSupport": true
+    "actionCategory": "Dedicated Support Action"
   }
 ]

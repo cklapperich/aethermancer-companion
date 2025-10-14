@@ -56,7 +56,7 @@ export interface SkillData {
   iconFilename: string;
   // Action-specific properties (only used when skillType === SkillType.Action)
   freeAction?: boolean;
-  isSupport?: boolean;  // true if this action can be used for support (affects categorization)
+  actionCategory?: ActionCategory;
 
   // Trait-specific properties (only used when skillType === SkillType.Trait)
   signatureMonster?: string;  // The monster this signature trait belongs to
@@ -72,7 +72,7 @@ export class Skill {
   iconFilename: string;
   // Action-specific properties
   freeAction?: boolean;
-  isSupport?: boolean;
+  actionCategory?: ActionCategory;
 
   // Trait-specific properties
   signatureMonster?: string;
@@ -85,7 +85,7 @@ export class Skill {
     this.description = data.description;
     this.iconFilename = data.iconFilename;
     this.freeAction = data.freeAction;
-    this.isSupport = data.isSupport;
+    this.actionCategory = data.actionCategory;
     this.signatureMonster = data.signatureMonster;
   }
 
@@ -165,18 +165,7 @@ export class Skill {
       return null;
     }
 
-    // Free support actions -> Support
-    if (this.freeAction && this.isSupport) {
-      return ActionCategory.Support;
-    }
-
-    // Non-free support actions -> DedicatedSupport
-    if (this.isSupport) {
-      return ActionCategory.DedicatedSupport;
-    }
-
-    // Everything else is an Attack
-    return ActionCategory.Attack;
+    return this.actionCategory || null;
   }
 
   /**

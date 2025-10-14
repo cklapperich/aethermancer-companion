@@ -63,17 +63,22 @@ function parseActionName(titleCell) {
 }
 
 /**
+ * Extract action category from title cell
+ */
+function parseActionCategory(titleCell) {
+  const categorySpan = titleCell.querySelector('span.figtree');
+  return categorySpan ? categorySpan.textContent.trim() : null;
+}
+
+/**
  * Extract icon filename from icon cell
  */
 function parseIconFilename(iconCell) {
   const img = iconCell.querySelector('img.skill-icon');
-  if (img && img.src) {
-    const src = img.src;
-    const match = src.match(/\/images\/(Action_[^?]+)/);
-    if (match) {
-      // Replace .png extension with .webp to match actual files
-      return match[1].replace(/\.png$/, '.webp');
-    }
+  if (img && img.alt) {
+    // alt text is like "Action aqua pounce.png"
+    // We need to convert it to "Action_aqua_pounce.webp"
+    return img.alt.replace(/ /g, '_').replace(/\.png$/, '.webp');
   }
   return null;
 }
@@ -127,32 +132,6 @@ function parseTypes(typeRow) {
 }
 
 /**
- * Determine if an action is an attack based on description
- */
-function isAttackAction(description) {
-  const damageKeywords = [
-    'damage',
-    'x 1', 'x 2', 'x 3', 'x 4', 'x 5', 'x 6', 'x 7', 'x 8', 'x 9',
-    'Fire damage',
-    'Water damage',
-    'Earth damage',
-    'Wind damage',
-    'Wild damage'
-  ];
-
-  const lowerDesc = description.toLowerCase();
-  return damageKeywords.some(keyword => lowerDesc.includes(keyword.toLowerCase()));
-}
-
-/**
- * Determine if an action is a support action (not an attack)
- */
-function isSupportAction(description) {
-  // If it's not an attack, it's a support action
-  return !isAttackAction(description);
-}
-
-/**
  * Detect if action is a free action from description
  */
 function isFreeAction(description) {
@@ -199,9 +178,11 @@ function parseActionCard(table, currentSection) {
   // Parse types from row 3
   const types = parseTypes(row3);
 
-  // Detect free action and support status
+  const actionCategory = parseActionCategory(titleCell);
+
+  // --- New logic for determining support status ---
   const freeAction = isFreeAction(description);
-  const isSupport = isSupportAction(description);
+  // --- End new logic ---
 
   // Build action object
   const action = {
@@ -212,7 +193,7 @@ function parseActionCard(table, currentSection) {
     description,
     iconFilename,
     freeAction,
-    isSupport
+    actionCategory
   };
 
   // Starting actions have no types
