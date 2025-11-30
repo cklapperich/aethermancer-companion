@@ -75,7 +75,24 @@ function parseActionCategory(titleCell) {
  */
 function parseIconFilename(iconCell) {
   const img = iconCell.querySelector('img.skill-icon');
-  if (img && img.alt) {
+  if (!img) return null;
+
+  // Try to get from src first (for local saved HTML files)
+  if (img.src) {
+    // Try new format: actions-list_files/Action_*.webp or similar local paths
+    let match = img.src.match(/(Action_[^/?]+\.webp)/);
+    if (match) {
+      return match[1];
+    }
+    // Try original format: /images/Action_*.png
+    match = img.src.match(/\/images\/(Action_[^?]+)/);
+    if (match) {
+      return match[1].replace(/\.png$/, '.webp');
+    }
+  }
+
+  // Fallback to alt text
+  if (img.alt) {
     // alt text is like "Action aqua pounce.png"
     // We need to convert it to "Action_aqua_pounce.webp"
     return img.alt.replace(/ /g, '_').replace(/\.png$/, '.webp');

@@ -4,6 +4,7 @@
     "skillType": "Trait",
     "description": "On Action, if it was this monster's second Action of the same turn: Generates Wild Aether.",
     "iconFilename": "Trait_accelerated_generation.webp",
+    "category": "Basic",
     "types": [
       "Aether"
     ]
@@ -13,6 +14,7 @@
     "skillType": "Trait",
     "description": "Aura: For every 7 Aether consumed by allies: Generates Wild Aether.",
     "iconFilename": "Trait_aether_cycle.webp",
+    "category": "Basic",
     "types": [
       "Aether"
     ]
@@ -22,6 +24,7 @@
     "skillType": "Trait",
     "description": "Whenever this monster Purges or Steals Aether: Generates 1 additional Aether of the same element. This monster takes 1 more damage from all Hits.",
     "iconFilename": "Trait_aether_fiend.webp",
+    "category": "Basic",
     "types": [
       "Purge"
     ]
@@ -31,6 +34,7 @@
     "skillType": "Trait",
     "description": "Whenever this monster generates or consumes Aether: Shields self equal to the amount of generated or consumed Aether.",
     "iconFilename": "Trait_aether_shield.webp",
+    "category": "Basic",
     "types": [
       "Aether"
     ]
@@ -40,6 +44,7 @@
     "skillType": "Trait",
     "description": "Aura: For every 3 consumed Regeneration stacks: Generates 1 Random Aether.",
     "iconFilename": "Trait_aethereal_regeneration.webp",
+    "category": "Basic",
     "types": [
       "Regeneration"
     ]
@@ -47,8 +52,9 @@
   {
     "name": "Afterstorm",
     "skillType": "Trait",
-    "description": "Aura: Whenever an ally evades a Hit: Deals a 5 Wind damage Hit to the attacker. <i>Triggers up to once per enemy per turn.</i>",
+    "description": "Aura: Allies gain +10% Evasion.<br>Whenever an ally evades a Hit: Deals a 5 Wind damage Hit to the attacker. <i>Triggers up to once per enemy per turn.</i>",
     "iconFilename": "Trait_afterstorm.webp",
+    "category": "Basic",
     "types": [
       "Dodge"
     ]
@@ -58,6 +64,7 @@
     "skillType": "Trait",
     "description": "Aura: On every 4 Attacks from allies: Purges 1 enemy Aether.",
     "iconFilename": "Trait_aggressive_purging.webp",
+    "category": "Basic",
     "types": [
       "Purge"
     ]
@@ -67,6 +74,7 @@
     "skillType": "Trait",
     "description": "Gains Aging. For every 3 Age: Applies 1 Power to self.",
     "iconFilename": "Trait_ancient_power.webp",
+    "category": "Basic",
     "types": [
       "Age"
     ]
@@ -74,8 +82,9 @@
   {
     "name": "Ascension",
     "skillType": "Trait",
-    "description": "Aura: For every 100 Healing of your allies: Applies 2 Power to each ally. <i>Triggers up to once per combat.</i>",
+    "description": "Aura: For every 100 healing of your allies: Applies 2 Power to each ally. <i>Triggers up to once per combat.</i>",
     "iconFilename": "Trait_ascension.webp",
+    "category": "Basic",
     "types": [
       "Heal"
     ]
@@ -83,8 +92,9 @@
   {
     "name": "Auto Heal",
     "skillType": "Trait",
-    "description": "On Attack: Heals the ally with the lowest health by 2 x 2.",
+    "description": "On Attack: Heals the ally with the lowest health by 2 x 3.",
     "iconFilename": "Trait_auto_heal.webp",
+    "category": "Basic",
     "types": [
       "Heal"
     ]
@@ -94,6 +104,7 @@
     "skillType": "Trait",
     "description": "Aura: Enemies with Terror have a 15% chance to miss each Hit. Whenever an enemy misses a Hit: Applies Terror to them.",
     "iconFilename": "Trait_blind.webp",
+    "category": "Basic",
     "types": [
       "Terror"
     ]
@@ -101,8 +112,9 @@
   {
     "name": "Blood Pact",
     "skillType": "Trait",
-    "description": "Aura: At the end of your turn: Deals a Water hit to all enemies; damage equals 1 for every 5 healing received by allies this round. <i>Doesn't trigger Retaliate.</i>",
+    "description": "Aura: At the end of your turn: Deals a Water Hit to all enemies; damage equals 1 for every 4 healing received by allies this round. <i>Doesn't trigger Retaliate.</i>",
     "iconFilename": "Trait_blood_pact.webp",
+    "category": "Basic",
     "types": [
       "Heal"
     ]
@@ -112,6 +124,7 @@
     "skillType": "Trait",
     "description": "Aura: For every 3 Fire Aether consumed by allies: Applies Burn to all enemies.",
     "iconFilename": "Trait_burning_fire.webp",
+    "category": "Basic",
     "types": [
       "Burn"
     ]
@@ -121,6 +134,7 @@
     "skillType": "Trait",
     "description": "Healing +1.<br>Aura: Whenever an ally is healed to full health: Cleanses 2 Corruption from them. <i>Triggers up to once per monster per combat.</i>",
     "iconFilename": "Trait_cleanse_corruption.webp",
+    "category": "Basic",
     "types": [
       "Heal"
     ]
@@ -130,6 +144,7 @@
     "skillType": "Trait",
     "description": "When a Minion is summoned on another ally: Summons a copy of it attached to this monster; both of them have half of the Essence, rounded up. <i>Triggers up to once per turn.</i>",
     "iconFilename": "Trait_clone_summoning.webp",
+    "category": "Basic",
     "types": [
       "Summon"
     ]
@@ -137,8 +152,9 @@
   {
     "name": "Concealed",
     "skillType": "Trait",
-    "description": "At the start of combat and On Dedicated Support Action: Applies Dodge and Shields self for 2.",
+    "description": "At the start of combat and on Dedicated Support Action: Applies 1 Dodge to self and Shields each ally for 3.",
     "iconFilename": "Trait_concealed.webp",
+    "category": "Basic",
     "types": [
       "Dodge"
     ]
@@ -146,8 +162,9 @@
   {
     "name": "Contagion",
     "skillType": "Trait",
-    "description": "Aura: Whenever an enemy's Weakness is consumed: 50% chance to apply Weakness to another random enemy.",
+    "description": "Weakness Reduction +1.<br>Aura: Whenever an enemy's Weakness is consumed: 50% chance to apply Weakness to another random enemy.",
     "iconFilename": "Trait_contagion.webp",
+    "category": "Basic",
     "types": [
       "Weakness"
     ]
@@ -157,6 +174,7 @@
     "skillType": "Trait",
     "description": "Aura: For every 50 healing of your allies: Generates 1 Wild Aether.",
     "iconFilename": "Trait_cosmic_healing.webp",
+    "category": "Basic",
     "types": [
       "Heal"
     ]
@@ -166,6 +184,7 @@
     "skillType": "Trait",
     "description": "Aura: Whenever an enemy is staggered: Consumes all stacks of Weakness on them to generate Wild Aether for each one.",
     "iconFilename": "Trait_cosmic_hex.webp",
+    "category": "Basic",
     "types": [
       "Weakness"
     ]
@@ -175,6 +194,7 @@
     "skillType": "Trait",
     "description": "Terror Application +1.<br>At the start of your turn: Generates Wild Aether for every enemy with 5 or more Terror.",
     "iconFilename": "Trait_cosmic_horror.webp",
+    "category": "Basic",
     "types": [
       "Terror"
     ]
@@ -184,6 +204,7 @@
     "skillType": "Trait",
     "description": "Aura: For every 8 debuffs applied to allies: Generates Wild Aether.",
     "iconFilename": "Trait_cosmic_torment.webp",
+    "category": "Basic",
     "types": [
       "Affliction"
     ]
@@ -193,6 +214,7 @@
     "skillType": "Trait",
     "description": "Gains Aging. For every 2 Age: Generates Wild Aether.",
     "iconFilename": "Trait_cosmic_wisdom.webp",
+    "category": "Basic",
     "types": [
       "Age"
     ]
@@ -200,8 +222,9 @@
   {
     "name": "Critical Aether",
     "skillType": "Trait",
-    "description": "Crit Chance +10%.<br>On every 3 Crits: Generates Wild Aether.",
+    "description": "Crit Chance +20%.<br>On every 3 Crits: Generates Wild Aether.",
     "iconFilename": "Trait_critical_aether.webp",
+    "category": "Basic",
     "types": [
       "Critical"
     ]
@@ -209,8 +232,9 @@
   {
     "name": "Critical Hybridization",
     "skillType": "Trait",
-    "description": "On Crit: Deals a 3 Wild Damage Hit.<i>Triggers up to once per Action.</i>",
+    "description": "On Crit: Deals a 3 Wild Damage Hit. <i>Triggers up to once per Action.</i>",
     "iconFilename": "Trait_critical_hybridization.webp",
+    "category": "Basic",
     "types": [
       "Critical"
     ]
@@ -220,6 +244,7 @@
     "skillType": "Trait",
     "description": "+3 Crit Damage. At the start of combat and whenever an enemy is staggered: Applies 1 Force to self.",
     "iconFilename": "Trait_cruelty.webp",
+    "category": "Basic",
     "types": [
       "Critical"
     ]
@@ -227,8 +252,9 @@
   {
     "name": "Decay",
     "skillType": "Trait",
-    "description": "Gains Aging. For every 4 Age: Triggers an Attack against all enemies with 2 Earth/Water Hits; damage of each Hit equals the amount of Age stacks on this monster.",
+    "description": "Gains Aging. For every 5 Age: Triggers an Attack against all enemies with 2 Earth/Water Hits; damage of each Hit equals the amount of Age stacks on this monster.",
     "iconFilename": "Trait_decay.webp",
+    "category": "Basic",
     "types": [
       "Age"
     ]
@@ -236,8 +262,9 @@
   {
     "name": "Disruptive Prime",
     "skillType": "Trait",
-    "description": "For every 3 Aether purged or stolen by this monster: Applies Power to self.",
+    "description": "For every 3 Aether {Purged} or {Stolen} by this monster: Applies Power to self.",
     "iconFilename": "Trait_disruptive_prime.webp",
+    "category": "Basic",
     "types": [
       "Purge"
     ]
@@ -247,6 +274,7 @@
     "skillType": "Trait",
     "description": "Aura: At the start of your turn: Shields all allies for 2; triggers one more time for allies with 50% or less health.",
     "iconFilename": "Trait_emergency_response.webp",
+    "category": "Basic",
     "types": [
       "Shield"
     ]
@@ -254,8 +282,9 @@
   {
     "name": "Enkindled Aether",
     "skillType": "Trait",
-    "description": "On Attack: Consumes up to one Fire Aether to deal a 5 Fire damage Hit and apply 3 Burn to Target Enemy.",
+    "description": "On Attack: Consumes up to one Fire Aether to deal a 5 Fire damage Hit and apply 3 Burn to target enemy.",
     "iconFilename": "Trait_enkindled_aether.webp",
+    "category": "Basic",
     "types": [
       "Burn"
     ]
@@ -265,6 +294,7 @@
     "skillType": "Trait",
     "description": "Aura: For every 30 Wind or Wild Damage dealt to enemies: Applies Dodge to the ally with the lowest amount of Dodge.",
     "iconFilename": "Trait_eye_of_the_storm.webp",
+    "category": "Basic",
     "types": [
       "Dodge"
     ]
@@ -274,6 +304,7 @@
     "skillType": "Trait",
     "description": "Aura: Debuffs deal 4 more damage against enemies.",
     "iconFilename": "Trait_fatal_upkeep.webp",
+    "category": "Basic",
     "types": [
       "Poison"
     ]
@@ -281,8 +312,9 @@
   {
     "name": "Forceful Generation",
     "skillType": "Trait",
-    "description": "Aura: When an ally reaches 2 Force stacks: It generates 2 Random Aether. <i>Triggers up to once per ally per combat,</i>",
+    "description": "Aura: When an ally reaches 2 Force stacks: It generates 2 Random Aether. <i>Triggers up to once per ally per combat.</i>",
     "iconFilename": "Trait_forceful_generation.webp",
+    "category": "Basic",
     "types": [
       "Force"
     ]
@@ -292,6 +324,7 @@
     "skillType": "Trait",
     "description": "Aura: For every 4 Age on an ally: Cleanses 4 debuffs from them and applies Age to them.",
     "iconFilename": "Trait_golden_age.webp",
+    "category": "Basic",
     "types": [
       "Age"
     ]
@@ -301,6 +334,7 @@
     "skillType": "Trait",
     "description": "Aura: Dodge now only increases Evasion by 12% per stack and doesn't get consumed when attacked. After an ally's turn, they consume 5 stacks of Dodge to Reactivate their turn.",
     "iconFilename": "Trait_haste.webp",
+    "category": "Basic",
     "types": [
       "Dodge"
     ]
@@ -310,6 +344,7 @@
     "skillType": "Trait",
     "description": "Aura: At the start of your turn: Cleanses 2 debuffs from each ally. Whenever a debuff is cleansed from an ally: Shields them for 2.",
     "iconFilename": "Trait_healthy_cleanse.webp",
+    "category": "Basic",
     "types": [
       "Affliction"
     ]
@@ -319,6 +354,7 @@
     "skillType": "Trait",
     "description": "For every 3 Wind Aether consumed by allies: Applies Sidekick to self.",
     "iconFilename": "Trait_helping_winds.webp",
+    "category": "Basic",
     "types": [
       "Sidekick"
     ]
@@ -328,6 +364,7 @@
     "skillType": "Trait",
     "description": "While this monster has Force, it gains +2 Defense and takes 1 less Corruption from enemy Attacks.",
     "iconFilename": "Trait_heroic_defense.webp",
+    "category": "Basic",
     "types": [
       "Force"
     ]
@@ -335,8 +372,9 @@
   {
     "name": "Hexing Strikes",
     "skillType": "Trait",
-    "description": "On Attack: Applies 2 Weakness to Target Enemy.",
+    "description": "Weakness Reduction +1.<br>On Attack: Applies 2 Weakness to target enemy.",
     "iconFilename": "Trait_hexing_strikes.webp",
+    "category": "Basic",
     "types": [
       "Weakness"
     ]
@@ -344,8 +382,9 @@
   {
     "name": "Hunt",
     "skillType": "Trait",
-    "description": "Aura: Allies gain +15% Crit Chance.",
+    "description": "Aura: Allies gain +15% Crit Chance and +2 Crit Damage.",
     "iconFilename": "Trait_hunt.webp",
+    "category": "Basic",
     "types": [
       "Critical"
     ]
@@ -353,8 +392,9 @@
   {
     "name": "Impactful Summoning",
     "skillType": "Trait",
-    "description": "When this monster summons a Minion: Deals a 3 damage Hit of the minion's Elements to all enemies. <i>Doesn't trigger retaliates.</i>",
+    "description": "When this monster summons a Minion: Deals a 3 damage Hit of the Minion's Elements to all enemies. <i>Doesn't trigger retaliates.</i>",
     "iconFilename": "Trait_impactful_summoning.webp",
+    "category": "Basic",
     "types": [
       "Summon"
     ]
@@ -362,8 +402,9 @@
   {
     "name": "Incorruptible",
     "skillType": "Trait",
-    "description": "Retaliate: Shields self for 4. If this Trait triggers 3 times: Cleanses 3 Corruption from self. <i>Only cleanses Corruption up to once per combat</i>",
+    "description": "Retaliate: Shields self for 4. If this Trait triggers 3 times: Cleanses 3 Corruption from self. <i>Only cleanses Corruption up to once per combat.</i>",
     "iconFilename": "Trait_incorruptible.webp",
+    "category": "Basic",
     "types": [
       "Tank"
     ]
@@ -373,6 +414,7 @@
     "skillType": "Trait",
     "description": "Aura: Poison no longer triggers at the start of turn. Poison damage is doubled. <i>This applies to both allies and enemies.</i>",
     "iconFilename": "Trait_incubation.webp",
+    "category": "Basic",
     "types": [
       "Poison"
     ]
@@ -382,6 +424,7 @@
     "skillType": "Trait",
     "description": "On Dedicated Support Action: Applies 1 Force to target ally and 1 Force to self.",
     "iconFilename": "Trait_into_the_fray.webp",
+    "category": "Basic",
     "types": [
       "Force"
     ]
@@ -389,8 +432,9 @@
   {
     "name": "Joint Protection",
     "skillType": "Trait",
-    "description": "Aura: Whenever an ally triggers Sidekick: Shields both attackers for 2.",
+    "description": "Aura: Whenever an ally triggers Sidekick: Shields both attackers for 3.",
     "iconFilename": "Trait_joint_protection.webp",
+    "category": "Basic",
     "types": [
       "Sidekick"
     ]
@@ -400,6 +444,7 @@
     "skillType": "Trait",
     "description": "Aura: For every 4 Burn applied to enemies: Generates Fire Aether.",
     "iconFilename": "Trait_kindle.webp",
+    "category": "Basic",
     "types": [
       "Burn"
     ]
@@ -409,6 +454,7 @@
     "skillType": "Trait",
     "description": "Aura: As long as this monster has Sidekick, other allies gain +2 Damage.",
     "iconFilename": "Trait_leadership.webp",
+    "category": "Basic",
     "types": [
       "Sidekick"
     ]
@@ -418,6 +464,7 @@
     "skillType": "Trait",
     "description": "Aura: Whenever Regeneration stacks are applied to an ally: Applies an additional stack. The healing of Regeneration stacks is reduced by 1.",
     "iconFilename": "Trait_long-lived.webp",
+    "category": "Basic",
     "types": [
       "Regeneration"
     ]
@@ -427,6 +474,7 @@
     "skillType": "Trait",
     "description": "On Attack: Deals a Hit with damage equal to the total amount of Power in the party.",
     "iconFilename": "Trait_magnus_hit.webp",
+    "category": "Basic",
     "types": [
       "Power"
     ]
@@ -434,8 +482,9 @@
   {
     "name": "Make It Double",
     "skillType": "Trait",
-    "description": "Aura: Sidekick Attacks on allies deals 2 x 2 damage Hits.",
+    "description": "Aura: Sidekick Attacks from allies deal 2 x 2 damage Hits.",
     "iconFilename": "Trait_make_it_double.webp",
+    "category": "Basic",
     "types": [
       "Sidekick"
     ]
@@ -445,6 +494,7 @@
     "skillType": "Trait",
     "description": "On every 2 Support Actions: Applies Power to self.",
     "iconFilename": "Trait_meditation.webp",
+    "category": "Basic",
     "types": [
       "Power"
     ]
@@ -454,6 +504,7 @@
     "skillType": "Trait",
     "description": "On every 3 Attacks: Applies Power to self.",
     "iconFilename": "Trait_momentum.webp",
+    "category": "Basic",
     "types": [
       "Power"
     ]
@@ -463,6 +514,7 @@
     "skillType": "Trait",
     "description": "Terror Application +1.<br>At the start of your turn: Deals a Wild Damage Hit with 9 damage to all enemies with 5 or more Terror.",
     "iconFilename": "Trait_nightmare.webp",
+    "category": "Basic",
     "types": [
       "Terror"
     ]
@@ -472,6 +524,7 @@
     "skillType": "Trait",
     "description": "Gains Aging. Whenever Age is applied to this monster: Heals and Shields self for 3.",
     "iconFilename": "Trait_outlast.webp",
+    "category": "Basic",
     "types": [
       "Age"
     ]
@@ -481,6 +534,7 @@
     "skillType": "Trait",
     "description": "Aura: Whenever a Wild Damage Hit staggers an enemy: Purges 1 enemy Aether and applies 5 Terror to each other enemy.",
     "iconFilename": "Trait_panic.webp",
+    "category": "Basic",
     "types": [
       "Terror"
     ]
@@ -490,6 +544,7 @@
     "skillType": "Trait",
     "description": "Aura: Whenever an ally reaches 4 debuff stacks: Applies Power and Shields them for 4. <i>Triggers up to once per monster per combat.</i>",
     "iconFilename": "Trait_peak_performance.webp",
+    "category": "Basic",
     "types": [
       "Affliction"
     ]
@@ -499,6 +554,7 @@
     "skillType": "Trait",
     "description": "Aura: Force stacks on allies now only apply to the first Hit of each Attack. Allies deal +2 Crit Damage for every stack of Force on them.",
     "iconFilename": "Trait_perfect_edge.webp",
+    "category": "Basic",
     "types": [
       "Force"
     ]
@@ -508,6 +564,7 @@
     "skillType": "Trait",
     "description": "Aura: Instead of Shields on allies vanishing at the start of your turn, half of all Shields are retained, rounded up.",
     "iconFilename": "Trait_permafrost.webp",
+    "category": "Basic",
     "types": [
       "Shield"
     ]
@@ -517,6 +574,7 @@
     "skillType": "Trait",
     "description": "Aura: Whenever Poison triggers on an enemy: Applies Poison to all enemies.",
     "iconFilename": "Trait_plague.webp",
+    "category": "Basic",
     "types": [
       "Poison"
     ]
@@ -524,8 +582,9 @@
   {
     "name": "Poise Purging",
     "skillType": "Trait",
-    "description": "Whenever this Monster Purges or Steals Aether: Breaks 1 Poise of the same element on all enemies.",
+    "description": "Whenever this Monster Purges or Steals Aether: Breaks 1 Poise on target enemy.",
     "iconFilename": "Trait_poise_purging.webp",
+    "category": "Basic",
     "types": [
       "Purge"
     ]
@@ -533,8 +592,9 @@
   {
     "name": "Polluted Aether",
     "skillType": "Trait",
-    "description": "On Attack: Consumes up to one Earth Aether to deal a 6 Earth damage Hit and apply 6 Poison to Target Enemy.",
+    "description": "On Attack: Consumes up to one Earth Aether to deal a 6 Earth damage Hit and apply 6 Poison to target enemy.",
     "iconFilename": "Trait_polluted_aether.webp",
+    "category": "Basic",
     "types": [
       "Poison"
     ]
@@ -544,6 +604,7 @@
     "skillType": "Trait",
     "description": "Aura: For every 3 Power applied to allies: Generates 1 Random Aether.",
     "iconFilename": "Trait_power_generator.webp",
+    "category": "Basic",
     "types": [
       "Power"
     ]
@@ -553,6 +614,7 @@
     "skillType": "Trait",
     "description": "Aura: On Action from an allied Minion: Consumes 1 Essence on that Minion to heal and Shield its attached monster by 5.",
     "iconFilename": "Trait_protective_servitude.webp",
+    "category": "Basic",
     "types": [
       "Summon"
     ]
@@ -562,6 +624,7 @@
     "skillType": "Trait",
     "description": "Aura: As long as this monster has Redirect, allies gain +1 Defense and +1 Shielding.",
     "iconFilename": "Trait_protector.webp",
+    "category": "Basic",
     "types": [
       "Tank"
     ]
@@ -571,6 +634,7 @@
     "skillType": "Trait",
     "description": "If this monster has not used a Free Action in its turn yet, it can use any Summoning Action as a Free Action.",
     "iconFilename": "Trait_quickened_summoning.webp",
+    "category": "Basic",
     "types": [
       "Summon"
     ]
@@ -580,6 +644,7 @@
     "skillType": "Trait",
     "description": "Aura: Whenever an enemy gets attacked for the second time in the same turn: Triggers Burn on them.",
     "iconFilename": "Trait_rapid_fire.webp",
+    "category": "Basic",
     "types": [
       "Burn"
     ]
@@ -587,8 +652,9 @@
   {
     "name": "Regenerated Prime",
     "skillType": "Trait",
-    "description": "Aura: For every 3 consumed Regeneration stacks: Applies Power to the ally wkth the least amount of Power.",
+    "description": "Aura: For every 3 consumed Regeneration stacks: Applies Power to the ally with the least amount of Power.",
     "iconFilename": "Trait_regenerated_prime.webp",
+    "category": "Basic",
     "types": [
       "Regeneration"
     ]
@@ -596,8 +662,9 @@
   {
     "name": "Regenerating Water",
     "skillType": "Trait",
-    "description": "Aura: On Water Action from any ally: Applies Regeneration on the ally with the lowest amount of Regeneration.",
+    "description": "{Regeneration Healing} +2.<br>Aura: {On Water Action from any ally}: Applies Regeneration to the ally with the lowest amount of Regeneration.",
     "iconFilename": "Trait_regenerating_water.webp",
+    "category": "Basic",
     "types": [
       "Regeneration"
     ]
@@ -605,8 +672,9 @@
   {
     "name": "Regeneration Shield",
     "skillType": "Trait",
-    "description": "Aura: Whenever Regeneration triggers on an ally: Shields them for 4.",
+    "description": "Aura: Whenever Regeneration triggers on an ally: Shields them for 5.",
     "iconFilename": "Trait_regeneration_shield.webp",
+    "category": "Basic",
     "types": [
       "Regeneration"
     ]
@@ -616,15 +684,17 @@
     "skillType": "Trait",
     "description": "On Dedicated Support Action: Heals target ally for 5, Shields them for 3, and applies 1 Force to them.",
     "iconFilename": "Trait_reinforce.webp",
+    "category": "Basic",
     "types": [
       "Force"
     ]
   },
   {
-    "name": "Return to Aether",
+    "name": "Return To Aether",
     "skillType": "Trait",
     "description": "Retaliate: Generates Random Aether.",
     "iconFilename": "Trait_return_to_aether.webp",
+    "category": "Basic",
     "types": [
       "Tank"
     ]
@@ -634,6 +704,7 @@
     "skillType": "Trait",
     "description": "Aura: Whenever Burn triggers on an enemy: Applies Burn to the enemy with the lowest amount of Burn.",
     "iconFilename": "Trait_rising_fire.webp",
+    "category": "Basic",
     "types": [
       "Burn"
     ]
@@ -641,8 +712,9 @@
   {
     "name": "Safeguard",
     "skillType": "Trait",
-    "description": "Corruption Cleanse +2.<br>At the end of your turn, if this monster has less than 8 Shield: Shields self equal to the difference.",
+    "description": "Corruption Cleanse +2<br>At the end of your turn, if this monster has less than 8 Shield: Shields self equal to the difference.",
     "iconFilename": "Trait_safeguard.webp",
+    "category": "Basic",
     "types": [
       "Tank"
     ]
@@ -652,6 +724,7 @@
     "skillType": "Trait",
     "description": "Aura: Weakness only reduces damage by 2, but each Hit against enemies with Weakness deals 2 more damage.",
     "iconFilename": "Trait_sensitivity.webp",
+    "category": "Basic",
     "types": [
       "Weakness"
     ]
@@ -661,6 +734,7 @@
     "skillType": "Trait",
     "description": "Whenever a debuff stack is applied to this monster: Applies the same debuff to another random ally or enemy.",
     "iconFilename": "Trait_shared_torment.webp",
+    "category": "Basic",
     "types": [
       "Affliction"
     ]
@@ -670,6 +744,7 @@
     "skillType": "Trait",
     "description": "On Attack: Deals a Hit with damage equal to half this monster's Shield, rounded up.",
     "iconFilename": "Trait_shield_hit.webp",
+    "category": "Basic",
     "types": [
       "Shield"
     ]
@@ -677,8 +752,9 @@
   {
     "name": "Shielding Winds",
     "skillType": "Trait",
-    "description": "Aura: On Wind Action from any ally: Shields that ally for 4.",
+    "description": "Aura: {On Wind Action from any ally}: Shields that ally for 4.",
     "iconFilename": "Trait_shielding_winds.webp",
+    "category": "Basic",
     "types": [
       "Shield"
     ]
@@ -686,8 +762,9 @@
   {
     "name": "Shock",
     "skillType": "Trait",
-    "description": "On Interrupt: Deals a 6 Fire/Wind damage Hit to that enemy.",
+    "description": "On Interrupt: Deals a 7 Fire/Wind damage Hit to that enemy.",
     "iconFilename": "Trait_shock.webp",
+    "category": "Basic",
     "types": [
       "Purge"
     ]
@@ -697,6 +774,7 @@
     "skillType": "Trait",
     "description": "Whenever Sidekick is applied to this monster: Generates 1 Random Aether.",
     "iconFilename": "Trait_sidekick_generator.webp",
+    "category": "Basic",
     "types": [
       "Sidekick"
     ]
@@ -704,8 +782,9 @@
   {
     "name": "Sleight of Hand",
     "skillType": "Trait",
-    "description": "+3 Crit Damage. Every third Hit of an Action is a Critical Hit. For multi-target Actions, it is every second Hit against each monster instead.",
+    "description": "+3 Crit Damage. Every [third] Hit of an Action is a Critical Hit. For multi-target Actions, it is every [second] Hit against each monster instead.",
     "iconFilename": "Trait_sleight_of_hand.webp",
+    "category": "Basic",
     "types": [
       "Critical"
     ]
@@ -713,8 +792,9 @@
   {
     "name": "Summon Mastery",
     "skillType": "Trait",
-    "description": "Aura:: Minion Damage +1.<br>This monster can have 1 additional Minion attached to it.",
+    "description": "Aura: Minion Damage +1.<br>This monster can have 1 additional Minion attached to it.",
     "iconFilename": "Trait_summon_mastery.webp",
+    "category": "Basic",
     "types": [
       "Summon"
     ]
@@ -722,8 +802,9 @@
   {
     "name": "Support Attacks",
     "skillType": "Trait",
-    "description": "On Support Action: Deals a 3 damage Hit to Target Enemy and triggers On Attack effects.",
+    "description": "On Support Action: Deals a 3 damage Hit to target enemy and triggers On Attack effects.",
     "iconFilename": "Trait_support_attacks.webp",
+    "category": "Basic",
     "types": [
       "Power"
     ]
@@ -733,6 +814,7 @@
     "skillType": "Trait",
     "description": "Aura: When you reach 5 Aether of the same element: Purges 1 enemy Aether of the same element and applies Power to self. <i>Triggers up to once per element per combat.</i>",
     "iconFilename": "Trait_synchronous_majesty.webp",
+    "category": "Basic",
     "types": [
       "Aether"
     ]
@@ -742,6 +824,7 @@
     "skillType": "Trait",
     "description": "Aura: Allies with 7 or more Shield gain +1 Damage and +15% Crit Chance.",
     "iconFilename": "Trait_tactical_shields.webp",
+    "category": "Basic",
     "types": [
       "Shield"
     ]
@@ -751,6 +834,7 @@
     "skillType": "Trait",
     "description": "Aura: Whenever an ally evades a Hit: Generates Wind Aether; if you have 5 or more Wind Aether, Wild Aether is generated instead. <i>Triggers up to once per ally per turn.</i>",
     "iconFilename": "Trait_tailwind.webp",
+    "category": "Basic",
     "types": [
       "Dodge"
     ]
@@ -758,8 +842,9 @@
   {
     "name": "Taunt",
     "skillType": "Trait",
-    "description": "At the start of combat: Applies 2 Redirect and Shields self 2 x 3.",
+    "description": "At the start of combat: Applies 2 Redirect and Shields self for 2 x 3.",
     "iconFilename": "Trait_taunt.webp",
+    "category": "Basic",
     "types": [
       "Tank"
     ]
@@ -769,6 +854,7 @@
     "skillType": "Trait",
     "description": "On Action, if the Action applied debuffs to enemies: Applies those debuffs another time to the enemies and to self.",
     "iconFilename": "Trait_torment_doubling.webp",
+    "category": "Basic",
     "types": [
       "Affliction"
     ]
@@ -776,8 +862,9 @@
   {
     "name": "Toxic Earth",
     "skillType": "Trait",
-    "description": "Aura: On Earth Action from any ally: Applies Poison to each enemy.",
+    "description": "Aura: {On Earth Action from any ally}: Applies Poison to each enemy.",
     "iconFilename": "Trait_toxic_earth.webp",
+    "category": "Basic",
     "types": [
       "Poison"
     ]
@@ -787,6 +874,7 @@
     "skillType": "Trait",
     "description": "Aura: At the start of your turn: Generates Wild/Wild Aether. At the end of your turn: Consumes Wild/Wild Aether and deals a 3 damage Hit to this Monster for each.",
     "iconFilename": "Trait_void_burn.webp",
+    "category": "Basic",
     "types": [
       "Aether"
     ]
@@ -794,8 +882,9 @@
   {
     "name": "Warlock Party",
     "skillType": "Trait",
-    "description": "Aura: On Support Action from any ally: Applies 2 Weakness distributed among enemies with the lowest amount of Weakness.",
+    "description": "Aura: {On Support Action from any ally}: Applies 2 Weakness distributed among enemies with the lowest amount of Weakness.",
     "iconFilename": "Trait_warlock_party.webp",
+    "category": "Basic",
     "types": [
       "Weakness"
     ]
@@ -805,6 +894,7 @@
     "skillType": "Trait",
     "description": "Terror Application +1.<br>Wild Damage Hits of this monster gain +1 Poise Damage.",
     "iconFilename": "Trait_wild_fear.webp",
+    "category": "Basic",
     "types": [
       "Terror"
     ]
@@ -814,6 +904,7 @@
     "skillType": "Trait",
     "description": "Aura: For every 20 Aether consumed by allies: Applies 2 Power to this monster and triggers an Attack against all enemies for 3 x 2 Wild Damage. <i>Triggers up to once per combat.</i>",
     "iconFilename": "Trait_aether_breath.webp",
+    "category": "Maverick",
     "types": [
       "Aether",
       "Power"
@@ -822,8 +913,9 @@
   {
     "name": "Age Absorption",
     "skillType": "Trait",
-    "description": "For every 10 damage absorbed by Shields on this monster: Applies Age to self.",
+    "description": "For every 15 damage absorbed by Shield on this monster: Applies Age to self.",
     "iconFilename": "Trait_age_absorption.webp",
+    "category": "Maverick",
     "types": [
       "Age",
       "Shield"
@@ -834,6 +926,7 @@
     "skillType": "Trait",
     "description": "Gains Aging. For every 2 Age: Applies Burn stacks to all enemies equal to half of the amount of Age stacks on this monster.",
     "iconFilename": "Trait_age_of_fire.webp",
+    "category": "Maverick",
     "types": [
       "Age",
       "Burn"
@@ -844,6 +937,7 @@
     "skillType": "Trait",
     "description": "On Crit: Shields the ally with the lowest amount of Shield for 3.",
     "iconFilename": "Trait_assault_shield.webp",
+    "category": "Maverick",
     "types": [
       "Critical",
       "Shield"
@@ -852,8 +946,9 @@
   {
     "name": "Beacon",
     "skillType": "Trait",
-    "description": "Aura: Whenever one or more Regeneration stacks are consumed by an ally: Consumes a Burn stack on a random enemy to apply another Regeneration stack to the ally.",
+    "description": "{Regeneration Healing} +2.<br>Aura: Whenever one or more Regeneration stacks are consumed by an ally: Consumes a Burn stack on a random enemy to apply another Regeneration stack to the ally.",
     "iconFilename": "Trait_beacon.webp",
+    "category": "Maverick",
     "types": [
       "Burn",
       "Regeneration"
@@ -864,6 +959,7 @@
     "skillType": "Trait",
     "description": "Aura: For every 5 Burn applied to enemies: Shields all allies for 3.",
     "iconFilename": "Trait_burning_desire.webp",
+    "category": "Maverick",
     "types": [
       "Burn",
       "Shield"
@@ -874,16 +970,18 @@
     "skillType": "Trait",
     "description": "Aura: Allies gain +5% Crit Chance against enemies for every stack of Burn on them.",
     "iconFilename": "Trait_burning_mark.webp",
+    "category": "Maverick",
     "types": [
-      "Critical",
-      "Burn"
+      "Burn",
+      "Critical"
     ]
   },
   {
     "name": "Controlled Burn",
     "skillType": "Trait",
-    "description": "Aura: For every Aether purged or stolen by allies: Applies 1 Burn to the enemy with the lowest amount of Burn.",
+    "description": "Aura: For every Aether {Purged} or {Stolen} by allies: Applies 1 Burn to the enemy with the lowest amount of Burn.",
     "iconFilename": "Trait_controlled_burn.webp",
+    "category": "Maverick",
     "types": [
       "Burn",
       "Purge"
@@ -894,6 +992,7 @@
     "skillType": "Trait",
     "description": "Aura: At the end of your turn: Deals a Fire/Water hit to all enemies; damage equals debuffs cleansed or consumed from allies this round. <i>Doesn't trigger Retaliate.</i>",
     "iconFilename": "Trait_conversion_pact.webp",
+    "category": "Maverick",
     "types": [
       "Affliction",
       "Heal"
@@ -904,16 +1003,18 @@
     "skillType": "Trait",
     "description": "On Action: Applies 1 Affliction to self and converts 1 random Aether into Wild Aether.",
     "iconFilename": "Trait_converter.webp",
+    "category": "Maverick",
     "types": [
-      "Affliction",
-      "Aether"
+      "Aether",
+      "Affliction"
     ]
   },
   {
     "name": "Cosmic Absorption",
     "skillType": "Trait",
-    "description": "For every 15 damage absorbed by Shields on this monster: Generates Wild Aether.",
+    "description": "For every 15 damage absorbed by Shield on this monster: Generates Wild Aether.",
     "iconFilename": "Trait_cosmic_absorption.webp",
+    "category": "Maverick",
     "types": [
       "Aether",
       "Shield"
@@ -922,8 +1023,9 @@
   {
     "name": "Cosmic Fire",
     "skillType": "Trait",
-    "description": "Aura: Every 3rd Fire Aether generated by your allies is converted into Wild Aether. Wild Aether also counts as Fire Aether for the effects of your skills.",
+    "description": "Aura: Every [third] Fire Aether generated by your allies is converted into Wild Aether. Wild Aether also counts as Fire Aether for the effects of your skills.",
     "iconFilename": "Trait_cosmic_fire.webp",
+    "category": "Maverick",
     "types": [
       "Aether",
       "Burn"
@@ -934,16 +1036,18 @@
     "skillType": "Trait",
     "description": "On Crit: Applies 1 Bleed. <i>Bleed can also be applied by Affliction as long as you have any Actions or Traits that can apply Bleed.</i>",
     "iconFilename": "Trait_critical_bleed.webp",
+    "category": "Maverick",
     "types": [
-      "Critical",
-      "Affliction"
+      "Affliction",
+      "Critical"
     ]
   },
   {
     "name": "Critical Purging",
     "skillType": "Trait",
-    "description": "On every 3 Crits: Purges 1 enemy Aether.",
+    "description": "Crit Chance +15%.<br>On every 3 Crits: Purges 1 enemy Aether.",
     "iconFilename": "Trait_critical_purging.webp",
+    "category": "Maverick",
     "types": [
       "Critical",
       "Purge"
@@ -954,6 +1058,7 @@
     "skillType": "Trait",
     "description": "Aura: Whenever an enemy's Weakness is consumed: Applies 1 Terror to that enemy.",
     "iconFilename": "Trait_cursed.webp",
+    "category": "Maverick",
     "types": [
       "Terror",
       "Weakness"
@@ -964,9 +1069,10 @@
     "skillType": "Trait",
     "description": "Whenever this monster deals Wild Damage to an enemy: Cleanses 3 debuffs from self and applies them to that enemy. <i>Triggers up to once per enemy per turn.</i>",
     "iconFilename": "Trait_dark_exchange.webp",
+    "category": "Maverick",
     "types": [
-      "Terror",
-      "Affliction"
+      "Affliction",
+      "Terror"
     ]
   },
   {
@@ -974,9 +1080,10 @@
     "skillType": "Trait",
     "description": "On Crit, if it was triggered by Force: Applies 5 Poison.",
     "iconFilename": "Trait_deadly_sting.webp",
+    "category": "Maverick",
     "types": [
-      "Poison",
-      "Force"
+      "Force",
+      "Poison"
     ]
   },
   {
@@ -984,6 +1091,7 @@
     "skillType": "Trait",
     "description": "Gains Aging. For every 3 Age: Applies Terror stacks to the enemy with the lowest amount of Terror equal to the total amount of Age on all allies.",
     "iconFilename": "Trait_eldritch_horror.webp",
+    "category": "Maverick",
     "types": [
       "Age",
       "Terror"
@@ -994,6 +1102,7 @@
     "skillType": "Trait",
     "description": "Aura: Whenever an enemy reaches 5 Burn stacks: Deals a Fire/Wind Hit with 11 damage to that enemy and applies Dodge to self. <i>Triggers only once per enemy per combat.</i>",
     "iconFilename": "Trait_electrical_burn.webp",
+    "category": "Maverick",
     "types": [
       "Burn",
       "Dodge"
@@ -1004,6 +1113,7 @@
     "skillType": "Trait",
     "description": "Gains Aging. For every 3 Age: Applies Redirect and Shields self for 2 x 6.",
     "iconFilename": "Trait_endless_endurance.webp",
+    "category": "Maverick",
     "types": [
       "Age",
       "Tank"
@@ -1014,6 +1124,7 @@
     "skillType": "Trait",
     "description": "Aura: Crit Chance on allies also increases their Evasion by 50% of that amount.",
     "iconFilename": "Trait_evasion_mastery.webp",
+    "category": "Maverick",
     "types": [
       "Critical",
       "Dodge"
@@ -1024,6 +1135,7 @@
     "skillType": "Trait",
     "description": "Gains Aging. For every 2 Age: Applies Sidekick to self. Sidekick on this monster deals additional damage equal to the amount of Age stacks on it.",
     "iconFilename": "Trait_experienced_strikes.webp",
+    "category": "Maverick",
     "types": [
       "Age",
       "Sidekick"
@@ -1034,6 +1146,7 @@
     "skillType": "Trait",
     "description": "On Interrupt: Applies Sidekick to self.",
     "iconFilename": "Trait_exploit.webp",
+    "category": "Maverick",
     "types": [
       "Purge",
       "Sidekick"
@@ -1044,9 +1157,10 @@
     "skillType": "Trait",
     "description": "On Attack, if this monster has 2 or more Regeneration: Applies Sidekick to self, triggers Regeneration on self, and then consumes another Regeneration stack.",
     "iconFilename": "Trait_fast_metabolism.webp",
+    "category": "Maverick",
     "types": [
-      "Sidekick",
-      "Regeneration"
+      "Regeneration",
+      "Sidekick"
     ]
   },
   {
@@ -1054,9 +1168,10 @@
     "skillType": "Trait",
     "description": "Aura: Poison on enemies with Terror does Wild Damage and deals 1 extra damage for every 3 Terror stacks on the enemy.",
     "iconFilename": "Trait_fear_toxin.webp",
+    "category": "Maverick",
     "types": [
-      "Terror",
-      "Poison"
+      "Poison",
+      "Terror"
     ]
   },
   {
@@ -1064,19 +1179,21 @@
     "skillType": "Trait",
     "description": "Aura: Whenever an allied Minion is summoned or dies: Applies 1 Force to its attached monster.",
     "iconFilename": "Trait_fierce_summoning.webp",
+    "category": "Maverick",
     "types": [
-      "Summon",
-      "Force"
+      "Force",
+      "Summon"
     ]
   },
   {
     "name": "First Aid",
     "skillType": "Trait",
-    "description": "Aura: Whenever Regeneration is applied to an ally: Heals them for 3.",
+    "description": "Aura: Whenever Regeneration is applied to an ally: Heals them for 5.",
     "iconFilename": "Trait_first_aid.webp",
+    "category": "Maverick",
     "types": [
-      "Regeneration",
-      "Heal"
+      "Heal",
+      "Regeneration"
     ]
   },
   {
@@ -1084,6 +1201,7 @@
     "skillType": "Trait",
     "description": "Retaliate: Shields self for 3.<br>For every 25 Shield applied to this monster: Applies Power to self.",
     "iconFilename": "Trait_flawless_defense.webp",
+    "category": "Maverick",
     "types": [
       "Power",
       "Tank"
@@ -1092,8 +1210,9 @@
   {
     "name": "Grim Servitude",
     "skillType": "Trait",
-    "description": "Aura: On Action from an allied Minion: Consumes 1 Essence on that Minion to apply 5 Terror to {target enemy}.",
+    "description": "Aura: On Action from an allied Minion: Consumes 1 Essence on that Minion to apply 5 Terror to target enemy.",
     "iconFilename": "Trait_grim_servitude.webp",
+    "category": "Maverick",
     "types": [
       "Summon",
       "Terror"
@@ -1104,6 +1223,7 @@
     "skillType": "Trait",
     "description": "Aura: Whenever an enemy's Weakness is consumed: Heals the ally with the lowest health for 3.",
     "iconFilename": "Trait_healing_hex.webp",
+    "category": "Maverick",
     "types": [
       "Heal",
       "Weakness"
@@ -1112,8 +1232,9 @@
   {
     "name": "Hexing Minions",
     "skillType": "Trait",
-    "description": "Aura: On Attack from an allied Minion, if the enemy has Weakness: It deals a 3 Wild Damage Hit to the enemy.",
+    "description": "Aura: On Attack from an allied Minion, if the enemy has 3 or more Weakness: It deals a 3 Wild Damage Hit to the enemy.",
     "iconFilename": "Trait_hexing_minions.webp",
+    "category": "Maverick",
     "types": [
       "Summon",
       "Weakness"
@@ -1122,11 +1243,12 @@
   {
     "name": "Hour of Glory",
     "skillType": "Trait",
-    "description": "Aura: When your allies land 10 Crits within a single round: Applies 1 Power to each ally and heals each ally for 10.",
+    "description": "Aura: When your allies land 7 Crits within a single round: Applies 1 Power to each ally and heals each ally for 7.",
     "iconFilename": "Trait_hour_of_glory.webp",
+    "category": "Maverick",
     "types": [
-      "Force",
-      "Critical"
+      "Critical",
+      "Force"
     ]
   },
   {
@@ -1134,19 +1256,21 @@
     "skillType": "Trait",
     "description": "On Attack: Cleanses 2 debuffs from self. Whenever a debuff is cleansed from this monster: Heals self for 2.",
     "iconFilename": "Trait_indomitable_attacks.webp",
+    "category": "Maverick",
     "types": [
-      "Sidekick",
-      "Affliction"
+      "Affliction",
+      "Sidekick"
     ]
   },
   {
     "name": "Instant Regeneration",
     "skillType": "Trait",
-    "description": "On Dedicated Support Action: Triggers Regeneration on each ally; then applies 1 Force to each ally that had Regeneration trigger this way.",
+    "description": "On Dedicated Support Action: Triggers Regeneration on each ally; then applies 2 Force to each ally that had Regeneration trigger this way.",
     "iconFilename": "Trait_instant_regeneration.webp",
+    "category": "Maverick",
     "types": [
-      "Regeneration",
-      "Force"
+      "Force",
+      "Regeneration"
     ]
   },
   {
@@ -1154,6 +1278,7 @@
     "skillType": "Trait",
     "description": "On Dedicated Support Action: Applies 1 Force and 1 Sidekick to self.",
     "iconFilename": "Trait_joust.webp",
+    "category": "Maverick",
     "types": [
       "Force",
       "Sidekick"
@@ -1162,11 +1287,12 @@
   {
     "name": "Leader of Minions",
     "skillType": "Trait",
-    "description": "Aura: On Attack: Allied Minions gain Damage +1, Healing +1, and Shielding +1 until end of turn. <i>Can stack.</i>",
+    "description": "On Attack: Allied Minions gain +1 Damage, +1 Healing, and +1 Shielding until end of turn. <i>Can stack.</i>",
     "iconFilename": "Trait_leader_of_minions.webp",
+    "category": "Maverick",
     "types": [
-      "Summon",
-      "Sidekick"
+      "Sidekick",
+      "Summon"
     ]
   },
   {
@@ -1174,16 +1300,18 @@
     "skillType": "Trait",
     "description": "Aura: Whenever one or more Regeneration stacks are consumed on this monster: Deals a 10 Earth/Water damage hit to all enemies with Weakness.",
     "iconFilename": "Trait_leeching_bond.webp",
+    "category": "Maverick",
     "types": [
-      "Weakness",
-      "Regeneration"
+      "Regeneration",
+      "Weakness"
     ]
   },
   {
     "name": "Live and Learn",
     "skillType": "Trait",
-    "description": "Retaliate: Applies 1 Dodge and 2 Regeneration to self. <i>Triggers up to once per turn.</i>",
+    "description": "Retaliate: Applies 2 Dodge and 2 Regeneration to self. <i>Triggers up to once per turn.</i>",
     "iconFilename": "Trait_live_and_learn.webp",
+    "category": "Maverick",
     "types": [
       "Dodge",
       "Regeneration"
@@ -1194,6 +1322,7 @@
     "skillType": "Trait",
     "description": "Aura: Allied Minions start with 1 more Essence and prevent 1 Corruption on their attached monster from each enemy Attack.",
     "iconFilename": "Trait_loyal_minions.webp",
+    "category": "Maverick",
     "types": [
       "Summon",
       "Tank"
@@ -1204,6 +1333,7 @@
     "skillType": "Trait",
     "description": "Aura: Whenever an ally evades a Hit: Applies Sidekick to them. <i>Triggers up to once per ally per turn.</i>",
     "iconFilename": "Trait_martial_prowess.webp",
+    "category": "Maverick",
     "types": [
       "Dodge",
       "Sidekick"
@@ -1214,6 +1344,7 @@
     "skillType": "Trait",
     "description": "This monster gains +2 max health for every level it has. It gains +1 Crit Damage for every 20 max health.",
     "iconFilename": "Trait_massive_damage.webp",
+    "category": "Maverick",
     "types": [
       "Force",
       "Tank"
@@ -1224,6 +1355,7 @@
     "skillType": "Trait",
     "description": "This monster gains +2 max health for every level it has. It heals 1 more health from Regeneration for every 25 max health.",
     "iconFilename": "Trait_massive_regeneration.webp",
+    "category": "Maverick",
     "types": [
       "Regeneration",
       "Tank"
@@ -1234,6 +1366,7 @@
     "skillType": "Trait",
     "description": "Whenever allies apply 3 or more Weakness in the same turn: Applies Redirect and Shields self for 3. <i>Triggers up to once per round.</i>",
     "iconFilename": "Trait_mesmerize.webp",
+    "category": "Maverick",
     "types": [
       "Tank",
       "Weakness"
@@ -1244,6 +1377,7 @@
     "skillType": "Trait",
     "description": "Whenever Dodge is applied to this monster: Applies Dodge and Redirect to self. <i>Triggers up to once per turn.</i>",
     "iconFilename": "Trait_nimble_guardian.webp",
+    "category": "Maverick",
     "types": [
       "Dodge",
       "Tank"
@@ -1254,6 +1388,7 @@
     "skillType": "Trait",
     "description": "On Dedicated Support Action: Applies 1 Essence to each allied Minion. Then heals each ally equal to the Essence of their Minions.",
     "iconFilename": "Trait_nurture.webp",
+    "category": "Maverick",
     "types": [
       "Heal",
       "Summon"
@@ -1264,6 +1399,7 @@
     "skillType": "Trait",
     "description": "Aura: At the end of your turn: Triggers Burn on each enemy with 3 or more Burn and applies 3 Burn to this monster for each one.",
     "iconFilename": "Trait_overheat.webp",
+    "category": "Maverick",
     "types": [
       "Affliction",
       "Burn"
@@ -1274,6 +1410,7 @@
     "skillType": "Trait",
     "description": "On Attack: Applies 1 Burn to target enemy for every Power stack on this monster.",
     "iconFilename": "Trait_overwhelming_heat.webp",
+    "category": "Maverick",
     "types": [
       "Burn",
       "Power"
@@ -1284,6 +1421,7 @@
     "skillType": "Trait",
     "description": "Aura: Whenever an ally attacks an enemy with 5 or more Terror: Applies Power to that ally.",
     "iconFilename": "Trait_peak_calamity.webp",
+    "category": "Maverick",
     "types": [
       "Power",
       "Terror"
@@ -1294,9 +1432,10 @@
     "skillType": "Trait",
     "description": "Aura: Whenever a debuff is applied to an ally: 10% chance to apply Dodge to them.",
     "iconFilename": "Trait_perseverance.webp",
+    "category": "Maverick",
     "types": [
-      "Dodge",
-      "Affliction"
+      "Affliction",
+      "Dodge"
     ]
   },
   {
@@ -1304,6 +1443,7 @@
     "skillType": "Trait",
     "description": "Retaliate: Applies 4 Poison to the enemy.",
     "iconFilename": "Trait_poison_glands.webp",
+    "category": "Maverick",
     "types": [
       "Poison",
       "Tank"
@@ -1314,9 +1454,10 @@
     "skillType": "Trait",
     "description": "Gains Aging. Whenever Age is applied to this monster: Applies 1 Force to each ally with Force.",
     "iconFilename": "Trait_polishing.webp",
+    "category": "Maverick",
     "types": [
-      "Force",
-      "Age"
+      "Age",
+      "Force"
     ]
   },
   {
@@ -1324,6 +1465,7 @@
     "skillType": "Trait",
     "description": "Whenever Power is applied to this monster: Heals each ally for 3.",
     "iconFilename": "Trait_power_healing.webp",
+    "category": "Maverick",
     "types": [
       "Heal",
       "Power"
@@ -1334,6 +1476,7 @@
     "skillType": "Trait",
     "description": "Aura: For every 20 damage absorbed by Shields on allies: Applies Power to the ally with the lowest amount of Power.",
     "iconFilename": "Trait_prime_absorption.webp",
+    "category": "Maverick",
     "types": [
       "Power",
       "Shield"
@@ -1342,18 +1485,20 @@
   {
     "name": "Proliferate",
     "skillType": "Trait",
-    "description": "Whenever this monster applies a debuff: Deals a 4 Earth/Water damage Hit to the enemy and applies 1 Poison to them. <i>Triggers up to once per enemy per round.</i>",
+    "description": "Whenever this monster applies a debuff: Deals a 3 Earth/Water damage Hit to the enemy and applies 1 Poison to them. <i>Triggers up to once per enemy per round.</i>",
     "iconFilename": "Trait_proliferate.webp",
+    "category": "Maverick",
     "types": [
-      "Poison",
-      "Affliction"
+      "Affliction",
+      "Poison"
     ]
   },
   {
     "name": "Purge Punishment",
     "skillType": "Trait",
-    "description": "Retaliate, if this monster has 50% or more health: Purges 1 enemy Aether.",
+    "description": "Defense +1.<br>Retaliate, if this monster has 50% or more health: Purges 1 enemy Aether.",
     "iconFilename": "Trait_purge_punishment.webp",
+    "category": "Maverick",
     "types": [
       "Purge",
       "Tank"
@@ -1364,6 +1509,7 @@
     "skillType": "Trait",
     "description": "For every 15 healing this monster receives or applies to allies: Applies Sidekick to self.",
     "iconFilename": "Trait_quicken.webp",
+    "category": "Maverick",
     "types": [
       "Heal",
       "Sidekick"
@@ -1372,11 +1518,12 @@
   {
     "name": "Recovery",
     "skillType": "Trait",
-    "description": "Corruption Cleanse +2.<br>At the start of your turn: This monster heals itself equal to 1/2 of the damage it took last round.",
+    "description": "Corruption Cleanse +3<br>At the start of your turn: This monster heals itself equal to 1/2 of the damage it took last round.",
     "iconFilename": "Trait_recovery.webp",
+    "category": "Maverick",
     "types": [
-      "Tank",
-      "Heal"
+      "Heal",
+      "Tank"
     ]
   },
   {
@@ -1384,6 +1531,7 @@
     "skillType": "Trait",
     "description": "On Dedicated Support Action: Cleanses 2 debuffs from each ally; then applies 1 Force to each ally that had at least 1 debuff cleansed this way.",
     "iconFilename": "Trait_redemption.webp",
+    "category": "Maverick",
     "types": [
       "Affliction",
       "Force"
@@ -1394,6 +1542,7 @@
     "skillType": "Trait",
     "description": "Aura: Whenever Regeneration is consumed by an ally: Cleanses 2 debuff stacks from them and applies them to random enemies.",
     "iconFilename": "Trait_rejuvenation.webp",
+    "category": "Maverick",
     "types": [
       "Affliction",
       "Regeneration"
@@ -1404,6 +1553,7 @@
     "skillType": "Trait",
     "description": "Aura: For every 4 Hits evaded by your allies: Applies Power to the ally with the lowest amount of Power.",
     "iconFilename": "Trait_serpentine_maneuvers.webp",
+    "category": "Maverick",
     "types": [
       "Dodge",
       "Power"
@@ -1414,6 +1564,7 @@
     "skillType": "Trait",
     "description": "Aura: Whenever an ally attacks an enemy with 3 or more Terror: Applies Dodge to that ally.",
     "iconFilename": "Trait_shadow_meld.webp",
+    "category": "Maverick",
     "types": [
       "Dodge",
       "Terror"
@@ -1424,9 +1575,10 @@
     "skillType": "Trait",
     "description": "At the end of your turn: Shields self for 2 for every debuff stack on it.",
     "iconFilename": "Trait_shielded_torment.webp",
+    "category": "Maverick",
     "types": [
-      "Tank",
-      "Affliction"
+      "Affliction",
+      "Tank"
     ]
   },
   {
@@ -1434,6 +1586,7 @@
     "skillType": "Trait",
     "description": "This monster's Sidekick Attack is always Critical.",
     "iconFilename": "Trait_sidecrits.webp",
+    "category": "Maverick",
     "types": [
       "Critical",
       "Sidekick"
@@ -1444,6 +1597,7 @@
     "skillType": "Trait",
     "description": "For every 3 Weakness stacks consumed by enemies: Applies Force to self.",
     "iconFilename": "Trait_siphoned_strength.webp",
+    "category": "Maverick",
     "types": [
       "Force",
       "Weakness"
@@ -1452,8 +1606,9 @@
   {
     "name": "Slasher",
     "skillType": "Trait",
-    "description": "Aura: Attacks of your allies increase the amount of Terror on the attacked enemies by 33%, rounded up, instead of consuming stacks. At the end of your turn: Consumes 66% of all Terror stacks on enemies, rounded up.",
+    "description": "Aura: Attacks of your allies increase the amount of Terror on the attacked enemies by 25%, rounded up, instead of consuming stacks. At the end of your turn: Consumes 75% of all Terror stacks on enemies, rounded up.",
     "iconFilename": "Trait_slasher.webp",
+    "category": "Maverick",
     "types": [
       "Sidekick",
       "Terror"
@@ -1464,6 +1619,7 @@
     "skillType": "Trait",
     "description": "Aura: For every 15 damage the first Hit of an Attack deals, it gains +1 Poise Damage.",
     "iconFilename": "Trait_smite.webp",
+    "category": "Maverick",
     "types": [
       "Force",
       "Terror"
@@ -1474,6 +1630,7 @@
     "skillType": "Trait",
     "description": "On Attack: Consumes up to one Wild Aether to deal a 7 Wild Damage Hit and Purge 1 enemy Aether.",
     "iconFilename": "Trait_split_aether.webp",
+    "category": "Maverick",
     "types": [
       "Aether",
       "Purge"
@@ -1484,9 +1641,10 @@
     "skillType": "Trait",
     "description": "Aura: Whenever you reach 5 Aether of the same element: Applies Age and Shields all allies with Age for 3. <i>Triggers up to once per element per combat.</i>",
     "iconFilename": "Trait_synchronous_aging.webp",
+    "category": "Maverick",
     "types": [
-      "Age",
-      "Aether"
+      "Aether",
+      "Age"
     ]
   },
   {
@@ -1494,9 +1652,10 @@
     "skillType": "Trait",
     "description": "Aura: When you reach 5 Aether of the same element: Generates 2 additional Aether of the same element and applies 1 Force to each ally. <i>Triggers up to once per element per combat.</i>",
     "iconFilename": "Trait_synchronous_force.webp",
+    "category": "Maverick",
     "types": [
-      "Force",
-      "Aether"
+      "Aether",
+      "Force"
     ]
   },
   {
@@ -1504,6 +1663,7 @@
     "skillType": "Trait",
     "description": "Aura: Whenever you reach 5 Aether of the same element: Heals all allies for 2 x 4. <i>Triggers up to once per element per combat.</i>",
     "iconFilename": "Trait_synchronous_healing.webp",
+    "category": "Maverick",
     "types": [
       "Aether",
       "Heal"
@@ -1514,6 +1674,7 @@
     "skillType": "Trait",
     "description": "Aura: Whenever you reach 5 Aether of the same element: Applies 2 Weakness and deals 5 damage of that element to each enemy. <i>Triggers up to once per element per combat.</i>",
     "iconFilename": "Trait_synchronous_surge.webp",
+    "category": "Maverick",
     "types": [
       "Aether",
       "Weakness"
@@ -1524,6 +1685,7 @@
     "skillType": "Trait",
     "description": "Aura: Whenever Power is applied to an ally: Applies Power and 2 Affliction to them. <i>Triggers up to once per ally per turn.</i>",
     "iconFilename": "Trait_tainted_power.webp",
+    "category": "Maverick",
     "types": [
       "Affliction",
       "Power"
@@ -1532,8 +1694,9 @@
   {
     "name": "Tormentor",
     "skillType": "Trait",
-    "description": "On Interrupt: Applies 5 Terror to that enemy and heals self for 5.",
+    "description": "On Interrupt: Applies 5 Terror to that enemy and heals self for 10.",
     "iconFilename": "Trait_tormentor.webp",
+    "category": "Maverick",
     "types": [
       "Purge",
       "Terror"
@@ -1544,6 +1707,7 @@
     "skillType": "Trait",
     "description": "On every 3 Crits: Applies 2 Poison, then triggers Poison.",
     "iconFilename": "Trait_toxic_assault.webp",
+    "category": "Maverick",
     "types": [
       "Critical",
       "Poison"
@@ -1554,6 +1718,7 @@
     "skillType": "Trait",
     "description": "Aura: Whenever allies apply 5 or more Poison in the same turn: Applies Regeneration to each ally. <i>Triggers up to once per round.</i>",
     "iconFilename": "Trait_toxic_cycle.webp",
+    "category": "Maverick",
     "types": [
       "Poison",
       "Regeneration"
@@ -1564,6 +1729,7 @@
     "skillType": "Trait",
     "description": "Whenever this monster receives or applies Shield: Applies Poison to the enemy with the lowest amount of Poison.",
     "iconFilename": "Trait_toxic_shielding.webp",
+    "category": "Maverick",
     "types": [
       "Poison",
       "Shield"
@@ -1574,9 +1740,10 @@
     "skillType": "Trait",
     "description": "Aura: When an allied Minion is summoned: Applies 1 Poison to all enemies. When an allied Minion dies: Triggers Poison on all enemies.",
     "iconFilename": "Trait_toxic_summoning.webp",
+    "category": "Maverick",
     "types": [
-      "Summon",
-      "Poison"
+      "Poison",
+      "Summon"
     ]
   },
   {
@@ -1584,19 +1751,21 @@
     "skillType": "Trait",
     "description": "Whenever Redirect is applied to this monster: Shields self for 7.",
     "iconFilename": "Trait_true_grit.webp",
+    "category": "Maverick",
     "types": [
       "Shield",
       "Tank"
     ]
   },
   {
-    "name": "Vengence",
+    "name": "Vengeance",
     "skillType": "Trait",
     "description": "When an allied Minion or monster dies: Applies Power to this monster.",
-    "iconFilename": "Trait_vengence.webp",
+    "iconFilename": "Trait_vengeance.webp",
+    "category": "Maverick",
     "types": [
-      "Summon",
-      "Power"
+      "Power",
+      "Summon"
     ]
   },
   {
@@ -1604,6 +1773,7 @@
     "skillType": "Trait",
     "description": "Aura: Your allies gain +15% Crit Chance for every Regeneration stack on them. Each Attack consumes 1 Regeneration.",
     "iconFilename": "Trait_vigorous_edge.webp",
+    "category": "Maverick",
     "types": [
       "Critical",
       "Regeneration"
@@ -1614,9 +1784,10 @@
     "skillType": "Trait",
     "description": "Aura: Whenever allies heal for 50 or more in the same turn: Triggers Poison on all enemies. <i>Triggers up to once per round.</i>",
     "iconFilename": "Trait_viral_healing.webp",
+    "category": "Maverick",
     "types": [
-      "Poison",
-      "Heal"
+      "Heal",
+      "Poison"
     ]
   },
   {
@@ -1624,9 +1795,10 @@
     "skillType": "Trait",
     "description": "Aura: Whenever Wild Aether is spent on an ally's Action, its second Hit does Wild Damage. If it's a Support Action, it applies 1 Terror to each enemy instead.",
     "iconFilename": "Trait_void_infusion.webp",
+    "category": "Maverick",
     "types": [
-      "Terror",
-      "Aether"
+      "Aether",
+      "Terror"
     ]
   },
   {
@@ -1634,14 +1806,16 @@
     "skillType": "Trait",
     "description": "This monster can copy its last Action and use it once, with its cost replaced by Wild Aether and as a Free Action. <i>Its Element becomes Wild.</i>",
     "iconFilename": "Trait_breach_the_void.webp",
+    "category": "Signature",
     "signatureMonster": "Shambler",
     "types": []
   },
   {
     "name": "Critical Mass",
     "skillType": "Trait",
-    "description": "On Crit: 50% chance to apply a [random buff] to self. Whenever this monster applies a buff: Heals the buffed monster for 3.",
+    "description": "On Crit: 50% chance to apply a Random Buff to self.<br>Whenever this monster applies a buff: Heals the buffed monster for 3.",
     "iconFilename": "Trait_critical_mass.webp",
+    "category": "Signature",
     "signatureMonster": "Catzerker",
     "types": []
   },
@@ -1650,6 +1824,7 @@
     "skillType": "Trait",
     "description": "This monster can copy the last 2 enemy Actions and use them once.<br>On Copied Action: Purges the same amounts and elements of Aether as were spent on the Action.",
     "iconFilename": "Trait_eagle_eyes.webp",
+    "category": "Signature",
     "signatureMonster": "Wolpertinger",
     "types": []
   },
@@ -1658,23 +1833,17 @@
     "skillType": "Trait",
     "description": "For every 15 Shield this monster receives or applies to allies: Applies Sidekick to self.<br>Sidekick Attacks of this monster consume all Sidekick stacks at once to deal their combined damage to the enemy. <i>Additional stacks consumed are affected by damage modifiers.</i>",
     "iconFilename": "Trait_earthen_striker.webp",
+    "category": "Signature",
     "signatureMonster": "Gargoyle",
     "types": []
   },
   {
     "name": "Exalted",
     "skillType": "Trait",
-    "description": "At the start of your turn: Applies Sidekick to this monster and applies 2 Essence to its attached Minions. This monster cannot learn any Attacks.",
+    "description": "At the start of your turn: Applies Sidekick to this monster and applies 1 Essence to its attached Minions. This monster cannot learn any Attacks.",
     "iconFilename": "Trait_exalted.webp",
+    "category": "Signature",
     "signatureMonster": "Sphinx",
-    "types": []
-  },
-  {
-    "name": "Fearless (Shifted)",
-    "skillType": "Trait",
-    "description": "While this monster has 2 or more Power, it evades the first Hit of each enemy Attack and has: \"Retaliate: Triggers a 2 x 1 Earth/Fire Attack against the enemy.\"",
-    "iconFilename": "Trait_fearless.webp",
-    "signatureMonster": "Naga (Shifted)",
     "types": []
   },
   {
@@ -1682,15 +1851,17 @@
     "skillType": "Trait",
     "description": "While this monster has 1 or more Force, it evades the first Hit of each enemy Attack and has: \"Retaliate: Triggers a 2 x 2 Fire/Water Attack against the enemy.\"",
     "iconFilename": "Trait_fearless.webp",
+    "category": "Signature",
     "signatureMonster": "Naga",
     "types": []
   },
   {
-    "name": "Feed the Void",
+    "name": "Fearless (Shifted)",
     "skillType": "Trait",
-    "description": "Gains Aging. When another allied Minion dies: Generates Wild Aether and applies X Terror to the enemy with the lowest amount of Terror, where X is the amount of Age on this monster.",
-    "iconFilename": "Trait_feed_the_void.webp",
-    "signatureMonster": "Dark Elder",
+    "description": "While this monster has 2 or more Power, it evades the first Hit of each enemy Attack and has: \"Retaliate: Triggers a 2 x 1 Earth/Fire Attack against the enemy.\"",
+    "iconFilename": "Trait_fearless.webp",
+    "category": "Signature",
+    "signatureMonster": "Naga (Shifted)",
     "types": []
   },
   {
@@ -1698,7 +1869,17 @@
     "skillType": "Trait",
     "description": "Gains Aging. When another allied Minion dies: Generates Wild Aether and applies X Burn to the enemy with the lowest amount of Burn, where X is the amount of Age on this monster.",
     "iconFilename": "Trait_feed_the_void.webp",
+    "category": "Signature",
     "signatureMonster": "Dark Elder (Shifted)",
+    "types": []
+  },
+  {
+    "name": "Feed the Void",
+    "skillType": "Trait",
+    "description": "Gains Aging. When another allied Minion dies: Generates Wild Aether and applies X Terror to the enemy with the lowest amount of Terror, where X is the amount of Age on this monster.",
+    "iconFilename": "Trait_feed_the_void.webp",
+    "category": "Signature",
+    "signatureMonster": "Dark Elder",
     "types": []
   },
   {
@@ -1706,86 +1887,106 @@
     "skillType": "Trait",
     "description": "On Support Action: Applies Temporary Power to self.<br>On Attack: Transfers all Power and Temporary Power stacks to every other ally.",
     "iconFilename": "Trait_gift_of_the_wyrm.webp",
+    "category": "Signature",
     "signatureMonster": "Wyrmling",
-    "types": []
-  },
-  {
-    "name": "Glutton",
-    "skillType": "Trait",
-    "description": "Regeneration heals this monster for 10% of its max health, rounded up, but doesn't trigger at the start of the turn. On Attack from this monster or its Minions: Triggers Regeneration on self and deals an Earth / Fire Hit to target enemy equal to the healed amount.",
-    "iconFilename": "Trait_glutton.webp",
-    "signatureMonster": "Ammit",
     "types": []
   },
   {
     "name": "Glutton (Shifted)",
     "skillType": "Trait",
-    "description": "Regeneration heals this monster for 10% of its max health, rounded up, but doesn't trigger at the start of the turn. On Attack from this monster or its Minions: Triggers Regeneration on self and deals an Earth / Water Hit to target enemy equal to the healed amount.",
+    "description": "Regeneration heals this monster for 10% of its max health, rounded up, but doesn't trigger at the start of turn. On Attack from this monster or its Minions: Triggers Regeneration on self and deals an Earth / Water Hit to target enemy equal to the healed amount.",
     "iconFilename": "Trait_glutton.webp",
+    "category": "Signature",
     "signatureMonster": "Ammit (Shifted)",
+    "types": []
+  },
+  {
+    "name": "Glutton",
+    "skillType": "Trait",
+    "description": "Regeneration heals this monster for 10% of its max health, rounded up, but doesn't trigger at the start of turn. On Attack from this monster or its Minions: Triggers Regeneration on self and deals an Earth / Fire Hit to target enemy equal to the healed amount.",
+    "iconFilename": "Trait_glutton.webp",
+    "category": "Signature",
+    "signatureMonster": "Ammit",
     "types": []
   },
   {
     "name": "Hot Temper",
     "skillType": "Trait",
-    "description": "Retaliate: Applies 1 Temporary Power to self. Every 7 times this Trait triggers: Applies 4 Burn to each enemy.",
+    "description": "Retaliate: Applies 1 Temporary Power to self. Every 7 times this Trait triggers: Applies 10 Burn to each enemy.",
     "iconFilename": "Trait_hot_temper.webp",
+    "category": "Signature",
     "signatureMonster": "Cockatrice",
-    "types": []
-  },
-  {
-    "name": "Hundred Handed (Shifted)",
-    "skillType": "Trait",
-    "description": "Gains Aging. At the end of your turn, if this monster has 3 or more Age: Triggers an Attack against each enemy that deals 1 x 5 Fire/Water damage for every 3 Age stacks and applies 1 Burn to each enemy.",
-    "iconFilename": "Trait_hundred_handed.webp",
-    "signatureMonster": "Hecatoncheires (Shifted)",
     "types": []
   },
   {
     "name": "Hundred Handed",
     "skillType": "Trait",
-    "description": "Gains Aging. At the end of your turn, if this monster has 3 or more Age: Triggers an Attack against each enemy that deals 1 x 5 Fire/Wind damage for every 3 Age stacks and applies 1 Weakness to each enemy.",
+    "description": "Gains Aging. At the end of your turn, if this monster has 3 or more Age: Triggers an Attack against each enemy that deals 1 x 4 Fire/Wind damage for every 3 Age stacks and applies 1 Weakness to each enemy.",
     "iconFilename": "Trait_hundred_handed.webp",
+    "category": "Signature",
     "signatureMonster": "Hecatoncheires",
+    "types": []
+  },
+  {
+    "name": "Hundred Handed (Shifted)",
+    "skillType": "Trait",
+    "description": "Gains Aging. At the end of your turn, if this monster has 3 or more Age: Triggers an Attack against each enemy that deals 1 x 4 Fire/Water damage for every 3 Age stacks and applies 1 Burn to each enemy.",
+    "iconFilename": "Trait_hundred_handed.webp",
+    "category": "Signature",
+    "signatureMonster": "Hecatoncheires (Shifted)",
     "types": []
   },
   {
     "name": "Judgment",
     "skillType": "Trait",
-    "description": "Aura: Whenever one or more {shielded} allies get attacked: Triggers Poison on the enemy and applies Force to the attacked allies.",
+    "description": "Aura: Whenever one or more Shielded allies get attacked: Triggers Poison on the enemy and applies Force to the attacked allies.",
     "iconFilename": "Trait_judgment.webp",
+    "category": "Signature",
     "signatureMonster": "Serket",
+    "types": []
+  },
+  {
+    "name": "Judgment (Shifted)",
+    "skillType": "Trait",
+    "description": "Aura: Whenever an enemy with Weakness attacks: Triggers Poison on the enemy and applies Force to the attacked allies.",
+    "iconFilename": "Trait_judgment.webp",
+    "category": "Signature",
+    "signatureMonster": "Serket (Shifted)",
     "types": []
   },
   {
     "name": "Lamentation of Woes (Shifted)",
     "skillType": "Trait",
-    "description": "Retaliate: Cleanses 1 debuff from self.<br>For every 4 debuffs cleansed from self: Triggers an Attack that deals 1 x 4 Earth / Wind damage to all enemies and applies 4 Affliction to each enemy.",
+    "description": "Retaliate: Cleanses 1 debuff from self.<br>For every 6 debuffs cleansed from self: Triggers an Attack that deals 1 x 6 Earth / Wind damage to all enemies and applies 4 Affliction to each enemy.",
     "iconFilename": "Trait_lamentation_of_woes.webp",
+    "category": "Signature",
     "signatureMonster": "Medusa (Shifted)",
     "types": []
   },
   {
     "name": "Lamentation of Woes",
     "skillType": "Trait",
-    "description": "Retaliate: Cleanses 1 debuff from self.<br>For every 4 debuffs cleansed from self: Triggers an Attack that deals 1 x 4 Earth / Water damage to all enemies and applies 4 Affliction to each enemy.",
+    "description": "Retaliate: Cleanses 1 debuff from self.<br>For every 6 debuffs cleansed from self: Triggers an Attack that deals 1 x 6 Earth / Water damage to all enemies and applies 4 Affliction to each enemy.",
     "iconFilename": "Trait_lamentation_of_woes.webp",
+    "category": "Signature",
     "signatureMonster": "Medusa",
     "types": []
   },
   {
     "name": "Levitation (Shifted)",
     "skillType": "Trait",
-    "description": "For every 9 Aether consumed by allies: Applies Dodge to this monster. Each Attack consumes a Dodge stack to gain +1 {damage} and Steal 1 Aether.",
+    "description": "Aura: For every 9 Aether consumed by allies: Applies Dodge to this monster. Each Attack consumes a Dodge stack to gain +1 Damage and Steal 1 Aether.",
     "iconFilename": "Trait_levitation.webp",
+    "category": "Signature",
     "signatureMonster": "Djinn (Shifted)",
     "types": []
   },
   {
     "name": "Levitation",
     "skillType": "Trait",
-    "description": "For every 9 Aether consumed by allies: Applies Dodge to this monster. Each Attack consumes a Dodge stack to gain 30% Crit Chance and +3 Crit Damage.",
+    "description": "For every 9 Aether consumed by allies: Applies Dodge to this monster. Each Attack consumes a Dodge stack to gain +30% Crit Chance and +3 Crit Damage.",
     "iconFilename": "Trait_levitation.webp",
+    "category": "Signature",
     "signatureMonster": "Djinn",
     "types": []
   },
@@ -1794,6 +1995,7 @@
     "skillType": "Trait",
     "description": "Whenever your allies spend 2 Aether of each element, Unleash Tome may be used once.<br>Unleash Tome: Uses a powerful Action without spending Aether and as a Free Action, from a choice of three random Actions. <i>Wild Aether spent fills the least filled element.</i>",
     "iconFilename": "Trait_living_tome.webp",
+    "category": "Signature",
     "signatureMonster": "Grimoire",
     "types": []
   },
@@ -1802,6 +2004,7 @@
     "skillType": "Trait",
     "description": "On Action, if the action didn't consume Cooking stacks: Applies Cooking to self and Regeneration to the ally with the lowest amount of Regeneration.",
     "iconFilename": "Trait_monster_chef.webp",
+    "category": "Signature",
     "signatureMonster": "Domovoy",
     "types": []
   },
@@ -1810,6 +2013,7 @@
     "skillType": "Trait",
     "description": "For every 5 Aether purged, Aether stolen, or Weakness applied by the party: Applies Power to self.",
     "iconFilename": "Trait_power_nexus.webp",
+    "category": "Signature",
     "signatureMonster": "Warden",
     "types": []
   },
@@ -1818,6 +2022,7 @@
     "skillType": "Trait",
     "description": "On Crit: Applies Poison.<br>This monster gains +4% Crit Chance for every Poison stack on enemies.",
     "iconFilename": "Trait_primeval_blight.webp",
+    "category": "Signature",
     "signatureMonster": "Tatzelwurm",
     "types": []
   },
@@ -1826,6 +2031,7 @@
     "skillType": "Trait",
     "description": "On Action: Applies 2 Burn to self.<br>Whenever Burn triggers on this monster: Enemies also take damage from it. <i>Doesn't trigger Retaliate.</i>",
     "iconFilename": "Trait_putrid_odor.webp",
+    "category": "Signature",
     "signatureMonster": "Ooze (Shifted)",
     "types": []
   },
@@ -1834,6 +2040,7 @@
     "skillType": "Trait",
     "description": "On Action: Applies 2 Poison to self.<br>Whenever Poison triggers on this monster: Enemies also take damage from it. <i>Doesn't trigger Retaliate.</i>",
     "iconFilename": "Trait_putrid_odor.webp",
+    "category": "Signature",
     "signatureMonster": "Ooze",
     "types": []
   },
@@ -1842,6 +2049,7 @@
     "skillType": "Trait",
     "description": "Whenever damage is dealt to this monster's Shield: Deals a combined Earth/Wind hit to the attacker with that much damage.",
     "iconFilename": "Trait_rime_wind.webp",
+    "category": "Signature",
     "signatureMonster": "Jotunn (Shifted)",
     "types": []
   },
@@ -1850,14 +2058,16 @@
     "skillType": "Trait",
     "description": "Whenever damage is dealt to this monster's Shield: Deals a combined Water/Wind hit to the attacker with that much damage.",
     "iconFilename": "Trait_rime_wind.webp",
+    "category": "Signature",
     "signatureMonster": "Jotunn",
     "types": []
   },
   {
     "name": "Schadenfreude (Shifted)",
     "skillType": "Trait",
-    "description": "Aura: The first ally and the first enemy that use an Action each turn get 2 Poison or 2 Burn applied to them.<br>This monster gains +1 Damage and +6% Evasion for every 10 debuff stacks among all monsters in combat.",
+    "description": "Aura: The first ally and the first enemy that use an Action each turn get 2 Poison or 2 Burn applied to them.<br>This monster gains +1 Damage and +6% Evasion for every 13 debuff stacks among all monsters in combat.",
     "iconFilename": "Trait_schadenfreude.webp",
+    "category": "Signature",
     "signatureMonster": "Mephisto (Shifted)",
     "types": []
   },
@@ -1866,22 +2076,25 @@
     "skillType": "Trait",
     "description": "Aura: The first ally and the first enemy that use an Action each turn get 2 Terror or 2 Burn applied to them.<br>This monster gains +1 Damage and +6% Evasion for every 10 debuff stacks among all monsters in combat.",
     "iconFilename": "Trait_schadenfreude.webp",
+    "category": "Signature",
     "signatureMonster": "Mephisto",
     "types": []
   },
   {
     "name": "Scorched Earth (Shifted)",
     "skillType": "Trait",
-    "description": "Whenever this monster applies one or more Terror stacks to an enemy: Breaks 1 Poise on them.",
+    "description": "Aura: Whenever one or more Terror stacks are applied to an enemy: Breaks 1 Poise on them. <i>Triggers up to 5 times per turn.</i>",
     "iconFilename": "Trait_scorched_earth.webp",
+    "category": "Signature",
     "signatureMonster": "Cherufe (Shifted)",
     "types": []
   },
   {
     "name": "Scorched Earth",
     "skillType": "Trait",
-    "description": "Whenever this monster applies one or more Burn stacks to an enemy: Breaks 1 Poise on them.",
+    "description": "Aura: Whenever one or more Burn stacks are applied to an enemy: Breaks 1 Poise on them. <i>Triggers up to 5 times per turn.</i>",
     "iconFilename": "Trait_scorched_earth.webp",
+    "category": "Signature",
     "signatureMonster": "Cherufe",
     "types": []
   },
@@ -1890,6 +2103,7 @@
     "skillType": "Trait",
     "description": "Gains Aging. The first Hit of each Attack of this monster deals +1 damage for every 2 buff stacks on it and Shields self equal to that amount.",
     "iconFilename": "Trait_shining_spark.webp",
+    "category": "Signature",
     "signatureMonster": "Minokawa (Shifted)",
     "types": []
   },
@@ -1898,6 +2112,7 @@
     "skillType": "Trait",
     "description": "The first Hit of each Attack of this monster deals +1 damage for every 2 buff stacks on it and Shields self equal to that amount.",
     "iconFilename": "Trait_shining_spark.webp",
+    "category": "Signature",
     "signatureMonster": "Minokawa",
     "types": []
   },
@@ -1906,6 +2121,7 @@
     "skillType": "Trait",
     "description": "Aura: Whenever an ally or enemy uses an Action of a certain element: Generates Wild Aether. The element is randomly chosen at the start of every round.",
     "iconFilename": "Trait_tides_of_the_void.webp",
+    "category": "Signature",
     "signatureMonster": "Star Spawn",
     "types": []
   },
@@ -1914,15 +2130,8 @@
     "skillType": "Trait",
     "description": "Whenever this monster receives or applies a heal: Applies Poison to the enemy with the lowest amount of Poison.",
     "iconFilename": "Trait_toxic_tides.webp",
+    "category": "Signature",
     "signatureMonster": "Nixe",
-    "types": []
-  },
-  {
-    "name": "Two Headed (Shifted)",
-    "skillType": "Trait",
-    "description": "On Attack, if it was this monster's first Attack of the turn: Applies 2 Weakness to target enemy. If it was this monster's second Attack of the turn: Applies Power to self.",
-    "iconFilename": "Trait_two_headed.webp",
-    "signatureMonster": "Orthrus (Shifted)",
     "types": []
   },
   {
@@ -1930,7 +2139,17 @@
     "skillType": "Trait",
     "description": "On Attack, if it was this monster's first Attack of the turn: Heals the ally with the lowest health by 5. If it was this monster's second Attack of the turn: Applies Power to self.",
     "iconFilename": "Trait_two_headed.webp",
+    "category": "Signature",
     "signatureMonster": "Orthrus",
+    "types": []
+  },
+  {
+    "name": "Two Headed (Shifted)",
+    "skillType": "Trait",
+    "description": "On Attack, if it was this monster's first Attack of the turn: Applies 2 Weakness to target enemy. If it was this monster's second Attack of the turn: Applies Power to self.",
+    "iconFilename": "Trait_two_headed.webp",
+    "category": "Signature",
+    "signatureMonster": "Orthrus (Shifted)",
     "types": []
   },
   {
@@ -1938,14 +2157,16 @@
     "skillType": "Trait",
     "description": "Aura: Terror on enemies deals 2 more damage and heals the attacker for 33% of the damage of the hit, rounded up.",
     "iconFilename": "Trait_vampirism.webp",
+    "category": "Signature",
     "signatureMonster": "Nosferatu",
     "types": []
   },
   {
     "name": "Wholesome",
     "skillType": "Trait",
-    "description": "At the start of combat: Applies 1 Regeneration to self.<br>Whenever Regeneration triggers on this monster: Applies Regeneration to each other ally, then triggers Regeneration on them.",
+    "description": "At the start of combat: Applies 1 Regeneration to self.<br>Whenever Regeneration triggers on this monster: Applies Regeneration to another ally with least health, then triggers Regeneration on them.",
     "iconFilename": "Trait_wholesome.webp",
+    "category": "Signature",
     "signatureMonster": "Mandragora",
     "types": []
   }

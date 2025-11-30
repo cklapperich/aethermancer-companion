@@ -106,7 +106,7 @@
       "Water"
     ],
     "types": [],
-    "description": "3 x 3 Water damage against target enemy.<br>Cleanses 3 debuffs from self.",
+    "description": "3 x 3 Water damage against target enemy.<br>Cleanses [3 debuffs] from self.",
     "iconFilename": "Action_cleansing_strike.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -245,7 +245,7 @@
       "Wind"
     ],
     "types": [],
-    "description": "3 x 2 Wind damage against target enemy.<br>Applies Dodge to self.",
+    "description": "3 x 3 Wind damage against target enemy.<br>Applies Dodge to self.",
     "iconFilename": "Action_flurry.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -388,6 +388,22 @@
     "actionCategory": "Attack"
   },
   {
+    "name": "Light Beam",
+    "skillType": "Action",
+    "manaCost": [
+      "Wild",
+      "Wild",
+      "Wild",
+      "Wild",
+      "Wild"
+    ],
+    "types": [],
+    "description": "2 x 10 Wild damage against all enemies.<br>Heals all allies for 2 x 10.",
+    "iconFilename": "Action_light_beam.webp",
+    "freeAction": false,
+    "actionCategory": "Attack"
+  },
+  {
     "name": "Long Slash",
     "skillType": "Action",
     "manaCost": [
@@ -420,7 +436,7 @@
       "Earth"
     ],
     "types": [],
-    "description": "2 x 5 Fire/Earth damage against target enemy.<br>On Interrupt: Applies Power to self.",
+    "description": "2 x 4 Fire/Earth damage against target enemy.<br>On Interrupt: Applies Power to self.",
     "iconFilename": "Action_molten_stabs.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -458,7 +474,7 @@
       "Earth"
     ],
     "types": [],
-    "description": "Heals target ally for 3 x 3.<br>Target geneerates 3 Random Aether.",
+    "description": "Heals target ally for 3 x 3.<br>Target generates 3 Random Aether.",
     "iconFilename": "Action_restore.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -560,7 +576,7 @@
       "Wild"
     ],
     "types": [],
-    "description": "2 x 10 Wild damage against all enemies.<br>Applies Power to self.",
+    "description": "2 x 10 Wild damage against all enemies.<br>Applies Power to all allies.",
     "iconFilename": "Action_star_beam.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -685,7 +701,7 @@
       "Wind"
     ],
     "types": [],
-    "description": "3 x 3 Wind damage against target enemy.<br>Cleanses 3 debuffs from self.",
+    "description": "3 x 3 Wind damage against target enemy.<br>Cleanses [3 debuffs] from self.",
     "iconFilename": "Action_windswept_strike.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -712,7 +728,7 @@
     "types": [
       "Sidekick"
     ],
-    "description": "3 x 2 Wind damage against target enemy.<br>Applies Sidekick to self.",
+    "description": "3 x 3 Wind damage against target enemy.<br>Applies Sidekick to self.",
     "iconFilename": "Action_aerial_strike.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -793,10 +809,20 @@
     "types": [
       "Purge"
     ],
-    "description": "2 x 4 Fire/Wind damage against target enemy.<br>Purges 2 enemy Aether.<br>On Interrupt: Deals 2 damage Hit to all enemies.",
+    "description": "2 x 4 Fire/Wind damage against target enemy.<br>Purges 2 enemy Aether.<br>On Interrupt: Deals 2 damage Hit to all enemies",
     "iconFilename": "Action_ball_lightning.webp",
     "freeAction": false,
     "actionCategory": "Attack"
+  },
+  {
+    "name": "Basic Heal",
+    "skillType": "Action",
+    "manaCost": [],
+    "types": [],
+    "description": "Heals target ally for 2 x 3<br>Generates X Aether.",
+    "iconFilename": "Action_basic_heal.webp",
+    "freeAction": false,
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Blood Drain",
@@ -809,7 +835,7 @@
     "types": [
       "Heal"
     ],
-    "description": "4 x 4 Water damage against target enemy.<br>Heals self for 3 x 4.",
+    "description": "4 x 4 Water damage against target enemy.<br>Heals all allies for 3 x 4.",
     "iconFilename": "Action_blood_drain.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -840,7 +866,7 @@
     "types": [
       "Regeneration"
     ],
-    "description": "Generates Wild Aether.<br>Applies Cooking to self.<br>Free Action.",
+    "description": "Generates Wild Aether.<br>Applies Cooking &amp; Regeneration to self.<br>Free Action.",
     "iconFilename": "Action_boil.webp",
     "freeAction": true,
     "actionCategory": "Support Action"
@@ -856,7 +882,7 @@
     "types": [
       "Terror"
     ],
-    "description": "Applies 6 Terror to target enemy.<br>Purges 1 enemy Aether.",
+    "description": "Purges 1 enemy Aether.<br>Applies 4 Terror to all enemies.",
     "iconFilename": "Action_bone_chill.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -873,6 +899,18 @@
     ],
     "description": "Heals all allies for 2 x 4.<br>Applies 2 Burn to all enemies.",
     "iconFilename": "Action_bonfire.webp",
+    "freeAction": false,
+    "actionCategory": "Dedicated Support Action"
+  },
+  {
+    "name": "Bountiful Wish",
+    "skillType": "Action",
+    "manaCost": [
+      "Wind"
+    ],
+    "types": [],
+    "description": "Generates Water/Fire/Wind/Earth Aether.",
+    "iconFilename": "Action_bountiful_wish.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
   },
@@ -918,7 +956,7 @@
     "types": [
       "Critical"
     ],
-    "description": "2 x 6 Fire/Wind damage against target enemy.<br>On Crit: Additional deals 1 x 8 additional damage to the enemy with the lowest health that didn't receive additional damage this way yet.",
+    "description": "3 x 4 Fire/Wind damage against target enemy.<br>On Crit: Additionally deals 1 x 8 damage to the enemy with lowest health that didn't receive additional damage this way yet.",
     "iconFilename": "Action_chain_lightning.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -948,7 +986,7 @@
     "types": [
       "Age"
     ],
-    "description": "3 x 5 Fire damage against target enemy.<br>Heals all allies with Age for 4 and cleanses 4 debuffs from them.",
+    "description": "3 x 3 Fire damage against target enemy.<br>Heals all allies with Age for 4 and cleanses 4 debuffs from them.",
     "iconFilename": "Action_cleansing_flame.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -963,7 +1001,7 @@
     "types": [
       "Heal"
     ],
-    "description": "Heals all allies for 2 x 5.<br>Cleanses 4 debuffs from all allies.<br>Cleanses 2 Corruption from all allies on first use each combat.",
+    "description": "Heals all allies for 2 x 5.<br>Cleanses [4 debuffs] from all allies.<br>Cleanses 2 Corruption from all allies on first use each combat.",
     "iconFilename": "Action_cleansing_rain.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -1009,10 +1047,25 @@
     "types": [
       "Power"
     ],
-    "description": "Applies Temporary Power to self.<br>Heals self for 4.<br>Cleanses 2 debuffs from self.<br>Free Action.",
+    "description": "Applies Temporary Power to self.<br>Heals self for 4.<br>Cleanses [2 debuffs] from self.<br>Free Action.",
     "iconFilename": "Action_deep_breath.webp",
     "freeAction": true,
     "actionCategory": "Support Action"
+  },
+  {
+    "name": "Deluge Strike",
+    "skillType": "Action",
+    "manaCost": [
+      "Water",
+      "Water"
+    ],
+    "types": [
+      "Weakness"
+    ],
+    "description": "3 x 2 Water damage against target enemy.<br>Applies Weakness to target enemy.<br>Then applies 2 more stacks of each debuff on the target.",
+    "iconFilename": "Action_deluge_strike.webp",
+    "freeAction": false,
+    "actionCategory": "Attack"
   },
   {
     "name": "Dissolve",
@@ -1024,7 +1077,7 @@
     "types": [
       "Summon"
     ],
-    "description": "Target generates 5 Random Aether.<br>Sacrifices the Minion attached to the target ally with the lowest Essence.<br>Free Action.",
+    "description": "Target generates 5 Random Aether.<br>Sacrifices the Minion attached to target ally with the lowest Essence.<br>Free Action.",
     "iconFilename": "Action_dissolve.webp",
     "freeAction": true,
     "actionCategory": "Support Action"
@@ -1146,7 +1199,7 @@
     "types": [
       "Dodge"
     ],
-    "description": "Heals target ally for 2 x 6.<br>Applies 2 Dodge to target ally.",
+    "description": "Heals target ally for 2 x 8.<br>Applies 3 Dodge to target ally.",
     "iconFilename": "Action_elixir.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -1177,7 +1230,7 @@
     "types": [
       "Regeneration"
     ],
-    "description": "4 x 2 Fire/Wind damage against target enemy.<br>Applies 3 Regeneration to self.<br>Cleanses 4 debuffs from self.",
+    "description": "4 x 2 Fire/Wind damage against target enemy.<br>Applies 3 Regeneration to self.<br>Cleanses [4 debuffs] from self.",
     "iconFilename": "Action_energizing_strike.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -1190,8 +1243,8 @@
       "Wind"
     ],
     "types": [
-      "Heal",
-      "Aether"
+      "Aether",
+      "Heal"
     ],
     "description": "Heals target ally for 2 x 3.<br>Target generates 1 Random Aether.<br>Free Action.",
     "iconFilename": "Action_energy_charm.webp",
@@ -1243,7 +1296,7 @@
     "types": [
       "Age"
     ],
-    "description": "Shields all allies for 2 x 6.<br>Applies Age to all allies with Age.",
+    "description": "Shields all allies for 2 x 5.<br>Applies Age to all allies with 3 or more Age stacks.",
     "iconFilename": "Action_eon_shield.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -1258,7 +1311,7 @@
     "types": [
       "Critical"
     ],
-    "description": "2 x 5 Water/Fire damage against target enemy.<br>+15% Crit Chance,<br>Critical hits Purge 1 enemy Aether.",
+    "description": "2 x 5 Water/Fire damage against target enemy.<br>+25% Crit Chance.<br>Critical hits Purge 1 enemy Aether.",
     "iconFilename": "Action_explosive_burst.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -1273,7 +1326,7 @@
     "types": [
       "Regeneration"
     ],
-    "description": "Applies 2 Regeneration to self.<br>Then consume all Regeneration stacks to deal 6 damage to target enemy for every stack consumed.",
+    "description": "Applies 2 Regeneration to self.<br>Then consume up to 10 Regeneration stacks to deal 6 damage to target enemy for every stack consumed.",
     "iconFilename": "Action_explosive_exhale.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -1289,10 +1342,22 @@
     "types": [
       "Tank"
     ],
-    "description": "4 x 5 Water/Fire damage against target enemy.<br>Deals 5 damage hit to self.",
+    "description": "4 x 5 Water/Fire damage against target enemy.<br>Deals 5 damage Hit to self",
     "iconFilename": "Action_explosive_rush.webp",
     "freeAction": false,
     "actionCategory": "Attack"
+  },
+  {
+    "name": "Fierce Wish",
+    "skillType": "Action",
+    "manaCost": [
+      "Wind"
+    ],
+    "types": [],
+    "description": "Applies 2 Force to all allies.",
+    "iconFilename": "Action_fierce_wish.webp",
+    "freeAction": false,
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Fire Blast",
@@ -1395,7 +1460,7 @@
     "types": [
       "Terror"
     ],
-    "description": "Heals all allies for 2 x 5.<br>Applies 2 Terror to all enemies.",
+    "description": "Heals all allies for 2 x 5.<br>Applies 3 Terror to all enemies.",
     "iconFilename": "Action_foreboding_rain.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -1426,7 +1491,7 @@
     "types": [
       "Terror"
     ],
-    "description": "3 x 3 Fire/Wind damage against target enemy.<br>Applies 3 Terror to all other enemies.",
+    "description": "3 x 4 Fire/Wind damage against target enemy.<br>Applies 3 Terror to all other enemies.",
     "iconFilename": "Action_frightful_lightning.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -1458,7 +1523,7 @@
     "types": [
       "Heal"
     ],
-    "description": "Heals target ally for 4 x 7.<br>Permanently increases their Max Health by 3 when used for the first time each combat.",
+    "description": "Heals target ally for 4 x 6.<br>Permanently increases their Max Health by 3 when used for the first time each combat.",
     "iconFilename": "Action_gemstone_healing.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -1520,8 +1585,8 @@
       "Fire"
     ],
     "types": [
-      "Heal",
-      "Aether"
+      "Aether",
+      "Heal"
     ],
     "description": "Heals all allies for 2 x 5.<br>Generates Water/Fire/Wind/Earth Aether.",
     "iconFilename": "Action_healing_brew.webp",
@@ -1539,7 +1604,7 @@
     "types": [
       "Weakness"
     ],
-    "description": "Applies 4 Weakness to target enemy.<br>Heals all allies for 2 x 6.",
+    "description": "Applies 4 Weakness to target enemy.<br>Heals all allies for 2 x 8.",
     "iconFilename": "Action_healing_dust.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -1570,7 +1635,7 @@
     "types": [
       "Age"
     ],
-    "description": "Heals target ally for 3 x 5.<br>Cleanses 3 debuffs from target. Then, if it has no debuffs, applies Age to it.",
+    "description": "Heals target ally for 3 x 5.<br>Cleanses [3 debuffs] from target ally. Then, if it has no debuffs, applies Age to it.",
     "iconFilename": "Action_hibernation.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -1587,7 +1652,7 @@
     "types": [
       "Critical"
     ],
-    "description": "2 x 4 Water/Wind damage against all enemies.<br>Critical Hits deal 4 additional damage.",
+    "description": "2 x 4 Water/Wind damage against all enemies.<br>+15% Crit Chance.<br>Critical Hits deal 4 additional damage.",
     "iconFilename": "Action_ice_spears.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -1618,7 +1683,7 @@
     "types": [
       "Regeneration"
     ],
-    "description": "Applies 3 Regeneration to target ally.<br>Then trigger all Regeneration stacks on them at once.",
+    "description": "Applies 3 Regeneration to target ally.<br>Then triggers up to 10 Regeneration stacks on them at once.",
     "iconFilename": "Action_immersion.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -1737,6 +1802,18 @@
     "actionCategory": "Attack"
   },
   {
+    "name": "Mischievous Wish",
+    "skillType": "Action",
+    "manaCost": [
+      "Wind"
+    ],
+    "types": [],
+    "description": "Purges 3 enemy Aether.",
+    "iconFilename": "Action_mischievous_wish.webp",
+    "freeAction": false,
+    "actionCategory": "Dedicated Support Action"
+  },
+  {
     "name": "Moisturize",
     "skillType": "Action",
     "manaCost": [
@@ -1745,7 +1822,7 @@
     "types": [
       "Age"
     ],
-    "description": "Applies Age to self if it has 3 or fewer Age stacks.<br>Then Shields for 1 for each Age stack.<br>Free Action.",
+    "description": "If this monster has 3 or fewer Age, applies Age to self.<br>Then Shields for 1 for each Age stack.<br>Free Action.",
     "iconFilename": "Action_moisturize.webp",
     "freeAction": true,
     "actionCategory": "Support Action"
@@ -1762,7 +1839,7 @@
     "types": [
       "Regeneration"
     ],
-    "description": "1 x 20 Water/Earth damage against target enemy.<br>+6 damage and +1 Poise Damage for every Regeneration stack.",
+    "description": "1 x 20 Water/Earth damage against target enemy.<br>+4 damage and +1 Poise Damage for every Regeneration stack.",
     "iconFilename": "Action_mud_fist.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -1778,7 +1855,7 @@
     "types": [
       "Purge"
     ],
-    "description": "Purges 2 enemy Aether.<br>Heals all allies for 5.<br>On Interrupt: Applies Temporary Power to all allies.",
+    "description": "Purges 2 enemy Aether.<br>Heals all allies for 7.<br>On Interrupt: Applies Temporary Power to all allies.",
     "iconFilename": "Action_mud_fling.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -1810,7 +1887,7 @@
     "types": [
       "Heal"
     ],
-    "description": "Heals target ally for 3 x 6.<br>Cleanses 4 debuffs from target ally.<br>Cleanses 4 Corruption from target ally on first use each combat.",
+    "description": "Heals target ally for 3 x 6.<br>Cleanses [4 debuffs] from target ally.<br>Cleanses 4 Corruption from target ally on first use each combat.",
     "iconFilename": "Action_natural_cure.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -1856,7 +1933,7 @@
     "types": [
       "Weakness"
     ],
-    "description": "3 x 2 Water/Earth damage against target enemy.<br>Deal an additional 2 x 2 damage if the enemy has Weakness.",
+    "description": "3 x 2 Water/Earth damage against target enemy.<br>Deals an additional 2 x 2 damage if the enemy has Weakness.",
     "iconFilename": "Action_petal_burst.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -1871,7 +1948,7 @@
     "types": [
       "Affliction"
     ],
-    "description": "Cleanses 3 debuffs from all allies.<br>Cleanses 1 Corruption from all allies on first use each combat.<br>Free Action.",
+    "description": "Cleanses [3 debuffs] from all allies.<br>Cleanses 1 Corruption from all allies on first use each combat.<br>Free Action.",
     "iconFilename": "Action_petal_cleanse.webp",
     "freeAction": true,
     "actionCategory": "Support Action"
@@ -1886,7 +1963,7 @@
     "types": [
       "Force"
     ],
-    "description": "Shields target ally for 2 x 4.<br>Applies Force to target ally.<br>Cleanses 3 debuffs from target ally.",
+    "description": "Shields target ally for 2 x 4.<br>Applies Force to target ally.<br>Cleanses [3 debuffs] from target ally.",
     "iconFilename": "Action_petal_shield.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -1901,7 +1978,7 @@
     "types": [
       "Sidekick"
     ],
-    "description": "2 x 3 Water/Earth damage against target enemy.<br>Cleanses 2 debuffs from self.<br>Applies Sidekick to self.",
+    "description": "2 x 3 Water/Earth damage against target enemy.<br>Cleanses [2 debuffs] from self.<br>Applies Sidekick to self.",
     "iconFilename": "Action_petal_spell.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -1933,7 +2010,7 @@
     "types": [
       "Weakness"
     ],
-    "description": "4 x 3 Earth damage against target enemy.<br>Applies 4 Weakness to target enemy.",
+    "description": "4 x 4 Earth damage against target enemy.<br>Applies 4 Weakness to target enemy.",
     "iconFilename": "Action_pollen_blast.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -1948,7 +2025,7 @@
     "types": [
       "Weakness"
     ],
-    "description": "Shields target ally for 2 x 5.<br>Applies 2 Weakness to all enemies.",
+    "description": "Shields target ally for 2 x 7.<br>Applies 2 Weakness to all enemies.",
     "iconFilename": "Action_pollen_shield.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -1961,8 +2038,8 @@
       "Fire"
     ],
     "types": [
-      "Power",
-      "Heal"
+      "Heal",
+      "Power"
     ],
     "description": "Heals target ally for 3 x 5.<br>Applies 3 Temporary Power to target ally.",
     "iconFilename": "Action_power_brand.webp",
@@ -1980,10 +2057,22 @@
       "Critical",
       "Force"
     ],
-    "description": "1 x 15 Fire/Earth damage against target enemy.<br>On first Hit Crit: +2 Poise Damage.",
+    "description": "1 x 15 Fire/Earth damage against target enemy.<br>On first Hit Crit: +3 Poise Damage.",
     "iconFilename": "Action_precision_meteor.webp",
     "freeAction": false,
     "actionCategory": "Attack"
+  },
+  {
+    "name": "Protective Wish",
+    "skillType": "Action",
+    "manaCost": [
+      "Wind"
+    ],
+    "types": [],
+    "description": "Applies 3 Dodge to target ally.",
+    "iconFilename": "Action_protective_wish.webp",
+    "freeAction": false,
+    "actionCategory": "Dedicated Support Action"
   },
   {
     "name": "Rain of Life",
@@ -1996,7 +2085,7 @@
     "types": [
       "Regeneration"
     ],
-    "description": "Heals all allies for 4 x 5.<br>Applies 2 Regeneration to all allies.",
+    "description": "Heals all allies for 4 x 6.<br>Applies 2 Regeneration to all allies.",
     "iconFilename": "Action_rain_of_life.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -2044,7 +2133,7 @@
     "types": [
       "Dodge"
     ],
-    "description": "Applies 2 Dodge to target ally.<br>Retaliate: Triggers 2 x 5 Earth/Wind damage Attack against the enemy.",
+    "description": "Applies 2 Dodge to target ally.<br>Retaliate: Triggers a 2 x 5 Earth/Wind damage Attack against the enemy.",
     "iconFilename": "Action_reflective_trap.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -2091,7 +2180,7 @@
     "types": [
       "Poison"
     ],
-    "description": "3 x 3 Water/Earth damage against all enemies.<br>Applies 3 Poison to all enemies and self.<br>Generates 1 Random Aether",
+    "description": "3 x 3 Water/Earth damage against all enemies.<br>Applies 3 Poison to all enemies and self.<br>Generates 1 Random Aether.",
     "iconFilename": "Action_slime_volley.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -2201,7 +2290,7 @@
     "types": [
       "Age"
     ],
-    "description": "If this Monster has 3 or fewer Age stacks, applies Age on it. Otherwise generates Wild/Wild Aether.<br>Free Action.",
+    "description": "If this Monster has 3 or fewer Age stacks, applies Age on it. Otherwise generates Wild / Wild Aether.<br>Free Action.",
     "iconFilename": "Action_stardust.webp",
     "freeAction": true,
     "actionCategory": "Support Action"
@@ -2232,7 +2321,7 @@
     "types": [
       "Critical"
     ],
-    "description": "3 x 8 Earth damage against target enemy.<br>First Hit is a Critical Hit.",
+    "description": "3 x 9 Earth damage against target enemy.<br>First Hit is a Critical Hit.",
     "iconFilename": "Action_stone_edge.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -2263,7 +2352,7 @@
     "types": [
       "Summon"
     ],
-    "description": "Summons Minion: Earth Lance with 4 Essence on target ally.<br>Earth Lance: Earth Damage +1.<br>Action: 1 x 5 Earth damage against target enemy.",
+    "description": "Summons Minion: Earth Lance with 4 Essence on target ally.<br>Earth Lance: Earth Damage +1.<br>Action: 1 x 6 Earth damage against target enemy.",
     "iconFilename": "Action_summon_earth_lance.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -2278,7 +2367,7 @@
     "types": [
       "Summon"
     ],
-    "description": "Summons Minion: Earth Totem with 5 Essence on target ally.<br>Earth Totem:<br>Action: Shields self for 4.<br>Generates Earth Aether.",
+    "description": "Summons Minion: Earth Totem with 5 Essence on target ally.<br>Earth Totem:<br>Action: Shields self for 6.<br>Generates Earth Aether.",
     "iconFilename": "Action_summon_earth_totem.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -2293,7 +2382,7 @@
     "types": [
       "Summon"
     ],
-    "description": "Summons Minion: Fire Lance with 4 Essence on target ally.<br>Fire Lance: Fire Damage +1.<br>Action: 1 x 5 Fire damage against target enemy.",
+    "description": "Summons Minion: Fire Lance with 4 Essence on target ally.<br>Fire Lance: Fire Damage +1.<br>Action: 1 x 6 Fire damage against target enemy.",
     "iconFilename": "Action_summon_fire_lance.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -2308,7 +2397,7 @@
     "types": [
       "Summon"
     ],
-    "description": "Summons Minion: Fire Totem with 5 Essence on target ally.<br>Fire Totem:<br>Action: Shields self for 4.<br>Generates Fire Aether.",
+    "description": "Summons Minion: Fire Totem with 5 Essence on target ally.<br>Fire Totem:<br>Action: Shields self for 6.<br>Generates Fire Aether.",
     "iconFilename": "Action_summon_fire_totem.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -2323,7 +2412,7 @@
     "types": [
       "Summon"
     ],
-    "description": "Summons Minion: Water Lance with 4 Essence on target ally.<br>Water Lance: Water Damage +1.<br>Action: 1 x 5 Water damage against target enemy.",
+    "description": "Summons Minion: Water Lance with 4 Essence on target ally.<br>Water Lance: Water Damage +1.<br>Action: 1 x 6 Water damage against target enemy.",
     "iconFilename": "Action_summon_water_lance.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -2338,7 +2427,7 @@
     "types": [
       "Summon"
     ],
-    "description": "Summons Minion: Water Totem with 5 Essence on target ally.<br>Water Totem:<br>Action: Shields self for 4.<br>Generates Water Aether.",
+    "description": "Summons Minion: Water Totem with 5 Essence on target ally.<br>Water Totem:<br>Action: Shields self for 6.<br>Generates Water Aether.",
     "iconFilename": "Action_summon_water_totem.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -2353,7 +2442,7 @@
     "types": [
       "Summon"
     ],
-    "description": "Summons Minion: Wind Lance with 4 Essence on target ally.<br>Wind Lance: Wind Damage +1.<br>Action: 1 x 5 Wind damage against target enemy.",
+    "description": "Summons Minion: Wind Lance with 4 Essence on target ally.<br>Wind Lance: Wind Damage +1.<br>Action: 1 x 6 Wind damage against target enemy.",
     "iconFilename": "Action_summon_wind_lance.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -2368,7 +2457,7 @@
     "types": [
       "Summon"
     ],
-    "description": "Summons Minion: Wind Totem with 5 Essence on target ally.<br>Wind Totem:<br>Action: Shields self for 4.<br>Generates Wind Aether.",
+    "description": "Summons Minion: Wind Totem with 5 Essence on target ally.<br>Wind Totem:<br>Action: Shields self for 6.<br>Generates Wind Aether.",
     "iconFilename": "Action_summon_wind_totem.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -2393,12 +2482,13 @@
     "skillType": "Action",
     "manaCost": [
       "Water",
+      "Earth",
       "Earth"
     ],
     "types": [
       "Age"
     ],
-    "description": "1 x 5 Water/Earth damage against target enemy.<br>+3 damage and +1 Poise Damage for every Age stack.",
+    "description": "1 x 8 Water/Earth damage against target enemy.<br>+3 damage and +1 Poise Damage for every Age stack.",
     "iconFilename": "Action_thorn_of_ages.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -2455,12 +2545,13 @@
     "skillType": "Action",
     "manaCost": [
       "Fire",
+      "Earth",
       "Earth"
     ],
     "types": [
       "Poison"
     ],
-    "description": "2 x 2 Fire/Earth damage against target enemy.<br>Deals an additional X damage hit. <i>(2 for each Poison stack on the enemy)</i>",
+    "description": "2 x 4 Fire/Earth damage against target enemy.<br>Deals an additional X damage hit. <i>(2 for each Poison stack on the enemy)</i>",
     "iconFilename": "Action_toxic_eruption.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -2476,7 +2567,7 @@
     "types": [
       "Poison"
     ],
-    "description": "Heals target ally for 3 x 6.<br>Applies 3 Poison to all enemies.<br>Triggers Poison on all enemies",
+    "description": "Heals target ally for 3 x 6.<br>Applies 3 Poison to all enemies.<br>Triggers Poison on all enemies.",
     "iconFilename": "Action_toxic_healing.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -2493,6 +2584,16 @@
     ],
     "description": "Consumes 1 Power on target ally as additional cost.<br>Generates Wild/Wild/Wild Aether.<br>Free Action.",
     "iconFilename": "Action_transmutation.webp",
+    "freeAction": true,
+    "actionCategory": "Support Action"
+  },
+  {
+    "name": "Unleash Tome",
+    "skillType": "Action",
+    "manaCost": [],
+    "types": [],
+    "description": "Uses a powerful action without spending Aether and as a Free Action, from a choice of three random actions.<br>Free Action.",
+    "iconFilename": "Action_unleash_tome.webp",
     "freeAction": true,
     "actionCategory": "Support Action"
   },
@@ -2704,7 +2805,7 @@
     "types": [
       "Tank"
     ],
-    "description": "Shields all allies for 3 x 3.<br>Cleanses 3 debuffs from all allies.<br>Applies Redirect to self.",
+    "description": "Shields all allies for 3 x 3.<br>Cleanses [3 debuffs] from all allies.<br>Applies Redirect to self.",
     "iconFilename": "Action_winter_guard.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -2720,10 +2821,10 @@
       "Fire"
     ],
     "types": [
-      "Age",
-      "Aether"
+      "Aether",
+      "Age"
     ],
-    "description": "4 x 5 Water/Fire damage against target enemy.<br>Deals an additional 5 damage Hit for every 3 Age stacks.",
+    "description": "4 x 4 Water/Fire damage against target enemy.<br>Deals an additional 4 damage Hit for every 3 Age stacks.",
     "iconFilename": "Action_ancient_blast.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -2759,7 +2860,7 @@
       "Dodge",
       "Terror"
     ],
-    "description": "Applies 2 Dodge to target ally.<br>Retaliate: Applies 5 Terror to the enemy.",
+    "description": "Applies 2 Dodge to target ally.<br>Retaliate: Applies 6 Terror to the enemy.",
     "iconFilename": "Action_chilling_trap.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -2825,10 +2926,10 @@
       "Earth"
     ],
     "types": [
-      "Shield",
-      "Force"
+      "Force",
+      "Shield"
     ],
-    "description": "Shields target ally for 2 x 5.<br>Shields all allies for 3.<br>Applies 3 Force to allies.",
+    "description": "Shields target ally for 2 x 5.<br>Shields all allies for 3.<br>Applies 3 Force to all allies.",
     "iconFilename": "Action_diamond_shield.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -2853,14 +2954,13 @@
     "skillType": "Action",
     "manaCost": [
       "Water",
-      "Fire",
       "Fire"
     ],
     "types": [
-      "Regeneration",
-      "Force"
+      "Force",
+      "Regeneration"
     ],
-    "description": "Applies Force to target ally. Reactivates that ally. Applies 2 Cooking to self.",
+    "description": "Applies 2 Force to target ally. Reactivates that ally. Applies 2 Cooking to self.",
     "iconFilename": "Action_epic_broth.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -2872,8 +2972,8 @@
       "Fire"
     ],
     "types": [
-      "Purge",
-      "Aether"
+      "Aether",
+      "Purge"
     ],
     "description": "Purges 2 enemy Aether.<br>Generates Fire/Fire/Fire Aether.",
     "iconFilename": "Action_fire_ritual.webp",
@@ -2909,7 +3009,7 @@
       "Force",
       "Heal"
     ],
-    "description": "Heals all allies for 2 x 7.<br>Applies 2 Force to all allies.<br>Cleanse 2 Corruption from all allies on first use each combat,",
+    "description": "Heals all allies for 2 x 7.<br>Applies 2 Force to all allies.<br>Cleanses 2 Corruption from all allies on first use each combat.",
     "iconFilename": "Action_force_of_flowers.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -2918,7 +3018,6 @@
     "name": "Forever Soup",
     "skillType": "Action",
     "manaCost": [
-      "Water",
       "Water",
       "Fire",
       "Fire"
@@ -2964,7 +3063,7 @@
       "Purge",
       "Tank"
     ],
-    "description": "5 x 3 Wind/Earth damage against target enemy.<br>Deals 5 damage Hit to self.<br>Purges 2 enemy Aether.",
+    "description": "5 x 3 Wind/Earth damage against target enemy.<br>Deals 5 damage Hit to self<br>Purges 2 enemy Aether.",
     "iconFilename": "Action_gemstone_crash.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -2979,10 +3078,10 @@
       "Earth"
     ],
     "types": [
-      "Shield",
-      "Aether"
+      "Aether",
+      "Shield"
     ],
-    "description": "Shields self for 2 x 2. Applies additional Shield equal to the remaining Aether.<br>Deals damage to target enemy equal to the amount of Shield on this monster.",
+    "description": "Shields self for 2 x 2. Applies an additional Shield equal to the remaining Aether.<br>Deals damage to target enemy equal to the amount of Shield on this monster.",
     "iconFilename": "Action_gemstone_fist.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -3030,8 +3129,8 @@
       "Wind"
     ],
     "types": [
-      "Weakness",
-      "Purge"
+      "Purge",
+      "Weakness"
     ],
     "description": "Consumes 2 Weakness among enemies as additional cost.<br>Purges 2 enemy Aether.<br>Free Action.",
     "iconFilename": "Action_hex_shock.webp",
@@ -3099,8 +3198,8 @@
       "Earth"
     ],
     "types": [
-      "Sidekick",
-      "Dodge"
+      "Dodge",
+      "Sidekick"
     ],
     "description": "Applies 3 Sidekick to self.<br>Applies Dodge to all allies.<br>Cleanses 3 Corruption from all allies on first use each combat.",
     "iconFilename": "Action_leaves_in_the_wind.webp",
@@ -3116,10 +3215,10 @@
       "Wind"
     ],
     "types": [
-      "Force",
-      "Dodge"
+      "Dodge",
+      "Force"
     ],
-    "description": "Applies Dodge &amp; 2 Force to target ally.<br>Retaliate: Deals 1 x 10 Fire/Wind damage attack against the enemy.",
+    "description": "Applies 1 Dodge &amp; 2 Force to target ally.<br>Retaliate: Deals 1 x 10 Fire/Wind damage attack against the enemy.",
     "iconFilename": "Action_lightning_bolt_trap.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -3138,7 +3237,7 @@
       "Critical",
       "Purge"
     ],
-    "description": "2 x 5 Fire/Wind damage against all enemies.<br>+15% Crit Chance.<br>Critical hits Purge 1 enemy Aether.",
+    "description": "2 x 5 Fire/Wind damage against all enemies.<br>+20% Crit Chance.<br>Critical hits Purge 1 enemy Aether.",
     "iconFilename": "Action_lightning_chaos.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -3188,8 +3287,8 @@
       "Earth"
     ],
     "types": [
-      "Poison",
-      "Affliction"
+      "Affliction",
+      "Poison"
     ],
     "description": "3 x 5 Water/Earth damage against target enemy.<br>For every 3 debuff stacks on this Monster, trigger Poison on the enemy. <i>Up to 3 times.</i>",
     "iconFilename": "Action_overslime.webp",
@@ -3209,7 +3308,7 @@
       "Regeneration",
       "Weakness"
     ],
-    "description": "2 x 5 Water/Earth damage against all enemies.<br>Applies 1 Weakness to all enemies.<br>Applies 2 Regeneration to all allies.",
+    "description": "2 x 5 Water/Earth damage against all enemies.<br>Applies Weakness to all enemies.<br>Applies 2 Regeneration to all allies.",
     "iconFilename": "Action_petal_storm.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -3226,7 +3325,7 @@
       "Tank",
       "Weakness"
     ],
-    "description": "Applies 3 Weakness to target enemy.<br>Retaliate: Triggers a 2 x 6 Earth/Water damage Attack against the enemy and applies 1 Weakness to them.",
+    "description": "Applies 3 Weakness to target enemy.<br>Retaliate: Triggers a 2 x 6 Earth/Water damage attack against the enemy and applies 1 Weakness to them.",
     "iconFilename": "Action_pheromone_trap.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -3260,7 +3359,7 @@
       "Burn",
       "Poison"
     ],
-    "description": "3 x 5 Fire/Earth damage against target enemy.<br>Consume all Cooking stacks to apply 3 Poison and 2 Burn to target enemy for each consumed stack.",
+    "description": "3 x 5 Fire/Earth damage against target enemy.<br>Consume all Cooking stacks to apply 3 Poison &amp; 2 Burn to target enemy for each consumed stack.",
     "iconFilename": "Action_poisoned_soup.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -3308,10 +3407,10 @@
       "Earth"
     ],
     "types": [
-      "Regeneration",
-      "Power"
+      "Power",
+      "Regeneration"
     ],
-    "description": "Applies Regeneration to self.<br>Applies Temporary Power to self.<br>Cleanses 2 debuffs from self.<br>Free Action.",
+    "description": "Applies Regeneration to self.<br>Applies Temporary Power to self.<br>Cleanses [3 debuffs] from self.<br>Free Action.",
     "iconFilename": "Action_regrow.webp",
     "freeAction": true,
     "actionCategory": "Support Action"
@@ -3345,7 +3444,7 @@
       "Heal",
       "Sidekick"
     ],
-    "description": "Heals all allies for 2 x 6.<br>Cleanses 2 debuffs from all allies.<br>Applies 2 Sidekick to self.",
+    "description": "Heals all allies for 2 x 6.<br>Cleanses [2 debuffs] from all allies.<br>Applies 2 Sidekick to self.",
     "iconFilename": "Action_snow_support.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -3360,10 +3459,10 @@
       "Wind"
     ],
     "types": [
-      "Weakness",
-      "Burn"
+      "Burn",
+      "Weakness"
     ],
-    "description": "4 x 6 Fire/Wind damage against target enemy.<br>Applies 4 Burn &amp; 3 Weakness to target enemy.",
+    "description": "4 x 4 Fire/Wind damage against target enemy.<br>Applies 4 Burn &amp; 3 Weakness to target enemy.",
     "iconFilename": "Action_solar_ray.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -3414,7 +3513,7 @@
       "Summon",
       "Tank"
     ],
-    "description": "Summons Minion: Faun with 5 Essence on target ally.<br>Faun: Health +5<br>Action: Heals self for 3 x 2.<br>Then deals Earth/Water damage to target enemy equal to 10% of the attached monster's current health, rounded up.",
+    "description": "Summons Minion: Faun with 4 Essence on target ally.<br>Faun: Health +5.<br>Action: Heals self for 3 x 2.<br>Then deals Earth/Water damage to target enemy equal to 10% of the attached monster's current health, rounded up.",
     "iconFilename": "Action_summon_faun.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -3432,7 +3531,7 @@
       "Sidekick",
       "Summon"
     ],
-    "description": "Summons Minion: Impundulu with 5 Essence on target ally.<br>Impundulu: Sidekick Damage +1.<br>Action: 2 x 3 Wind/Fire damage against target enemy.<br>On Interrupt: Applies 1 Essence to self.",
+    "description": "Summons Minion: Impundulu with 4 Essence on target ally.<br>Impundulu: Sidekick Damage +1.<br>Action: 2 x 3 Wind/Fire damage against target enemy.<br>On Interrupt: Applies 1 Essence to self.",
     "iconFilename": "Action_summon_impundulu.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -3450,7 +3549,7 @@
       "Aether",
       "Summon"
     ],
-    "description": "Summons Minion: Kami with 5 Essence on target ally.<br>Kami: Aether +1<br>Action: 1 x 1 Wild damage against target enemy.<br>Deals additional damage for each Aether of any element.",
+    "description": "Summons Minion: Kami with 4 Essence on target ally.<br>Kami: Aether +1.<br>Action: 1 x 1 Wild damage against target enemy.<br>Deals 1 additional damage for each 2 Aether of any element.",
     "iconFilename": "Action_summon_kami.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -3468,7 +3567,7 @@
       "Burn",
       "Summon"
     ],
-    "description": "Summons Minion: Salamander with 5 Essence on target ally.<br>Salamander: Burn Damage +1.<br>Action: 1 x 5 Earth/Fire damage against target enemy.<br>Triggers Burn on target enemy.",
+    "description": "Summons Minion: Salamander with 4 Essence on target ally.<br>Salamander: Burn Damage +1.<br>Action: 1 x 5 Earth/Fire damage against target enemy.<br>Triggers Burn on target enemy.",
     "iconFilename": "Action_summon_salamander.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -3483,10 +3582,10 @@
       "Fire"
     ],
     "types": [
-      "Summon",
-      "Age"
+      "Age",
+      "Summon"
     ],
-    "description": "Summons Minion: Wisp with 5 Essence on target ally.<br>Wisp: Shield Generator +2.<br>Action: 1 x 5 Fire/Water damage against target enemy.<br>+1 damage for every stack of Age.",
+    "description": "Summons Minion: Wisp with 4 Essence on target ally.<br>Wisp: Shield Generator +2.<br>Action: 1 x 5 Fire/Water damage against target enemy.<br>+1 damage for every 2 stacks of Age.",
     "iconFilename": "Action_summon_wisp.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -3501,10 +3600,10 @@
       "Earth"
     ],
     "types": [
-      "Weakness",
-      "Summon"
+      "Summon",
+      "Weakness"
     ],
-    "description": "Summons Minion: Yokai with 5 Essence on target ally.<br>Yokai: Evasion +15%.<br>Action: 1 x 5 Earth/Wind damage against target enemy.<br>Applies 2 Weakness to target enemy.",
+    "description": "Summons Minion: Yokai with 4 Essence on target ally.<br>Yokai: Evasion +15%.<br>Action: 1 x 5 Earth/Wind damage against target enemy.<br>Applies 2 Weakness to target enemy.",
     "iconFilename": "Action_summon_yokai.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -3569,7 +3668,7 @@
       "Heal",
       "Terror"
     ],
-    "description": "1 x 3 Water damage against target enemy.<br>If this action kills an enemy: Heals self for 10 and increases this action's damage by 2. <i>For the rest of the run.</i>",
+    "description": "1 x 3 Water damage against target enemy.<br>If this action kills an enemy: Heals self for 10 and increases this action's damage by 3. <i>For the rest of the run.</i>",
     "iconFilename": "Action_vampiric_bite.webp",
     "freeAction": false,
     "actionCategory": "Attack"
@@ -3595,6 +3694,7 @@
     "name": "Viral Burst",
     "skillType": "Action",
     "manaCost": [
+      "Water",
       "Earth",
       "Earth"
     ],
@@ -3617,8 +3717,8 @@
       "Wind"
     ],
     "types": [
-      "Power",
-      "Aether"
+      "Aether",
+      "Power"
     ],
     "description": "5 x 3 Fire/Wind damage against target enemy.<br>Consumes 1 Wild Aether: Applies Power to self.",
     "iconFilename": "Action_void_lightning.webp",
@@ -3638,7 +3738,7 @@
       "Aether",
       "Heal"
     ],
-    "description": "Heals all allies for 3 x 7.<br>Allies gain: \"Retaliate: {heals} self for 8 and generates random Aether.\"",
+    "description": "Heals all allies for 3 x 7.<br>Allies gain: \"Retaliate: Heals self for 7 and generates Random Aether.\"",
     "iconFilename": "Action_volcanic_unity.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -3687,7 +3787,7 @@
       "Tank",
       "Terror"
     ],
-    "description": "Applies Redirect to target ally.<br>Retaliate: Triggers a 2 x 4 Wild damage attack against the enemy and applies 3 Terror to them.",
+    "description": "Applies Redirect to target ally.<br>Retaliate: Triggers a 2 x 4 Wild damage Attack against the enemy and applies 3 Terror to them.",
     "iconFilename": "Action_wild_mark.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -3748,7 +3848,7 @@
     "skillType": "Action",
     "manaCost": [],
     "types": [],
-    "description": "Heals target ally for 2 x 3<br>Generates [x] Aether.",
+    "description": "Heals target ally for 2 x 3<br>Generates X Aether.",
     "iconFilename": "Action_basic_heal.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -3760,7 +3860,7 @@
       "Wind"
     ],
     "types": [],
-    "description": "Generates Water/Fire/Wind/Earth.",
+    "description": "Generates Water/Fire/Wind/Earth Aether.",
     "iconFilename": "Action_bountiful_wish.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
@@ -3778,6 +3878,18 @@
     "actionCategory": "Dedicated Support Action"
   },
   {
+    "name": "Mischievous Wish",
+    "skillType": "Action",
+    "manaCost": [
+      "Wind"
+    ],
+    "types": [],
+    "description": "Purges 3 enemy Aether.",
+    "iconFilename": "Action_mischievous_wish.webp",
+    "freeAction": false,
+    "actionCategory": "Dedicated Support Action"
+  },
+  {
     "name": "Protective Wish",
     "skillType": "Action",
     "manaCost": [
@@ -3788,5 +3900,15 @@
     "iconFilename": "Action_protective_wish.webp",
     "freeAction": false,
     "actionCategory": "Dedicated Support Action"
+  },
+  {
+    "name": "Unleash Tome",
+    "skillType": "Action",
+    "manaCost": [],
+    "types": [],
+    "description": "Uses a powerful action without spending Aether and as a Free Action, from a choice of three random actions.<br>Free Action.",
+    "iconFilename": "Action_unleash_tome.webp",
+    "freeAction": true,
+    "actionCategory": "Support Action"
   }
 ]

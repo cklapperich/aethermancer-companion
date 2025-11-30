@@ -29,9 +29,20 @@ function parseIconFilename(iconCell) {
   const img = iconCell.querySelector('img.skill-icon');
   if (img && img.src) {
     const src = img.src;
-    const match = src.match(/\/images\/(Trait_[^?]+)/);
+    // Try original format: /images/Trait_*.png
+    let match = src.match(/\/images\/(Trait_[^?]+)/);
     if (match) {
       // Replace .png extension with .webp to match actual files
+      return match[1].replace(/\.png$/, '.webp');
+    }
+    // Try new format: traits-list_files/Trait_*.webp or similar local paths
+    match = src.match(/(Trait_[^/?]+\.webp)/);
+    if (match) {
+      return match[1];
+    }
+    // Fallback: extract filename from any path
+    match = src.match(/(Trait_[^/?]+)/);
+    if (match) {
       return match[1].replace(/\.png$/, '.webp');
     }
   }
