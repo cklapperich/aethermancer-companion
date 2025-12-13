@@ -5,6 +5,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const https = require('https');
 const { JSDOM } = require('jsdom');
 
 // Section headers map to trait categories
@@ -219,6 +220,65 @@ function scrapeTraits(htmlPath) {
 }
 
 /**
+ * Download an image from a URL
+ */
+function downloadImage(url, filepath) {
+  return new Promise((resolve, reject) => {
+    const file = fs.createWriteStream(filepath);
+    https.get(url, response => {
+      response.pipe(file);
+      file.on('finish', () => {
+        file.close();
+        resolve();
+      });
+    }).on('error', err => {
+      fs.unlink(filepath, () => {}); // Delete the file on error
+      reject(err);
+    });
+  });
+}
+
+/**
+ * Download all trait icons
+ */
+async function downloadTraitIcons(traits, imagesDir) {
+  console.log(`\nDownloading ${traits.length} trait icons...`);
+
+  // Create images directory if it doesn't exist
+  if (!fs.existsSync(imagesDir)) {
+    fs.mkdirSync(imagesDir, { recursive: true });
+  }
+
+  const baseUrl = 'https://aethermancer.wiki.gg';
+  let downloaded = 0;
+  let skipped = 0;
+
+  for (const trait of traits) {
+    const imagePath = path.join(imagesDir, trait.iconFilename);
+
+    // Skip if already exists
+    if (fs.existsSync(imagePath)) {
+      skipped++;
+      continue;
+    }
+
+    // Download the image
+    const imageUrl = `${baseUrl}/images/${trait.iconFilename}`;
+    try {
+      await downloadImage(imageUrl, imagePath);
+      downloaded++;
+      if (downloaded % 10 === 0) {
+        console.log(`  Downloaded ${downloaded} images...`);
+      }
+    } catch (err) {
+      console.error(`  Error downloading ${trait.iconFilename}: ${err.message}`);
+    }
+  }
+
+  console.log(`Downloaded ${downloaded} new images, skipped ${skipped} existing images`);
+}
+
+/**
  * Main execution
  */
 async function main() {
@@ -234,6 +294,10 @@ async function main() {
   // Write to JSON file
   fs.writeFileSync(outputPath, JSON.stringify(traits, null, 2));
   console.log(`\nTraits written to: ${outputPath}`);
+
+  // Download trait icons
+  const imagesDir = '../public/assets/traits';
+  await downloadTraitIcons(traits, imagesDir);
 
   // Print some stats
   const categories = {};

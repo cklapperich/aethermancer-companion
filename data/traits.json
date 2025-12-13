@@ -230,20 +230,20 @@
     ]
   },
   {
-    "name": "Critical Hybridization",
+    "name": "Critical Bleed",
     "skillType": "Trait",
-    "description": "On Crit: Deals a 3 Wild Damage Hit. <i>Triggers up to once per Action.</i>",
-    "iconFilename": "Trait_critical_hybridization.webp",
+    "description": "On Crit: Applies 1 Bleed.",
+    "iconFilename": "Trait_critical_bleed.webp",
     "category": "Basic",
     "types": [
       "Critical"
     ]
   },
   {
-    "name": "Cruelty",
+    "name": "Critical Hybridization",
     "skillType": "Trait",
-    "description": "+3 Crit Damage. At the start of combat and whenever an enemy is staggered: Applies 1 Force to self.",
-    "iconFilename": "Trait_cruelty.webp",
+    "description": "Aura: {On Crit from an ally}: Deals a 3 Wild Damage Hit. <i>Triggers up to once per Action.</i>",
+    "iconFilename": "Trait_critical_hybridization.webp",
     "category": "Basic",
     "types": [
       "Critical"
@@ -292,7 +292,7 @@
   {
     "name": "Eye of the Storm",
     "skillType": "Trait",
-    "description": "Aura: For every 30 Wind or Wild Damage dealt to enemies: Applies Dodge to the ally with the lowest amount of Dodge.",
+    "description": "Aura: For every 35 Wind or Wild Damage dealt to enemies: Applies Dodge to the ally with the lowest amount of Dodge.",
     "iconFilename": "Trait_eye_of_the_storm.webp",
     "category": "Basic",
     "types": [
@@ -372,7 +372,7 @@
   {
     "name": "Hexing Strikes",
     "skillType": "Trait",
-    "description": "Weakness Reduction +1.<br>On Attack: Applies 2 Weakness to target enemy.",
+    "description": "On Attack: Applies 2 Weakness to target enemy.",
     "iconFilename": "Trait_hexing_strikes.webp",
     "category": "Basic",
     "types": [
@@ -392,7 +392,7 @@
   {
     "name": "Impactful Summoning",
     "skillType": "Trait",
-    "description": "When this monster summons a Minion: Deals a 3 damage Hit of the Minion's Elements to all enemies. <i>Doesn't trigger retaliates.</i>",
+    "description": "When this monster summons a Minion: Deals a 4 damage Hit of the Minion's Elements to all enemies. <i>Doesn't trigger retaliates.</i>",
     "iconFilename": "Trait_impactful_summoning.webp",
     "category": "Basic",
     "types": [
@@ -422,7 +422,7 @@
   {
     "name": "Into the Fray",
     "skillType": "Trait",
-    "description": "On Dedicated Support Action: Applies 1 Force to target ally and 1 Force to self.",
+    "description": "On Dedicated Support Action: Applies 1 Force to each ally.",
     "iconFilename": "Trait_into_the_fray.webp",
     "category": "Basic",
     "types": [
@@ -512,7 +512,7 @@
   {
     "name": "Nightmare",
     "skillType": "Trait",
-    "description": "Terror Application +1.<br>At the start of your turn: Deals a Wild Damage Hit with 9 damage to all enemies with 5 or more Terror.",
+    "description": "Terror Application +1.<br>At the start of your turn: Deals a Wild Damage Hit with 9 damage to all enemies with 5 or more Terror. <i>Doesn't trigger Retaliate.</i>",
     "iconFilename": "Trait_nightmare.webp",
     "category": "Basic",
     "types": [
@@ -532,7 +532,7 @@
   {
     "name": "Panic",
     "skillType": "Trait",
-    "description": "Aura: Whenever a Wild Damage Hit staggers an enemy: Purges 1 enemy Aether and applies 5 Terror to each other enemy.",
+    "description": "Aura: Whenever a Wild Damage Hit staggers an enemy: Purges 1 enemy Aether and applies 6 Terror to each other enemy.",
     "iconFilename": "Trait_panic.webp",
     "category": "Basic",
     "types": [
@@ -612,7 +612,7 @@
   {
     "name": "Protective Servitude",
     "skillType": "Trait",
-    "description": "Aura: On Action from an allied Minion: Consumes 1 Essence on that Minion to heal and Shield its attached monster by 5.",
+    "description": "Aura: On Action from an allied Minion: Consumes 1 Essence on that Minion to heal and Shield its attached monster by 6.",
     "iconFilename": "Trait_protective_servitude.webp",
     "category": "Basic",
     "types": [
@@ -682,7 +682,7 @@
   {
     "name": "Reinforce",
     "skillType": "Trait",
-    "description": "On Dedicated Support Action: Heals target ally for 5, Shields them for 3, and applies 1 Force to them.",
+    "description": "On Dedicated Support Action: Heals target ally for 3, Shields them for 3, and applies 2 Force to them.",
     "iconFilename": "Trait_reinforce.webp",
     "category": "Basic",
     "types": [
@@ -762,7 +762,7 @@
   {
     "name": "Shock",
     "skillType": "Trait",
-    "description": "On Interrupt: Deals a 7 Fire/Wind damage Hit to that enemy.",
+    "description": "On Interrupt: Deals a 6 Fire/Wind damage Hit to that enemy.",
     "iconFilename": "Trait_shock.webp",
     "category": "Basic",
     "types": [
@@ -790,9 +790,19 @@
     ]
   },
   {
+    "name": "Splatter",
+    "skillType": "Trait",
+    "description": "Aura: Allies gain +25% Crit Chance against enemies with Bleed. Whenever an enemy dies: Spreads half of their Bleed stacks to the remaining enemies.",
+    "iconFilename": "Trait_splatter.webp",
+    "category": "Basic",
+    "types": [
+      "Critical"
+    ]
+  },
+  {
     "name": "Summon Mastery",
     "skillType": "Trait",
-    "description": "Aura: Minion Damage +1.<br>This monster can have 1 additional Minion attached to it.",
+    "description": "Aura: Minion Damage +2.<br>Minion Limit +1.",
     "iconFilename": "Trait_summon_mastery.webp",
     "category": "Basic",
     "types": [
@@ -882,7 +892,7 @@
   {
     "name": "Warlock Party",
     "skillType": "Trait",
-    "description": "Aura: {On Support Action from any ally}: Applies 2 Weakness distributed among enemies with the lowest amount of Weakness.",
+    "description": "Weakness Reduction +1.<br>Aura: {On Support Action from any ally}: Applies 1 Weakness to the enemy with the lowest amount of Weakness.",
     "iconFilename": "Trait_warlock_party.webp",
     "category": "Basic",
     "types": [
@@ -935,7 +945,7 @@
   {
     "name": "Assault Shield",
     "skillType": "Trait",
-    "description": "On Crit: Shields the ally with the lowest amount of Shield for 3.",
+    "description": "Aura: {On Crit from an ally}: Shields them for 3.",
     "iconFilename": "Trait_assault_shield.webp",
     "category": "Maverick",
     "types": [
@@ -1032,17 +1042,6 @@
     ]
   },
   {
-    "name": "Critical Bleed",
-    "skillType": "Trait",
-    "description": "On Crit: Applies 1 Bleed. <i>Bleed can also be applied by Affliction as long as you have any Actions or Traits that can apply Bleed.</i>",
-    "iconFilename": "Trait_critical_bleed.webp",
-    "category": "Maverick",
-    "types": [
-      "Affliction",
-      "Critical"
-    ]
-  },
-  {
     "name": "Critical Purging",
     "skillType": "Trait",
     "description": "Crit Chance +15%.<br>On every 3 Crits: Purges 1 enemy Aether.",
@@ -1051,6 +1050,28 @@
     "types": [
       "Critical",
       "Purge"
+    ]
+  },
+  {
+    "name": "Cruelty",
+    "skillType": "Trait",
+    "description": "At the start of combat and whenever an enemy is staggered: Applies 1 Force and 2 Temporary Power to self.",
+    "iconFilename": "Trait_cruelty.webp",
+    "category": "Maverick",
+    "types": [
+      "Force",
+      "Power"
+    ]
+  },
+  {
+    "name": "Cunning Minions",
+    "skillType": "Trait",
+    "description": "Minion Limit +1.<br>Aura: Each allied monster gains +10% Crit Chance and +1 Crit Damage for each Minion attached to it.",
+    "iconFilename": "Trait_cunning_minions.webp",
+    "category": "Maverick",
+    "types": [
+      "Critical",
+      "Summon"
     ]
   },
   {
@@ -1067,7 +1088,7 @@
   {
     "name": "Dark Exchange",
     "skillType": "Trait",
-    "description": "Whenever this monster deals Wild Damage to an enemy: Cleanses 3 debuffs from self and applies them to that enemy. <i>Triggers up to once per enemy per turn.</i>",
+    "description": "Whenever this monster deals Wild Damage to an enemy: Cleanses 4 debuffs from self and applies them to that enemy. <i>Triggers up to once per enemy per turn.</i>",
     "iconFilename": "Trait_dark_exchange.webp",
     "category": "Maverick",
     "types": [
@@ -1084,6 +1105,17 @@
     "types": [
       "Force",
       "Poison"
+    ]
+  },
+  {
+    "name": "Dread and Gore",
+    "skillType": "Trait",
+    "description": "Aura: Whenever Terror stacks are consumed on an enemy: Applies 1 Bleed for every 2 Terror stacks consumed. Whenever Bleed stacks are consumed on an enemy: Applies 1 Terror for every 2 Bleed stacks consumed.",
+    "iconFilename": "Trait_dread_and_gore.webp",
+    "category": "Maverick",
+    "types": [
+      "Critical",
+      "Terror"
     ]
   },
   {
@@ -1177,7 +1209,7 @@
   {
     "name": "Fierce Summoning",
     "skillType": "Trait",
-    "description": "Aura: Whenever an allied Minion is summoned or dies: Applies 1 Force to its attached monster.",
+    "description": "Aura: Whenever an allied Minion is summoned or dies: Applies 1 Force to its attached monster and Shields them for 3.",
     "iconFilename": "Trait_fierce_summoning.webp",
     "category": "Maverick",
     "types": [
@@ -1342,7 +1374,7 @@
   {
     "name": "Massive Damage",
     "skillType": "Trait",
-    "description": "This monster gains +2 max health for every level it has. It gains +1 Crit Damage for every 20 max health.",
+    "description": "This monster gains +2 max health for every level it has. It gains +1 Crit Damage for every 15 max health.",
     "iconFilename": "Trait_massive_damage.webp",
     "category": "Maverick",
     "types": [
@@ -1584,7 +1616,7 @@
   {
     "name": "Sidecrits",
     "skillType": "Trait",
-    "description": "This monster's Sidekick Attack is always Critical.",
+    "description": "This monster's Sidekick Attack is always Critical and applies 1 Bleed.",
     "iconFilename": "Trait_sidecrits.webp",
     "category": "Maverick",
     "types": [
@@ -1628,7 +1660,7 @@
   {
     "name": "Split Aether",
     "skillType": "Trait",
-    "description": "On Attack: Consumes up to one Wild Aether to deal a 7 Wild Damage Hit and Purge 1 enemy Aether.",
+    "description": "On Attack: Consumes up to one Wild Aether to deal a 6 Wild Damage Hit and Purge 1 enemy Aether.",
     "iconFilename": "Trait_split_aether.webp",
     "category": "Maverick",
     "types": [
@@ -1820,6 +1852,15 @@
     "types": []
   },
   {
+    "name": "Cursed Blood",
+    "skillType": "Trait",
+    "description": "Aura: For every 10 Critical or Wild Damage dealt by allies: Applies 1 Bleed to target enemy.",
+    "iconFilename": "Trait_cursed_blood.webp",
+    "category": "Signature",
+    "signatureMonster": "Ravager",
+    "types": []
+  },
+  {
     "name": "Eagle Eyes",
     "skillType": "Trait",
     "description": "This monster can copy the last 2 enemy Actions and use them once.<br>On Copied Action: Purges the same amounts and elements of Aether as were spent on the Action.",
@@ -1849,7 +1890,7 @@
   {
     "name": "Fearless",
     "skillType": "Trait",
-    "description": "While this monster has 1 or more Force, it evades the first Hit of each enemy Attack and has: \"Retaliate: Triggers a 2 x 2 Fire/Water Attack against the enemy.\"",
+    "description": "While this monster has 1 or more Force, it evades the first Hit of each enemy Attack and has: \"Retaliate: Triggers a 2 x 4 Fire/Water Attack against the enemy.\"",
     "iconFilename": "Trait_fearless.webp",
     "category": "Signature",
     "signatureMonster": "Naga",
@@ -1892,21 +1933,21 @@
     "types": []
   },
   {
-    "name": "Glutton (Shifted)",
-    "skillType": "Trait",
-    "description": "Regeneration heals this monster for 10% of its max health, rounded up, but doesn't trigger at the start of turn. On Attack from this monster or its Minions: Triggers Regeneration on self and deals an Earth / Water Hit to target enemy equal to the healed amount.",
-    "iconFilename": "Trait_glutton.webp",
-    "category": "Signature",
-    "signatureMonster": "Ammit (Shifted)",
-    "types": []
-  },
-  {
     "name": "Glutton",
     "skillType": "Trait",
     "description": "Regeneration heals this monster for 10% of its max health, rounded up, but doesn't trigger at the start of turn. On Attack from this monster or its Minions: Triggers Regeneration on self and deals an Earth / Fire Hit to target enemy equal to the healed amount.",
     "iconFilename": "Trait_glutton.webp",
     "category": "Signature",
     "signatureMonster": "Ammit",
+    "types": []
+  },
+  {
+    "name": "Glutton (Shifted)",
+    "skillType": "Trait",
+    "description": "Regeneration heals this monster for 10% of its max health, rounded up, but doesn't trigger at the start of turn. On Attack from this monster or its Minions: Triggers Regeneration on self and deals an Earth / Water Hit to target enemy equal to the healed amount.",
+    "iconFilename": "Trait_glutton.webp",
+    "category": "Signature",
+    "signatureMonster": "Ammit (Shifted)",
     "types": []
   },
   {
@@ -1919,15 +1960,6 @@
     "types": []
   },
   {
-    "name": "Hundred Handed",
-    "skillType": "Trait",
-    "description": "Gains Aging. At the end of your turn, if this monster has 3 or more Age: Triggers an Attack against each enemy that deals 1 x 4 Fire/Wind damage for every 3 Age stacks and applies 1 Weakness to each enemy.",
-    "iconFilename": "Trait_hundred_handed.webp",
-    "category": "Signature",
-    "signatureMonster": "Hecatoncheires",
-    "types": []
-  },
-  {
     "name": "Hundred Handed (Shifted)",
     "skillType": "Trait",
     "description": "Gains Aging. At the end of your turn, if this monster has 3 or more Age: Triggers an Attack against each enemy that deals 1 x 4 Fire/Water damage for every 3 Age stacks and applies 1 Burn to each enemy.",
@@ -1937,12 +1969,12 @@
     "types": []
   },
   {
-    "name": "Judgment",
+    "name": "Hundred Handed",
     "skillType": "Trait",
-    "description": "Aura: Whenever one or more Shielded allies get attacked: Triggers Poison on the enemy and applies Force to the attacked allies.",
-    "iconFilename": "Trait_judgment.webp",
+    "description": "Gains Aging. At the end of your turn, if this monster has 3 or more Age: Triggers an Attack against each enemy that deals 1 x 4 Fire/Wind damage for every 3 Age stacks and applies 1 Weakness to each enemy.",
+    "iconFilename": "Trait_hundred_handed.webp",
     "category": "Signature",
-    "signatureMonster": "Serket",
+    "signatureMonster": "Hecatoncheires",
     "types": []
   },
   {
@@ -1955,21 +1987,39 @@
     "types": []
   },
   {
+    "name": "Judgment",
+    "skillType": "Trait",
+    "description": "Aura: Whenever one or more Shielded allies get attacked: Triggers Poison on the enemy and applies Force to the attacked allies.",
+    "iconFilename": "Trait_judgment.webp",
+    "category": "Signature",
+    "signatureMonster": "Serket",
+    "types": []
+  },
+  {
+    "name": "Lamentation of Woes",
+    "skillType": "Trait",
+    "description": "Retaliate: Cleanses 1 debuff from self.<br>For every 5 debuffs cleansed from self: Triggers an Attack that deals 1 x 5 Earth / Water damage to all enemies and applies 4 Affliction to each enemy.",
+    "iconFilename": "Trait_lamentation_of_woes.webp",
+    "category": "Signature",
+    "signatureMonster": "Medusa",
+    "types": []
+  },
+  {
     "name": "Lamentation of Woes (Shifted)",
     "skillType": "Trait",
-    "description": "Retaliate: Cleanses 1 debuff from self.<br>For every 6 debuffs cleansed from self: Triggers an Attack that deals 1 x 6 Earth / Wind damage to all enemies and applies 4 Affliction to each enemy.",
+    "description": "Retaliate: Cleanses 1 debuff from self.<br>For every 5 debuffs cleansed from self: Triggers an Attack that deals 1 x 6 Earth / Wind damage to all enemies and applies 4 Affliction to each enemy.",
     "iconFilename": "Trait_lamentation_of_woes.webp",
     "category": "Signature",
     "signatureMonster": "Medusa (Shifted)",
     "types": []
   },
   {
-    "name": "Lamentation of Woes",
+    "name": "Levitation",
     "skillType": "Trait",
-    "description": "Retaliate: Cleanses 1 debuff from self.<br>For every 6 debuffs cleansed from self: Triggers an Attack that deals 1 x 6 Earth / Water damage to all enemies and applies 4 Affliction to each enemy.",
-    "iconFilename": "Trait_lamentation_of_woes.webp",
+    "description": "For every 9 Aether consumed by allies: Applies Dodge to this monster. Each Attack consumes a Dodge stack to gain +35% Crit Chance and +3 Crit Damage.",
+    "iconFilename": "Trait_levitation.webp",
     "category": "Signature",
-    "signatureMonster": "Medusa",
+    "signatureMonster": "Djinn",
     "types": []
   },
   {
@@ -1979,15 +2029,6 @@
     "iconFilename": "Trait_levitation.webp",
     "category": "Signature",
     "signatureMonster": "Djinn (Shifted)",
-    "types": []
-  },
-  {
-    "name": "Levitation",
-    "skillType": "Trait",
-    "description": "For every 9 Aether consumed by allies: Applies Dodge to this monster. Each Attack consumes a Dodge stack to gain +30% Crit Chance and +3 Crit Damage.",
-    "iconFilename": "Trait_levitation.webp",
-    "category": "Signature",
-    "signatureMonster": "Djinn",
     "types": []
   },
   {
@@ -2045,21 +2086,21 @@
     "types": []
   },
   {
-    "name": "Rime Wind (Shifted)",
-    "skillType": "Trait",
-    "description": "Whenever damage is dealt to this monster's Shield: Deals a combined Earth/Wind hit to the attacker with that much damage.",
-    "iconFilename": "Trait_rime_wind.webp",
-    "category": "Signature",
-    "signatureMonster": "Jotunn (Shifted)",
-    "types": []
-  },
-  {
     "name": "Rime Wind",
     "skillType": "Trait",
     "description": "Whenever damage is dealt to this monster's Shield: Deals a combined Water/Wind hit to the attacker with that much damage.",
     "iconFilename": "Trait_rime_wind.webp",
     "category": "Signature",
     "signatureMonster": "Jotunn",
+    "types": []
+  },
+  {
+    "name": "Rime Wind (Shifted)",
+    "skillType": "Trait",
+    "description": "Whenever damage is dealt to this monster's Shield: Deals a combined Earth/Wind hit to the attacker with that much damage.",
+    "iconFilename": "Trait_rime_wind.webp",
+    "category": "Signature",
+    "signatureMonster": "Jotunn (Shifted)",
     "types": []
   },
   {

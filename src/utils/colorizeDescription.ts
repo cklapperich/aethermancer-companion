@@ -12,7 +12,9 @@ export function colorizeDescription(description: string): string {
   // This prevents "Water" from matching before "Water Damage"
   const terms = Object.keys(termDictionary).sort((a, b) => b.length - a.length);
 
-  let result = description;
+  // Strip curly braces from {term} and square brackets from [term] patterns
+  // These are used in source data to mark terms
+  let result = description.replace(/\{([^}]+)\}/g, '$1').replace(/\[([^\]]+)\]/g, '$1');
 
   for (const term of terms) {
     const colorClass = termDictionary[term as keyof typeof termDictionary];

@@ -323,7 +323,7 @@ async function downloadActionIcons(actions, imagesDir) {
 async function main() {
   const inputPath = './html-samples/actions-list.html';
   const outputPath = '../data/actions.json';
-  const imagesDir = '../public/images/actions';
+  const imagesDir = '../public/assets/actions';
 
   console.log('Starting action scraper...\n');
 
@@ -335,8 +335,8 @@ async function main() {
   fs.writeFileSync(outputPath, JSON.stringify(actions, null, 2));
   console.log(`\nActions written to: ${outputPath}`);
 
-  // Skip downloading images - we already have .webp files
-  // await downloadActionIcons(actions, imagesDir);
+  // Download action icons
+  await downloadActionIcons(actions, imagesDir);
 
   // Print some stats
   const sections = {};
