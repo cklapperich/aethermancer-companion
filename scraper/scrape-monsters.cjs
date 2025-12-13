@@ -120,11 +120,12 @@ function parseMonsterCard(table, isShifted = false) {
   const cleanName = name.replace(/\(Shifted\)$/, '').trim();
 
   // Build monster object
+  const shiftedSuffix = isShifted ? '_Shifted' : '';
   const monster = {
     name: cleanName,
     types,
     elements,
-    portraitFilename: portraitFilename || `${cleanName.replace(/\s+/g, '_')}_Portrait.webp`,
+    portraitFilename: `${cleanName.replace(/\s+/g, '_')}${shiftedSuffix}_Portrait.webp`,
     shifted: isShifted
   };
 

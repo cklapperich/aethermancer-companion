@@ -415,7 +415,7 @@
       "Earth",
       "Wind"
     ],
-    "portraitFilename": "Jotunn_Portrait.webp",
+    "portraitFilename": "Jotunn_Shifted_Portrait.webp",
     "shifted": true
   },
   {
@@ -429,7 +429,7 @@
       "Fire",
       "Water"
     ],
-    "portraitFilename": "Cherufe_Portrait.webp",
+    "portraitFilename": "Cherufe_Shifted_Portrait.webp",
     "shifted": true
   },
   {
@@ -443,7 +443,7 @@
       "Earth",
       "Wind"
     ],
-    "portraitFilename": "Minokawa_Portrait.webp",
+    "portraitFilename": "Minokawa_Shifted_Portrait.webp",
     "shifted": true
   },
   {
@@ -457,7 +457,7 @@
       "Earth",
       "Water"
     ],
-    "portraitFilename": "Nixe_Portrait.webp",
+    "portraitFilename": "Nixe_Shifted_Portrait.webp",
     "shifted": true
   },
   {
@@ -471,7 +471,7 @@
       "Fire",
       "Water"
     ],
-    "portraitFilename": "Ooze_Portrait.webp",
+    "portraitFilename": "Ooze_Shifted_Portrait.webp",
     "shifted": true
   },
   {
@@ -485,7 +485,7 @@
       "Earth",
       "Wind"
     ],
-    "portraitFilename": "Tatzelwurm_Portrait.webp",
+    "portraitFilename": "Tatzelwurm_Shifted_Portrait.webp",
     "shifted": true
   },
   {
@@ -499,7 +499,7 @@
       "Fire",
       "Wind"
     ],
-    "portraitFilename": "Wolpertinger_Portrait.webp",
+    "portraitFilename": "Wolpertinger_Shifted_Portrait.webp",
     "shifted": true
   },
   {
@@ -513,7 +513,7 @@
       "Earth",
       "Wind"
     ],
-    "portraitFilename": "Mandragora_Portrait.webp",
+    "portraitFilename": "Mandragora_Shifted_Portrait.webp",
     "shifted": true
   },
   {
@@ -527,7 +527,7 @@
       "Fire",
       "Earth"
     ],
-    "portraitFilename": "Orthrus_Portrait.webp",
+    "portraitFilename": "Orthrus_Shifted_Portrait.webp",
     "shifted": true
   },
   {
@@ -541,7 +541,7 @@
       "Fire",
       "Wind"
     ],
-    "portraitFilename": "Wyrmling_Portrait.webp",
+    "portraitFilename": "Wyrmling_Shifted_Portrait.webp",
     "shifted": true
   },
   {
@@ -555,7 +555,7 @@
       "Fire",
       "Wind"
     ],
-    "portraitFilename": "Cockatrice_Portrait.webp",
+    "portraitFilename": "Cockatrice_Shifted_Portrait.webp",
     "shifted": true
   },
   {
@@ -569,7 +569,7 @@
       "Earth",
       "Fire"
     ],
-    "portraitFilename": "Warden_Portrait.webp",
+    "portraitFilename": "Warden_Shifted_Portrait.webp",
     "shifted": true
   },
   {
@@ -583,7 +583,7 @@
       "Fire",
       "Wind"
     ],
-    "portraitFilename": "Ravager_Portrait.webp",
+    "portraitFilename": "Ravager_Shifted_Portrait.webp",
     "shifted": true
   },
   {
@@ -597,7 +597,7 @@
       "Fire",
       "Wind"
     ],
-    "portraitFilename": "Catzerker_Portrait.webp",
+    "portraitFilename": "Catzerker_Shifted_Portrait.webp",
     "shifted": true
   },
   {
@@ -611,7 +611,7 @@
       "Earth",
       "Wind"
     ],
-    "portraitFilename": "Gargoyle_Portrait.webp",
+    "portraitFilename": "Gargoyle_Shifted_Portrait.webp",
     "shifted": true
   },
   {
@@ -625,7 +625,7 @@
       "Fire",
       "Wind"
     ],
-    "portraitFilename": "Nosferatu_Portrait.webp",
+    "portraitFilename": "Nosferatu_Shifted_Portrait.webp",
     "shifted": true
   },
   {
@@ -639,7 +639,7 @@
       "Fire",
       "Water"
     ],
-    "portraitFilename": "Domovoy_Portrait.webp",
+    "portraitFilename": "Domovoy_Shifted_Portrait.webp",
     "shifted": true
   },
   {
@@ -653,7 +653,7 @@
       "Fire",
       "Earth"
     ],
-    "portraitFilename": "Mephisto_Portrait.webp",
+    "portraitFilename": "Mephisto_Shifted_Portrait.webp",
     "shifted": true
   },
   {
@@ -667,7 +667,7 @@
       "Earth",
       "Wind"
     ],
-    "portraitFilename": "Shambler_Portrait.webp",
+    "portraitFilename": "Shambler_Shifted_Portrait.webp",
     "shifted": true
   },
   {
@@ -680,7 +680,7 @@
     "elements": [
       "Wild"
     ],
-    "portraitFilename": "Grimoire_Portrait.webp",
+    "portraitFilename": "Grimoire_Shifted_Portrait.webp",
     "shifted": true
   },
   {
@@ -694,7 +694,7 @@
       "Fire",
       "Wind"
     ],
-    "portraitFilename": "Star_Spawn_Portrait.webp",
+    "portraitFilename": "Star_Spawn_Shifted_Portrait.webp",
     "shifted": true
   },
   {
@@ -708,7 +708,7 @@
       "Earth",
       "Fire"
     ],
-    "portraitFilename": "Dark_Elder_Portrait.webp",
+    "portraitFilename": "Dark_Elder_Shifted_Portrait.webp",
     "shifted": true
   },
   {
@@ -722,7 +722,7 @@
       "Earth",
       "Fire"
     ],
-    "portraitFilename": "Naga_Portrait.webp",
+    "portraitFilename": "Naga_Shifted_Portrait.webp",
     "shifted": true
   },
   {
@@ -736,7 +736,7 @@
       "Water",
       "Wind"
     ],
-    "portraitFilename": "Sphinx_Portrait.webp",
+    "portraitFilename": "Sphinx_Shifted_Portrait.webp",
     "shifted": true
   },
   {
@@ -750,7 +750,7 @@
       "Earth",
       "Wind"
     ],
-    "portraitFilename": "Djinn_Portrait.webp",
+    "portraitFilename": "Djinn_Shifted_Portrait.webp",
     "shifted": true
   },
   {
@@ -764,7 +764,7 @@
       "Earth",
       "Water"
     ],
-    "portraitFilename": "Ammit_Portrait.webp",
+    "portraitFilename": "Ammit_Shifted_Portrait.webp",
     "shifted": true
   },
   {
@@ -778,7 +778,7 @@
       "Earth",
       "Wind"
     ],
-    "portraitFilename": "Medusa_Portrait.webp",
+    "portraitFilename": "Medusa_Shifted_Portrait.webp",
     "shifted": true
   },
   {
@@ -792,7 +792,7 @@
       "Earth",
       "Water"
     ],
-    "portraitFilename": "Serket_Portrait.webp",
+    "portraitFilename": "Serket_Shifted_Portrait.webp",
     "shifted": true
   },
   {
@@ -806,7 +806,7 @@
       "Fire",
       "Water"
     ],
-    "portraitFilename": "Hecatoncheires_Portrait.webp",
+    "portraitFilename": "Hecatoncheires_Shifted_Portrait.webp",
     "shifted": true
   }
 ]
