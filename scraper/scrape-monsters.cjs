@@ -81,6 +81,8 @@ function parseElements(table) {
 
 /**
  * Extract portrait filename from portrait cell
+ * Returns { wikiFilename, cleanFilename } where wikiFilename is for download URL
+ * and cleanFilename has any ##px- prefix removed for storage
  */
 function parsePortraitFilename(table) {
   const img = table.querySelector('img[alt*="Portrait.png"]');
@@ -89,7 +91,10 @@ function parsePortraitFilename(table) {
     // Extract filename from path
     const match = src.match(/([^\/]+Portrait\.webp)/);
     if (match) {
-      return match[1];
+      const wikiFilename = match[1];
+      // Remove any ##px- prefix (e.g., "65px-Dark_Elder_Portrait.webp" -> "Dark_Elder_Portrait.webp")
+      const cleanFilename = wikiFilename.replace(/^\d+px-/, '');
+      return { wikiFilename, cleanFilename };
     }
   }
   return null;
@@ -106,7 +111,7 @@ function parseMonsterCard(table, isShifted = false) {
   const name = parseMonsterName(innerTable);
   const types = parseTypes(innerTable);
   const elements = parseElements(innerTable);
-  const portraitFilename = parsePortraitFilename(innerTable);
+  const portraitData = parsePortraitFilename(innerTable);
 
   // Validate: must have name, 3 types, and either 1 or 2 elements
   // (Most monsters have 2 elements, but some like Grimoire have 1 Wild element)
@@ -119,13 +124,18 @@ function parseMonsterCard(table, isShifted = false) {
   // Clean the name (remove (Shifted) suffix if present)
   const cleanName = name.replace(/\(Shifted\)$/, '').trim();
 
-  // Build monster object
+  // Build clean portrait filename for storage and JSON
   const shiftedSuffix = isShifted ? '_Shifted' : '';
+  const cleanPortraitFilename = `${cleanName.replace(/\s+/g, '_')}${shiftedSuffix}_Portrait.webp`;
+
+  // Build monster object
   const monster = {
     name: cleanName,
     types,
     elements,
-    portraitFilename: `${cleanName.replace(/\s+/g, '_')}${shiftedSuffix}_Portrait.webp`,
+    portraitFilename: cleanPortraitFilename,
+    // Store wiki filename for downloading (may have ##px- prefix)
+    wikiPortraitFilename: portraitData ? portraitData.wikiFilename : cleanPortraitFilename,
     shifted: isShifted
   };
 
@@ -220,6 +230,7 @@ async function downloadMonsterPortraits(monsters, imagesDir) {
   let skipped = 0;
 
   for (const monster of monsters) {
+    // Save with clean filename (no ##px- prefix)
     const imagePath = path.join(imagesDir, monster.portraitFilename);
 
     // Skip if already exists
@@ -228,8 +239,8 @@ async function downloadMonsterPortraits(monsters, imagesDir) {
       continue;
     }
 
-    // Download the image
-    const imageUrl = `${baseUrl}/images/${monster.portraitFilename}`;
+    // Download using wiki filename (may have ##px- prefix)
+    const imageUrl = `${baseUrl}/images/${monster.wikiPortraitFilename}`;
     try {
       await downloadImage(imageUrl, imagePath);
       downloaded++;
@@ -250,7 +261,7 @@ async function downloadMonsterPortraits(monsters, imagesDir) {
 async function main() {
   const inputPath = './html-samples/monsters.html';
   const outputPath = '../data/monsters.json';
-  const imagesDir = '../public/images/monsters';
+  const imagesDir = '../public/assets/monsters';
 
   console.log('Starting monster scraper...\n');
 
@@ -258,12 +269,15 @@ async function main() {
 
   console.log(`\nTotal monsters scraped: ${monsters.length}`);
 
-  // Write to JSON file
-  fs.writeFileSync(outputPath, JSON.stringify(monsters, null, 2));
-  console.log(`\nMonsters written to: ${outputPath}`);
-
-  // Download portraits
+  // Download portraits first (needs wikiPortraitFilename)
   await downloadMonsterPortraits(monsters, imagesDir);
+
+  // Strip wikiPortraitFilename before writing JSON (only needed for downloading)
+  const monstersForJson = monsters.map(({ wikiPortraitFilename, ...rest }) => rest);
+
+  // Write to JSON file
+  fs.writeFileSync(outputPath, JSON.stringify(monstersForJson, null, 2));
+  console.log(`\nMonsters written to: ${outputPath}`);
 
   // Print some stats
   const elementCombos = {};
