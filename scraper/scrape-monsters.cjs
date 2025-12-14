@@ -88,13 +88,16 @@ function parsePortraitFilename(table) {
   const img = table.querySelector('img[alt*="Portrait.png"]');
   if (img && img.src) {
     const src = img.src;
-    // Extract filename from path
-    const match = src.match(/([^\/]+Portrait\.webp)/);
+    // Extract filename from path (handles both .png and .webp, strips query string)
+    // Wiki serves: /images/Jotunn_Portrait.png?e12e26
+    const match = src.match(/([^\/]+Portrait\.(?:png|webp))(?:\?|$)/);
     if (match) {
       const wikiFilename = match[1];
-      // Remove any ##px- prefix (e.g., "65px-Dark_Elder_Portrait.webp" -> "Dark_Elder_Portrait.webp")
+      // Remove any ##px- prefix (e.g., "65px-Dark_Elder_Portrait.png" -> "Dark_Elder_Portrait.png")
       const cleanFilename = wikiFilename.replace(/^\d+px-/, '');
-      return { wikiFilename, cleanFilename };
+      // Convert to .webp for local storage
+      const storageFilename = cleanFilename.replace(/\.png$/, '.webp');
+      return { wikiFilename, cleanFilename: storageFilename };
     }
   }
   return null;
@@ -200,8 +203,30 @@ function scrapeMonsters(htmlPath) {
  */
 function downloadImage(url, filepath) {
   return new Promise((resolve, reject) => {
-    const file = fs.createWriteStream(filepath);
-    https.get(url, response => {
+    const parsedUrl = new URL(url);
+    const options = {
+      hostname: parsedUrl.hostname,
+      path: parsedUrl.pathname + parsedUrl.search,
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+      }
+    };
+
+    https.get(options, response => {
+      // Check for HTTP errors
+      if (response.statusCode !== 200) {
+        reject(new Error(`HTTP ${response.statusCode}`));
+        return;
+      }
+
+      // Check content type is an image
+      const contentType = response.headers['content-type'] || '';
+      if (!contentType.startsWith('image/')) {
+        reject(new Error(`Not an image: ${contentType}`));
+        return;
+      }
+
+      const file = fs.createWriteStream(filepath);
       response.pipe(file);
       file.on('finish', () => {
         file.close();
