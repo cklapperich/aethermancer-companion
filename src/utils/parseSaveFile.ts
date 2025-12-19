@@ -36,6 +36,21 @@ export function getWinsByDifficulty(saveFile: SaveFile): Map<number, number> {
 }
 
 /**
+ * Get total runs per difficulty level (calculated from PreviousRuns)
+ */
+export function getRunsByDifficulty(saveFile: SaveFile): Map<number, number> {
+  const result = new Map<number, number>();
+  const runs = saveFile.PreviousRuns || [];
+
+  for (const run of runs) {
+    const current = result.get(run.Difficulty) || 0;
+    result.set(run.Difficulty, current + 1);
+  }
+
+  return result;
+}
+
+/**
  * Get recent runs (most recent first)
  */
 export function getRecentRuns(saveFile: SaveFile, limit: number = 20): PreviousRun[] {

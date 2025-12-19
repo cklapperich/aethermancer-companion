@@ -1,6 +1,7 @@
 import { SaveFile, DIFFICULTY_NAMES } from '../types/saveFile';
 import {
   getWinsByDifficulty,
+  getRunsByDifficulty,
   getRecentRuns,
   formatNumber,
 } from '../utils/parseSaveFile';
@@ -11,40 +12,87 @@ interface StatsDisplayProps {
 
 export function StatsDisplay({ saveFile }: StatsDisplayProps) {
   const winsByDifficulty = getWinsByDifficulty(saveFile);
+  const runsByDifficulty = getRunsByDifficulty(saveFile);
   const recentRuns = getRecentRuns(saveFile, 20);
 
   return (
     <div className="space-y-8">
-      {/* Wins by Difficulty */}
+      {/* Overview */}
       <section>
         <h3
           className="text-xl font-alegreya font-bold text-tier-maverick mb-4"
           style={{ fontVariant: 'small-caps' }}
         >
-          Wins by Difficulty
+          Overview
+        </h3>
+        <div className="bg-gray-800 rounded-lg p-4 md:p-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="text-center p-4 rounded-lg bg-gray-700">
+              <p className="text-xs font-figtree text-gray-400 mb-1">Aether Crystals</p>
+              <p className="text-2xl font-figtree font-bold text-tier-maverick">
+                {formatNumber(saveFile.PrimaryMetaResource)}
+              </p>
+            </div>
+            <div className="text-center p-4 rounded-lg bg-gray-700">
+              <p className="text-xs font-figtree text-gray-400 mb-1">Lurker Teeth</p>
+              <p className="text-2xl font-figtree font-bold text-tier-basic">
+                {formatNumber(saveFile.SecondaryMetaResource)}
+              </p>
+            </div>
+            <div className="text-center p-4 rounded-lg bg-gray-700">
+              <p className="text-xs font-figtree text-gray-400 mb-1">Total Runs</p>
+              <p className="text-2xl font-figtree font-bold text-white">
+                {formatNumber(saveFile.RunCount)}
+              </p>
+            </div>
+            <div className="text-center p-4 rounded-lg bg-gray-700">
+              <p className="text-xs font-figtree text-gray-400 mb-1">Unlocked Difficulty</p>
+              <p className="text-2xl font-figtree font-bold text-white">
+                {DIFFICULTY_NAMES[saveFile.UnlockedDifficulty] || `Level ${saveFile.UnlockedDifficulty}`}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Runs by Difficulty */}
+      <section>
+        <h3
+          className="text-xl font-alegreya font-bold text-tier-maverick mb-4"
+          style={{ fontVariant: 'small-caps' }}
+        >
+          Runs by Difficulty
         </h3>
         <div className="bg-gray-800 rounded-lg p-4 md:p-6">
           {(() => {
             // Get unknown difficulties
-            const unknownDifficulties = Array.from(winsByDifficulty.entries())
+            const unknownDifficulties = Array.from(runsByDifficulty.entries())
               .filter(([level]) => level !== 1 && level !== 2 && level !== 3)
               .sort((a, b) => a[0] - b[0]);
 
             // Build all difficulties: Normal, Heroic, Mythic, then unknowns
-            const allDifficulties: Array<{ level: number; name: string; wins: number }> = [
-              { level: 1, name: 'Normal', wins: winsByDifficulty.get(1) || 0 },
-              { level: 2, name: 'Heroic', wins: winsByDifficulty.get(2) || 0 },
-              { level: 3, name: 'Mythic', wins: winsByDifficulty.get(3) || 0 },
-              ...unknownDifficulties.map(([level, wins]) => ({ level, name: 'Unknown', wins })),
+            const allDifficulties: Array<{ level: number; name: string; runs: number; wins: number }> = [
+              { level: 1, name: 'Normal', runs: runsByDifficulty.get(1) || 0, wins: winsByDifficulty.get(1) || 0 },
+              { level: 2, name: 'Heroic', runs: runsByDifficulty.get(2) || 0, wins: winsByDifficulty.get(2) || 0 },
+              { level: 3, name: 'Mythic', runs: runsByDifficulty.get(3) || 0, wins: winsByDifficulty.get(3) || 0 },
+              ...unknownDifficulties.map(([level, runs]) => ({
+                level,
+                name: 'Unknown',
+                runs,
+                wins: winsByDifficulty.get(level) || 0,
+              })),
             ];
 
             return (
-              <div className={`grid gap-3 ${allDifficulties.length <= 4 ? 'grid-cols-4' : 'grid-cols-3 md:grid-cols-6'}`}>
-                {allDifficulties.map(({ level, name, wins }) => (
+              <div className={`grid gap-3 ${allDifficulties.length <= 4 ? 'grid-cols-3' : 'grid-cols-3 md:grid-cols-6'}`}>
+                {allDifficulties.map(({ level, name, runs, wins }) => (
                   <div key={level} className="text-center p-3 rounded-lg bg-gray-700">
                     <p className="text-xs font-figtree text-gray-400 mb-1">{name}</p>
-                    <p className="text-xl font-figtree font-bold text-tier-maverick">
-                      {wins}
+                    <p className="text-xl font-figtree font-bold text-white">
+                      {runs}
+                    </p>
+                    <p className="text-xs font-figtree text-green-400">
+                      {wins} {wins === 1 ? 'win' : 'wins'}
                     </p>
                   </div>
                 ))}

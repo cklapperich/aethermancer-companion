@@ -248,21 +248,8 @@ Aggregated gameplay statistics. Each entry has:
 
 | StatisticType | Description |
 |---------------|-------------|
-| 0 | Monster usage counts (keys = monster IDs) |
-| 1 | Biome visits (keys = biome IDs) |
-| 2 | Total gold earned (SingleStat) |
-| 3 | Damage dealt by biome |
-| 5 | Combat rounds per monster |
-| 6 | Monster deaths |
-| 7 | Monster permadeaths |
-| 8 | NPC interaction counts |
-| 9 | Unknown |
-| 10 | Total combats won (SingleStat) |
-| 11 | Total damage dealt (SingleStat) |
-| 12 | Wins per difficulty |
-| 13 | Unknown per biome |
-| 14 | Unknown (SingleStat) |
-| 15 | Unknown (SingleStat) |
+
+See STATISTICS_MAPPING.MD for more info.
 
 ## Worthiness System
 
