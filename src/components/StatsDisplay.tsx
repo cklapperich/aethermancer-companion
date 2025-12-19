@@ -84,10 +84,13 @@ export function StatsDisplay({ saveFile }: StatsDisplayProps) {
           Wins by Difficulty
         </h3>
         <div className="bg-gray-800 rounded-lg p-4 md:p-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
-            {Object.entries(DIFFICULTY_NAMES).map(([level, name]) => {
-              const wins = winsByDifficulty.get(Number(level)) || 0;
-              const isUnlocked = Number(level) <= saveFile.UnlockedDifficulty;
+          {/* Current difficulties - show in order: Normal, Heroic, Mythic */}
+          <div className="grid grid-cols-3 gap-3 mb-4">
+            {[5, 4, 3].map((level) => {
+              const name = DIFFICULTY_NAMES[level];
+              const wins = winsByDifficulty.get(level) || 0;
+              // Higher difficulty number = easier, so unlocked if level >= UnlockedDifficulty
+              const isUnlocked = level >= saveFile.UnlockedDifficulty;
               return (
                 <div
                   key={level}
@@ -107,6 +110,26 @@ export function StatsDisplay({ saveFile }: StatsDisplayProps) {
               );
             })}
           </div>
+          {/* Legacy/unknown difficulties (if any wins exist for old difficulty levels) */}
+          {(() => {
+            const legacyDifficulties = Array.from(winsByDifficulty.entries())
+              .filter(([level]) => level !== 3 && level !== 4 && level !== 5)
+              .sort((a, b) => a[0] - b[0]);
+            if (legacyDifficulties.length === 0) return null;
+            return (
+              <div className="border-t border-gray-700 pt-4 mt-2">
+                <p className="text-xs font-figtree text-gray-500 mb-2">Unknown difficulties (from older game versions)</p>
+                <div className="grid grid-cols-3 md:grid-cols-6 gap-2">
+                  {legacyDifficulties.map(([level, wins]) => (
+                    <div key={level} className="text-center p-2 rounded-lg bg-gray-900/50">
+                      <p className="text-xs font-figtree text-gray-500 mb-1">Unknown</p>
+                      <p className="text-lg font-figtree font-bold text-gray-400">{wins}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })()}
         </div>
       </section>
 
@@ -135,7 +158,7 @@ export function StatsDisplay({ saveFile }: StatsDisplayProps) {
                   <tr key={run.RunID} className="border-b border-gray-700/50 hover:bg-gray-700/30">
                     <td className="px-4 py-3 font-figtree text-gray-300">#{run.RunID}</td>
                     <td className="px-4 py-3 font-figtree text-gray-300">
-                      {DIFFICULTY_NAMES[run.Difficulty] || `Level ${run.Difficulty}`}
+                      {DIFFICULTY_NAMES[run.Difficulty] || 'Unknown'}
                     </td>
                     <td className="px-4 py-3">
                       <span

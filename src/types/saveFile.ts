@@ -123,9 +123,9 @@ export enum StatisticType {
   WinsPerDifficulty = 12,
 }
 
-// Difficulty level names
+// Difficulty level names (save file uses 3, 4, 5 for current difficulties)
 export const DIFFICULTY_NAMES: Record<number, string> = {
-  0: 'Normal',
-  1: 'Heroic',
-  2: 'Mythic',
+  3: 'Mythic',
+  4: 'Heroic',
+  5: 'Normal',
 };
