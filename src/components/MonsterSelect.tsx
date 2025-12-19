@@ -1,3 +1,4 @@
+import { X } from 'lucide-react';
 import { Monster } from '../types/monsters';
 import {
   Select,
@@ -42,40 +43,52 @@ export function MonsterSelect({
       </div>
 
       {/* Dropdown Select */}
-      <Select value={value} onValueChange={onChange}>
-        <SelectTrigger className="w-[240px] bg-gray-800 border-gray-600 text-white">
-          <span>
-            {selectedMonster
-              ? `${selectedMonster.name}${selectedMonster.shifted ? ' (Shifted)' : ''}`
-              : placeholder}
-          </span>
-        </SelectTrigger>
-        <SelectContent className="bg-gray-800 border-gray-600 text-white max-h-[400px]">
-          {monsters.map((monster) => {
-            const key = monster.shifted ? `${monster.name}-shifted` : monster.name;
-            const displayName = monster.shifted
-              ? `${monster.name} (Shifted)`
-              : monster.name;
+      <div className="flex items-center gap-2">
+        <Select value={value} onValueChange={onChange}>
+          <SelectTrigger className="w-[240px] bg-gray-800 border-gray-600 text-white">
+            <span>
+              {selectedMonster
+                ? `${selectedMonster.name}${selectedMonster.shifted ? ' (Shifted)' : ''}`
+                : placeholder}
+            </span>
+          </SelectTrigger>
+          <SelectContent className="bg-gray-800 border-gray-600 text-white max-h-[400px]">
+            {monsters.map((monster) => {
+              const key = monster.shifted ? `${monster.name}-shifted` : monster.name;
+              const displayName = monster.shifted
+                ? `${monster.name} (Shifted)`
+                : monster.name;
 
-            return (
-              <SelectItem
-                key={key}
-                value={key}
-                className="cursor-pointer hover:bg-gray-700 focus:bg-gray-700"
-              >
-                <div className="flex items-center gap-2">
-                  <img
-                    src={monster.imagePath}
-                    alt={monster.name}
-                    className="w-8 h-8 object-cover rounded"
-                  />
-                  <span>{displayName}</span>
-                </div>
-              </SelectItem>
-            );
-          })}
-        </SelectContent>
-      </Select>
+              return (
+                <SelectItem
+                  key={key}
+                  value={key}
+                  className="cursor-pointer hover:bg-gray-700 focus:bg-gray-700"
+                >
+                  <div className="flex items-center gap-2">
+                    <img
+                      src={monster.imagePath}
+                      alt={monster.name}
+                      className="w-8 h-8 object-cover rounded"
+                    />
+                    <span>{displayName}</span>
+                  </div>
+                </SelectItem>
+              );
+            })}
+          </SelectContent>
+        </Select>
+        {selectedMonster && (
+          <button
+            type="button"
+            onClick={() => onChange('')}
+            className="p-1 text-gray-400 hover:text-white hover:bg-gray-700 rounded transition-colors"
+            title="Clear selection"
+          >
+            <X className="w-4 h-4" />
+          </button>
+        )}
+      </div>
     </div>
   );
 }
