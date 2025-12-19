@@ -1,80 +1,20 @@
 import { SaveFile, DIFFICULTY_NAMES } from '../types/saveFile';
 import {
-  getWinRate,
   getWinsByDifficulty,
-  getTotalStats,
   getRecentRuns,
-  getTotalMonstersUsed,
   formatNumber,
-  formatPercent,
 } from '../utils/parseSaveFile';
-import { StatCard } from './StatCard';
 
 interface StatsDisplayProps {
   saveFile: SaveFile;
 }
 
 export function StatsDisplay({ saveFile }: StatsDisplayProps) {
-  const winRate = getWinRate(saveFile);
   const winsByDifficulty = getWinsByDifficulty(saveFile);
-  const totalStats = getTotalStats(saveFile);
   const recentRuns = getRecentRuns(saveFile, 20);
-  const monstersUsed = getTotalMonstersUsed(saveFile);
 
   return (
     <div className="space-y-8">
-      {/* Overview Cards */}
-      <section>
-        <h3
-          className="text-xl font-alegreya font-bold text-tier-maverick mb-4"
-          style={{ fontVariant: 'small-caps' }}
-        >
-          Overview
-        </h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <StatCard
-            title="Total Runs"
-            value={formatNumber(saveFile.RunCount)}
-          />
-          <StatCard
-            title="Win Rate"
-            value={formatPercent(winRate)}
-            subtitle={`${recentRuns.filter((r) => r.DidWin).length} wins`}
-          />
-          <StatCard
-            title="Difficulty"
-            value={`${saveFile.Difficulty + 1} / ${saveFile.UnlockedDifficulty + 1}`}
-            subtitle={DIFFICULTY_NAMES[saveFile.Difficulty] || 'Unknown'}
-          />
-          <StatCard
-            title="Combats Won"
-            value={formatNumber(totalStats.combatsWon)}
-          />
-        </div>
-      </section>
-
-      {/* Secondary Stats */}
-      <section>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <StatCard
-            title="Total Damage"
-            value={formatNumber(totalStats.damageDealt)}
-          />
-          <StatCard
-            title="Gold Earned"
-            value={formatNumber(totalStats.goldEarned)}
-          />
-          <StatCard
-            title="Monsters Used"
-            value={formatNumber(monstersUsed)}
-          />
-          <StatCard
-            title="Mementos"
-            value={formatNumber(saveFile.Mementos?.length || 0)}
-          />
-        </div>
-      </section>
-
       {/* Wins by Difficulty */}
       <section>
         <h3

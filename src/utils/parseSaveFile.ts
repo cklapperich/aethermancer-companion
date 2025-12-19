@@ -83,17 +83,15 @@ export function getTotalMonstersUsed(saveFile: SaveFile): number {
 }
 
 /**
- * Get aggregate stats (combats won, damage dealt, gold earned)
+ * Get aggregate stats (combats won, damage dealt)
  */
 export function getTotalStats(saveFile: SaveFile): {
   combatsWon: number;
   damageDealt: number;
-  goldEarned: number;
 } {
   return {
     combatsWon: getSingleStat(saveFile, StatisticType.TotalCombatsWon),
     damageDealt: getSingleStat(saveFile, StatisticType.TotalDamageDealt),
-    goldEarned: getSingleStat(saveFile, StatisticType.TotalGoldEarned),
   };
 }
 
