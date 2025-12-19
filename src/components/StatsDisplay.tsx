@@ -24,49 +24,30 @@ export function StatsDisplay({ saveFile }: StatsDisplayProps) {
           Wins by Difficulty
         </h3>
         <div className="bg-gray-800 rounded-lg p-4 md:p-6">
-          {/* Current difficulties - show in order: Normal, Heroic, Mythic */}
-          <div className="grid grid-cols-3 gap-3 mb-4">
-            {[5, 4, 3].map((level) => {
-              const name = DIFFICULTY_NAMES[level];
-              const wins = winsByDifficulty.get(level) || 0;
-              // Higher difficulty number = easier, so unlocked if level >= UnlockedDifficulty
-              const isUnlocked = level >= saveFile.UnlockedDifficulty;
-              return (
-                <div
-                  key={level}
-                  className={`text-center p-3 rounded-lg ${
-                    isUnlocked ? 'bg-gray-700' : 'bg-gray-900 opacity-50'
-                  }`}
-                >
-                  <p className="text-xs font-figtree text-gray-400 mb-1">{name}</p>
-                  <p
-                    className={`text-xl font-figtree font-bold ${
-                      wins > 0 ? 'text-tier-maverick' : 'text-gray-500'
-                    }`}
-                  >
-                    {wins}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-          {/* Legacy/unknown difficulties (if any wins exist for old difficulty levels) */}
           {(() => {
-            const legacyDifficulties = Array.from(winsByDifficulty.entries())
+            // Get unknown difficulties
+            const unknownDifficulties = Array.from(winsByDifficulty.entries())
               .filter(([level]) => level !== 3 && level !== 4 && level !== 5)
               .sort((a, b) => a[0] - b[0]);
-            if (legacyDifficulties.length === 0) return null;
+
+            // Build all difficulties: Normal, Heroic, Mythic, then unknowns
+            const allDifficulties: Array<{ level: number; name: string; wins: number }> = [
+              { level: 5, name: 'Normal', wins: winsByDifficulty.get(5) || 0 },
+              { level: 4, name: 'Heroic', wins: winsByDifficulty.get(4) || 0 },
+              { level: 3, name: 'Mythic', wins: winsByDifficulty.get(3) || 0 },
+              ...unknownDifficulties.map(([level, wins]) => ({ level, name: 'Unknown', wins })),
+            ];
+
             return (
-              <div className="border-t border-gray-700 pt-4 mt-2">
-                <p className="text-xs font-figtree text-gray-500 mb-2">Unknown difficulties (from older game versions)</p>
-                <div className="grid grid-cols-3 md:grid-cols-6 gap-2">
-                  {legacyDifficulties.map(([level, wins]) => (
-                    <div key={level} className="text-center p-2 rounded-lg bg-gray-900/50">
-                      <p className="text-xs font-figtree text-gray-500 mb-1">Unknown</p>
-                      <p className="text-lg font-figtree font-bold text-gray-400">{wins}</p>
-                    </div>
-                  ))}
-                </div>
+              <div className={`grid gap-3 ${allDifficulties.length <= 4 ? 'grid-cols-4' : 'grid-cols-3 md:grid-cols-6'}`}>
+                {allDifficulties.map(({ level, name, wins }) => (
+                  <div key={level} className="text-center p-3 rounded-lg bg-gray-700">
+                    <p className="text-xs font-figtree text-gray-400 mb-1">{name}</p>
+                    <p className="text-xl font-figtree font-bold text-tier-maverick">
+                      {wins}
+                    </p>
+                  </div>
+                ))}
               </div>
             );
           })()}
