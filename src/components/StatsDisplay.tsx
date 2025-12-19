@@ -27,13 +27,13 @@ export function StatsDisplay({ saveFile }: StatsDisplayProps) {
           {(() => {
             // Get unknown difficulties
             const unknownDifficulties = Array.from(winsByDifficulty.entries())
-              .filter(([level]) => level !== 3 && level !== 4 && level !== 5)
+              .filter(([level]) => level !== 1 && level !== 2 && level !== 3)
               .sort((a, b) => a[0] - b[0]);
 
             // Build all difficulties: Normal, Heroic, Mythic, then unknowns
             const allDifficulties: Array<{ level: number; name: string; wins: number }> = [
-              { level: 5, name: 'Normal', wins: winsByDifficulty.get(5) || 0 },
-              { level: 4, name: 'Heroic', wins: winsByDifficulty.get(4) || 0 },
+              { level: 1, name: 'Normal', wins: winsByDifficulty.get(1) || 0 },
+              { level: 2, name: 'Heroic', wins: winsByDifficulty.get(2) || 0 },
               { level: 3, name: 'Mythic', wins: winsByDifficulty.get(3) || 0 },
               ...unknownDifficulties.map(([level, wins]) => ({ level, name: 'Unknown', wins })),
             ];

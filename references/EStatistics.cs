@@ -1,0 +1,19 @@
+public enum EStatistic
+{
+    MonstersRevived,
+    SkillTypeLearned,
+    MaverickSkillLearned,
+    SkillTypeUsed,
+    TriggerTypeTriggered,
+    EnemyMonsterKilled,
+    PlayerMonsterKilledByMonster,
+    RunDefeatedByEnemyMonster,
+    NPCInteraction,
+    MapZoneChoice,
+    ItemsBoughtAtMerchant,
+    GoldSpentAtMerchant,
+    AreaVisitedCount,
+    SmallEventUsedCount,
+    ElementalChallengeFailedCount,
+    LurkerTeethSpent
+}
