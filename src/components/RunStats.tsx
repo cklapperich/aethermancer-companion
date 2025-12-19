@@ -127,23 +127,37 @@ export function RunStats() {
                 {/* OS Paths */}
                 <div className="space-y-4 mb-6">
                   <div>
-                    <h4 className="text-tier-basic font-alegreya font-semibold mb-1">Windows</h4>
+                    <h4 className="text-tier-basic font-alegreya font-semibold mb-2">Windows</h4>
+                    <ol className="text-gray-400 font-figtree text-sm list-decimal list-inside space-y-1 mb-2">
+                      <li>Press <code className="bg-gray-700 px-1 rounded text-tier-basic">Win + R</code> to open the Run dialog</li>
+                      <li>Paste the path below and press Enter</li>
+                    </ol>
                     <code className="block bg-gray-900 p-3 rounded text-sm font-mono text-gray-300 overflow-x-auto">
-                      C:\Program Files (x86)\Steam\userdata\&lt;YOUR_USER_ID&gt;\
+                      %ProgramFiles(x86)%\Steam\userdata
                     </code>
+                    <p className="text-gray-500 font-figtree text-xs mt-1">
+                      Or navigate to: C:\Program Files (x86)\Steam\userdata\
+                    </p>
                   </div>
 
                   <div>
-                    <h4 className="text-tier-basic font-alegreya font-semibold mb-1">Linux</h4>
+                    <h4 className="text-tier-basic font-alegreya font-semibold mb-2">Linux</h4>
                     <code className="block bg-gray-900 p-3 rounded text-sm font-mono text-gray-300 overflow-x-auto">
-                      ~/.steam/steam/userdata/&lt;YOUR_USER_ID&gt;/
+                      ~/.steam/steam/userdata/
                     </code>
+                    <p className="text-gray-500 font-figtree text-xs mt-1">
+                      Or: ~/.steam/debian-installation/userdata/
+                    </p>
                   </div>
 
                   <div>
-                    <h4 className="text-tier-basic font-alegreya font-semibold mb-1">macOS</h4>
+                    <h4 className="text-tier-basic font-alegreya font-semibold mb-2">macOS</h4>
+                    <ol className="text-gray-400 font-figtree text-sm list-decimal list-inside space-y-1 mb-2">
+                      <li>Open Finder and press <code className="bg-gray-700 px-1 rounded text-tier-basic">Cmd + Shift + G</code></li>
+                      <li>Paste the path below and press Enter</li>
+                    </ol>
                     <code className="block bg-gray-900 p-3 rounded text-sm font-mono text-gray-300 overflow-x-auto">
-                      ~/Library/Application Support/Steam/userdata/&lt;YOUR_USER_ID&gt;/
+                      ~/Library/Application Support/Steam/userdata
                     </code>
                   </div>
                 </div>
@@ -153,11 +167,14 @@ export function RunStats() {
                   Aethermancer Save Location
                 </h4>
                 <p className="text-gray-300 font-figtree mb-3">
-                  Aethermancer uses <span className="text-tier-basic font-semibold">App ID 2288470</span>. Your save files are located at:
+                  Inside the userdata folder, find your Steam User ID folder, then navigate to the Aethermancer folder (App ID <span className="text-tier-basic font-semibold">2288470</span>):
                 </p>
-                <code className="block bg-gray-900 p-3 rounded text-sm font-mono text-gray-300 mb-4 overflow-x-auto">
-                  &lt;STEAM_USERDATA&gt;/&lt;YOUR_USER_ID&gt;/2288470/remote/
+                <code className="block bg-gray-900 p-3 rounded text-sm font-mono text-gray-300 mb-2 overflow-x-auto">
+                  &lt;YOUR_USER_ID&gt;\2288470\remote\
                 </code>
+                <p className="text-gray-500 font-figtree text-xs mb-4">
+                  Example (Windows): C:\Program Files (x86)\Steam\userdata\12345678\2288470\remote\
+                </p>
 
                 {/* Save file names */}
                 <h4 className="text-lg font-alegreya font-bold text-tier-maverick mb-2" style={{ fontVariant: 'small-caps' }}>
