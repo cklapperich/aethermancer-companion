@@ -26,7 +26,7 @@ export function StatsDisplay({ saveFile }: StatsDisplayProps) {
           Overview
         </h3>
         <div className="bg-gray-800 rounded-lg p-4 md:p-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-3 gap-4">
             <div className="text-center p-4 rounded-lg bg-gray-700">
               <p className="text-xs font-figtree text-gray-400 mb-1">Aether Crystals</p>
               <p className="text-2xl font-figtree font-bold text-tier-maverick">
