@@ -125,11 +125,7 @@ export enum StatisticType {
 
 // Difficulty level names
 export const DIFFICULTY_NAMES: Record<number, string> = {
-  0: 'Standard',
-  1: 'Worthy I',
-  2: 'Worthy II',
-  3: 'Worthy III',
-  4: 'Worthy IV',
-  5: 'Worthy V',
-  6: 'Worthy VI',
+  0: 'Normal',
+  1: 'Heroic',
+  2: 'Mythic',
 };

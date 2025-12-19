@@ -73,7 +73,7 @@ export function RunStats() {
             <button
               onClick={handleUploadClick}
               disabled={isLoading}
-              className="px-6 py-3 bg-tier-maverick hover:bg-tier-maverick/80 disabled:bg-gray-600 text-white font-alegreya text-lg rounded-lg transition-colors"
+              className="px-6 py-3 bg-tier-maverick hover:bg-tier-maverick/80 disabled:bg-gray-600 text-gray-900 font-alegreya text-lg rounded-lg transition-colors"
               style={{ fontVariant: 'small-caps' }}
             >
               {isLoading ? 'Loading...' : saveData ? 'Upload Different File' : 'Upload Save File'}
