@@ -45,12 +45,6 @@ export function StatsDisplay({ saveFile }: StatsDisplayProps) {
                 {formatNumber(saveFile.RunCount)}
               </p>
             </div>
-            <div className="text-center p-4 rounded-lg bg-gray-700">
-              <p className="text-xs font-figtree text-gray-400 mb-1">Unlocked Difficulty</p>
-              <p className="text-2xl font-figtree font-bold text-white">
-                {DIFFICULTY_NAMES[saveFile.UnlockedDifficulty] || `Level ${saveFile.UnlockedDifficulty}`}
-              </p>
-            </div>
           </div>
         </div>
       </section>
