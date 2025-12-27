@@ -40,7 +40,6 @@ interface CalculatorState {
 
   // === EVASION ===
   // Boons
-  evasionBoon: boolean;
   windNimbleEvade: boolean;
 
   // Traits - Fixed %
@@ -108,7 +107,6 @@ const initialState: CalculatorState = {
   critHits: 3,
 
   // Evasion Boons
-  evasionBoon: false,
   windNimbleEvade: false,
 
   // Evasion Traits - Fixed
@@ -208,7 +206,6 @@ function calculateEvasionChance(state: CalculatorState, baseCritChance: number):
   const chances: number[] = [];
 
   // Boons
-  if (state.evasionBoon) chances.push(0.15);
   if (state.windNimbleEvade) chances.push(0.05);
 
   // Traits - Fixed %
@@ -453,7 +450,10 @@ export function ChanceCalculator() {
                 />
                 <TraitCheckbox
                   checked={state.windNimbleCrit}
-                  onChange={v => updateState('windNimbleCrit', v)}
+                  onChange={v => {
+                    updateState('windNimbleCrit', v);
+                    updateState('windNimbleEvade', v);
+                  }}
                   label="Wind Nimble"
                   bonus="+5%"
                 />
@@ -618,6 +618,7 @@ export function ChanceCalculator() {
                     type="number"
                     min="0"
                     max="100"
+                    step="5"
                     value={state.equipmentCritPercent || ''}
                     onChange={e => updateState('equipmentCritPercent', Number(e.target.value) || 0)}
                     className="w-full bg-gray-700 text-white px-3 py-2 rounded border border-gray-600 focus:border-tier-maverick focus:outline-none"
@@ -630,6 +631,7 @@ export function ChanceCalculator() {
                     type="number"
                     min="0"
                     max="100"
+                    step="5"
                     value={state.actionCritPercent || ''}
                     onChange={e => updateState('actionCritPercent', Number(e.target.value) || 0)}
                     className="w-full bg-gray-700 text-white px-3 py-2 rounded border border-gray-600 focus:border-tier-maverick focus:outline-none"
@@ -705,14 +707,11 @@ export function ChanceCalculator() {
               <h4 className="text-tier-basic font-alegreya font-semibold mb-2">Boons</h4>
               <div className="space-y-2">
                 <TraitCheckbox
-                  checked={state.evasionBoon}
-                  onChange={v => updateState('evasionBoon', v)}
-                  label="Evasion Boon"
-                  bonus="+15%"
-                />
-                <TraitCheckbox
                   checked={state.windNimbleEvade}
-                  onChange={v => updateState('windNimbleEvade', v)}
+                  onChange={v => {
+                    updateState('windNimbleEvade', v);
+                    updateState('windNimbleCrit', v);
+                  }}
                   label="Wind Nimble"
                   bonus="+5%"
                 />
@@ -769,7 +768,10 @@ export function ChanceCalculator() {
                       <input
                         type="checkbox"
                         checked={state.schadenfreude}
-                        onChange={e => updateState('schadenfreude', e.target.checked)}
+                        onChange={e => {
+                          updateState('schadenfreude', e.target.checked);
+                          if (e.target.checked) updateState('schadenfreudeShifted', false);
+                        }}
                         className="w-4 h-4 accent-tier-maverick"
                       />
                       <span className="font-figtree text-gray-300">
@@ -783,7 +785,10 @@ export function ChanceCalculator() {
                       <input
                         type="checkbox"
                         checked={state.schadenfreudeShifted}
-                        onChange={e => updateState('schadenfreudeShifted', e.target.checked)}
+                        onChange={e => {
+                          updateState('schadenfreudeShifted', e.target.checked);
+                          if (e.target.checked) updateState('schadenfreude', false);
+                        }}
                         className="w-4 h-4 accent-tier-maverick"
                       />
                       <span className="font-figtree text-gray-300">
@@ -881,6 +886,7 @@ export function ChanceCalculator() {
                   type="number"
                   min="0"
                   max="100"
+                  step="5"
                   value={state.equipmentEvadePercent || ''}
                   onChange={e => updateState('equipmentEvadePercent', Number(e.target.value) || 0)}
                   className="w-full bg-gray-700 text-white px-3 py-2 rounded border border-gray-600 focus:border-tier-maverick focus:outline-none"
