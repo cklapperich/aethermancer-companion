@@ -22,7 +22,7 @@ export function MonsterSelect({
   placeholder = 'Select a monster...',
 }: MonsterSelectProps) {
   const selectedMonster = monsters.find(
-    (m) => (m.shifted ? `${m.name}-shifted` : m.name) === value
+    (m) => (m.shifted ? `${m.name}-shifted` : m.name).toLowerCase() === value?.toLowerCase()
   );
 
   return (
@@ -44,7 +44,7 @@ export function MonsterSelect({
 
       {/* Dropdown Select */}
       <div className="flex items-center gap-2">
-        <Select value={value} onValueChange={onChange}>
+        <Select value={value ?? ''} onValueChange={onChange}>
           <SelectTrigger className="w-[240px] bg-gray-800 border-gray-600 text-white">
             <span>
               {selectedMonster

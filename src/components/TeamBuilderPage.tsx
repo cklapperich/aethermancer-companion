@@ -50,7 +50,7 @@ export function TeamBuilderPage() {
   // Effect to update URL when selection changes
   const [m1, m2, m3] = selectedMonsters;
   useEffect(() => {
-    const path = [m1, m2, m3].filter(Boolean).join('/');
+    const path = [m1, m2, m3].filter(Boolean).map(m => m!.toLowerCase()).join('/');
     // Use replace to avoid polluting browser history
     navigate(`/${path}`, { replace: true });
   }, [m1, m2, m3, navigate]);
@@ -73,10 +73,10 @@ export function TeamBuilderPage() {
     });
   };
 
-  // Get actual Monster objects from selected IDs
+  // Get actual Monster objects from selected IDs (case-insensitive lookup for URL compatibility)
   const getSelectedMonsterObjects = (): [Monster?, Monster?, Monster?] => {
     return selectedMonsters.map((id) =>
-      id ? monsters.find((m) => (m.shifted ? `${m.name}-shifted` : m.name) === id) : undefined
+      id ? monsters.find((m) => (m.shifted ? `${m.name}-shifted` : m.name).toLowerCase() === id.toLowerCase()) : undefined
     ) as [Monster?, Monster?, Monster?];
   };
 
