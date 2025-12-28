@@ -998,6 +998,9 @@ export function ChanceCalculator() {
               </div>
             </div>
 
+            {/* Spacer to align with Crit's Action section */}
+            <div className="flex-grow" />
+
             {/* Hit Count */}
             <div className="mb-5">
               <h4 className="text-tier-basic font-alegreya font-semibold mb-2">Enemy Attack Hits</h4>
