@@ -31,8 +31,11 @@ interface CalculatorState {
   critPerk2: number;
   critPerk3: number;
 
-  // Manual entry
-  equipmentCritPercent: number;
+  // Equipment entries (4 slots)
+  equipmentCrit1: number;
+  equipmentCrit2: number;
+  equipmentCrit3: number;
+  equipmentCrit4: number;
   actionCritPercent: number;
 
   // Hit count
@@ -62,8 +65,11 @@ interface CalculatorState {
   evadePerk2: number;
   evadePerk3: number;
 
-  // Manual entry
-  equipmentEvadePercent: number;
+  // Equipment entries (4 slots)
+  equipmentEvade1: number;
+  equipmentEvade2: number;
+  equipmentEvade3: number;
+  equipmentEvade4: number;
 
   // Hit count
   evadeHits: number;
@@ -99,8 +105,11 @@ const initialState: CalculatorState = {
   critPerk2: 0,
   critPerk3: 0,
 
-  // Crit Manual
-  equipmentCritPercent: 0,
+  // Crit Equipment
+  equipmentCrit1: 0,
+  equipmentCrit2: 0,
+  equipmentCrit3: 0,
+  equipmentCrit4: 0,
   actionCritPercent: 0,
 
   // Crit Hits
@@ -129,8 +138,11 @@ const initialState: CalculatorState = {
   evadePerk2: 0,
   evadePerk3: 0,
 
-  // Evasion Manual
-  equipmentEvadePercent: 0,
+  // Evasion Equipment
+  equipmentEvade1: 0,
+  equipmentEvade2: 0,
+  equipmentEvade3: 0,
+  equipmentEvade4: 0,
 
   // Evasion Hits
   evadeHits: 2,
@@ -180,8 +192,11 @@ function calculateBaseCritChance(state: CalculatorState): number {
   if (state.critPerk2 > 0) chances.push(state.critPerk2 / 100);
   if (state.critPerk3 > 0) chances.push(state.critPerk3 / 100);
 
-  // Equipment
-  if (state.equipmentCritPercent > 0) chances.push(state.equipmentCritPercent / 100);
+  // Equipment (each is independent roll)
+  if (state.equipmentCrit1 > 0) chances.push(state.equipmentCrit1 / 100);
+  if (state.equipmentCrit2 > 0) chances.push(state.equipmentCrit2 / 100);
+  if (state.equipmentCrit3 > 0) chances.push(state.equipmentCrit3 / 100);
+  if (state.equipmentCrit4 > 0) chances.push(state.equipmentCrit4 / 100);
 
   // NOTE: Action % is NOT included here - this is for Evasion Mastery
 
@@ -238,8 +253,11 @@ function calculateEvasionChance(state: CalculatorState, baseCritChance: number):
   if (state.evadePerk2 > 0) chances.push(state.evadePerk2 / 100);
   if (state.evadePerk3 > 0) chances.push(state.evadePerk3 / 100);
 
-  // Equipment
-  if (state.equipmentEvadePercent > 0) chances.push(state.equipmentEvadePercent / 100);
+  // Equipment (each is independent roll)
+  if (state.equipmentEvade1 > 0) chances.push(state.equipmentEvade1 / 100);
+  if (state.equipmentEvade2 > 0) chances.push(state.equipmentEvade2 / 100);
+  if (state.equipmentEvade3 > 0) chances.push(state.equipmentEvade3 / 100);
+  if (state.equipmentEvade4 > 0) chances.push(state.equipmentEvade4 / 100);
 
   return combineIndependentChances(chances);
 }
@@ -608,36 +626,80 @@ export function ChanceCalculator() {
               </div>
             </div>
 
-            {/* Manual Entry */}
+            {/* Equipment */}
             <div className="mb-5">
-              <h4 className="text-tier-basic font-alegreya font-semibold mb-2">Manual Entry</h4>
-              <div className="grid grid-cols-2 gap-3">
+              <h4 className="text-tier-basic font-alegreya font-semibold mb-2">Equipment</h4>
+              <div className="grid grid-cols-4 gap-2">
                 <div>
-                  <label className="block text-xs text-gray-400 mb-1">Equipment %</label>
+                  <label className="block text-xs text-gray-400 mb-1">Slot 1 %</label>
                   <input
                     type="number"
                     min="0"
                     max="100"
                     step="5"
-                    value={state.equipmentCritPercent || ''}
-                    onChange={e => updateState('equipmentCritPercent', Number(e.target.value) || 0)}
+                    value={state.equipmentCrit1 || ''}
+                    onChange={e => updateState('equipmentCrit1', Number(e.target.value) || 0)}
                     className="w-full bg-gray-700 text-white px-3 py-2 rounded border border-gray-600 focus:border-tier-maverick focus:outline-none"
                     placeholder="0"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs text-gray-400 mb-1">Action %</label>
+                  <label className="block text-xs text-gray-400 mb-1">Slot 2 %</label>
                   <input
                     type="number"
                     min="0"
                     max="100"
                     step="5"
-                    value={state.actionCritPercent || ''}
-                    onChange={e => updateState('actionCritPercent', Number(e.target.value) || 0)}
+                    value={state.equipmentCrit2 || ''}
+                    onChange={e => updateState('equipmentCrit2', Number(e.target.value) || 0)}
                     className="w-full bg-gray-700 text-white px-3 py-2 rounded border border-gray-600 focus:border-tier-maverick focus:outline-none"
                     placeholder="0"
                   />
                 </div>
+                <div>
+                  <label className="block text-xs text-gray-400 mb-1">Slot 3 %</label>
+                  <input
+                    type="number"
+                    min="0"
+                    max="100"
+                    step="5"
+                    value={state.equipmentCrit3 || ''}
+                    onChange={e => updateState('equipmentCrit3', Number(e.target.value) || 0)}
+                    className="w-full bg-gray-700 text-white px-3 py-2 rounded border border-gray-600 focus:border-tier-maverick focus:outline-none"
+                    placeholder="0"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs text-gray-400 mb-1">Slot 4 %</label>
+                  <input
+                    type="number"
+                    min="0"
+                    max="100"
+                    step="5"
+                    value={state.equipmentCrit4 || ''}
+                    onChange={e => updateState('equipmentCrit4', Number(e.target.value) || 0)}
+                    className="w-full bg-gray-700 text-white px-3 py-2 rounded border border-gray-600 focus:border-tier-maverick focus:outline-none"
+                    placeholder="0"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Action */}
+            <div className="mb-5">
+              <h4 className="text-tier-basic font-alegreya font-semibold mb-2">Action</h4>
+              <div>
+                <label className="block text-xs text-gray-400 mb-1">Action %</label>
+                <input
+                  type="number"
+                  min="0"
+                  max="100"
+                  step="5"
+                  value={state.actionCritPercent || ''}
+                  onChange={e => updateState('actionCritPercent', Number(e.target.value) || 0)}
+                  className="w-full bg-gray-700 text-white px-3 py-2 rounded border border-gray-600 focus:border-tier-maverick focus:outline-none"
+                  placeholder="0"
+                />
               </div>
             </div>
 
@@ -877,21 +939,62 @@ export function ChanceCalculator() {
               </div>
             </div>
 
-            {/* Manual Entry */}
+            {/* Equipment */}
             <div className="mb-5">
               <h4 className="text-tier-basic font-alegreya font-semibold mb-2">Equipment</h4>
-              <div>
-                <label className="block text-xs text-gray-400 mb-1">Equipment %</label>
-                <input
-                  type="number"
-                  min="0"
-                  max="100"
-                  step="5"
-                  value={state.equipmentEvadePercent || ''}
-                  onChange={e => updateState('equipmentEvadePercent', Number(e.target.value) || 0)}
-                  className="w-full bg-gray-700 text-white px-3 py-2 rounded border border-gray-600 focus:border-tier-maverick focus:outline-none"
-                  placeholder="0"
-                />
+              <div className="grid grid-cols-4 gap-2">
+                <div>
+                  <label className="block text-xs text-gray-400 mb-1">Slot 1 %</label>
+                  <input
+                    type="number"
+                    min="0"
+                    max="100"
+                    step="5"
+                    value={state.equipmentEvade1 || ''}
+                    onChange={e => updateState('equipmentEvade1', Number(e.target.value) || 0)}
+                    className="w-full bg-gray-700 text-white px-3 py-2 rounded border border-gray-600 focus:border-tier-maverick focus:outline-none"
+                    placeholder="0"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs text-gray-400 mb-1">Slot 2 %</label>
+                  <input
+                    type="number"
+                    min="0"
+                    max="100"
+                    step="5"
+                    value={state.equipmentEvade2 || ''}
+                    onChange={e => updateState('equipmentEvade2', Number(e.target.value) || 0)}
+                    className="w-full bg-gray-700 text-white px-3 py-2 rounded border border-gray-600 focus:border-tier-maverick focus:outline-none"
+                    placeholder="0"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs text-gray-400 mb-1">Slot 3 %</label>
+                  <input
+                    type="number"
+                    min="0"
+                    max="100"
+                    step="5"
+                    value={state.equipmentEvade3 || ''}
+                    onChange={e => updateState('equipmentEvade3', Number(e.target.value) || 0)}
+                    className="w-full bg-gray-700 text-white px-3 py-2 rounded border border-gray-600 focus:border-tier-maverick focus:outline-none"
+                    placeholder="0"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs text-gray-400 mb-1">Slot 4 %</label>
+                  <input
+                    type="number"
+                    min="0"
+                    max="100"
+                    step="5"
+                    value={state.equipmentEvade4 || ''}
+                    onChange={e => updateState('equipmentEvade4', Number(e.target.value) || 0)}
+                    className="w-full bg-gray-700 text-white px-3 py-2 rounded border border-gray-600 focus:border-tier-maverick focus:outline-none"
+                    placeholder="0"
+                  />
+                </div>
               </div>
             </div>
 
