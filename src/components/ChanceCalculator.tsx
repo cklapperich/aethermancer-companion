@@ -838,7 +838,7 @@ export function ChanceCalculator() {
                       />
                       <span className="font-figtree text-gray-300">
                         Schadenfreude <span className="text-tier-basic">(+6% per 10)</span>
-                        <span className="text-gray-500 text-sm"> - Poison variant</span>
+                        <span className="text-gray-500 text-sm"> - Terror variant</span>
                       </span>
                     </label>
                   </div>
@@ -855,7 +855,7 @@ export function ChanceCalculator() {
                       />
                       <span className="font-figtree text-gray-300">
                         Schadenfreude <span className="text-tier-basic">(+6% per 13)</span>
-                        <span className="text-gray-500 text-sm"> - Terror variant (Shifted)</span>
+                        <span className="text-gray-500 text-sm"> - Poison variant (Shifted)</span>
                       </span>
                     </label>
                   </div>
