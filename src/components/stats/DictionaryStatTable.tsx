@@ -25,35 +25,35 @@ export function DictionaryStatTable({
   return (
     <div>
       <p className="text-gray-400 text-sm font-figtree mb-3">{description}</p>
-      <div className="max-h-[400px] overflow-y-auto">
+      <div>
         <table className="w-full text-left">
-          <thead className="sticky top-0 bg-gray-800">
-            <tr className="border-b border-gray-700">
-              <th className="px-3 py-2 font-alegreya text-tier-basic text-sm">
-                Name
-              </th>
-              <th className="px-3 py-2 font-alegreya text-tier-basic text-sm text-right">
-                Count
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.map((entry, index) => (
-              <tr
-                key={entry.id}
-                className={`border-b border-gray-700/50 ${
-                  index % 2 === 0 ? 'bg-gray-800/50' : 'bg-gray-700/30'
-                }`}
-              >
-                <td className="px-3 py-2 font-figtree text-gray-200 text-sm">
-                  {entry.name}
-                </td>
-                <td className="px-3 py-2 font-figtree text-gray-300 text-sm text-right tabular-nums">
-                  {formatNumber(entry.value)}
-                </td>
+            <thead className="sticky top-0 bg-gray-800">
+              <tr className="border-b border-gray-700">
+                <th className="px-3 py-2 font-alegreya text-tier-basic text-sm">
+                  Name
+                </th>
+                <th className="px-3 py-2 font-alegreya text-tier-basic text-sm text-right">
+                  Count
+                </th>
               </tr>
-            ))}
-          </tbody>
+            </thead>
+            <tbody>
+              {data.map((entry, index) => (
+                <tr
+                  key={entry.id}
+                  className={`border-b border-gray-700/50 ${
+                    index % 2 === 0 ? 'bg-gray-800/50' : 'bg-gray-700/30'
+                  }`}
+                >
+                  <td className="px-3 py-2 font-figtree text-gray-200 text-sm">
+                    {entry.name}
+                  </td>
+                  <td className="px-3 py-2 font-figtree text-gray-300 text-sm text-right tabular-nums">
+                    {formatNumber(entry.value)}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
         </table>
       </div>
       <p className="text-gray-500 text-xs font-figtree mt-2 text-right">
