@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = IDDumper
+build_property.ProjectDir = /home/klappec/gitrepos/aethermancer-companion/bepinex-plugin/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

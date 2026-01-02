@@ -1,87 +1,82 @@
 # Extract ID Mappings from Game Assets
 
-## Problem
-The Aethermancer save file uses Unity `Referenceable.ID` values to identify:
-- Monsters (IDs like 428, 951, 1011, 1446, 1316, 1672)
-- NPCs (IDs like 7, 8, 9, 10, 11, 12, 14, 17, 19, 20, 21, 24, 25)
-- Areas/Biomes (LevelID values)
+## Status: Partially Complete
 
-These IDs are assigned at Unity editor time and stored in `.asset` files.
-The decompiled C# code does NOT contain these mappings.
+The automated extraction from Unity assets was attempted but could not fully resolve the ID-to-name mappings because:
+1. UnityPy cannot read custom MonoBehaviour types without the type definitions
+2. The Monster, NPC, and Event data are stored as ScriptableObjects with custom serialization
+3. The `ID` field is inherited from `Referenceable` and the `Name` field uses localization keys
 
-## Step 1: Install UnityPy
-```bash
-pip install UnityPy
-```
+## Current Implementation
 
-## Step 2: Locate Game Assets
-Game asset files are typically at:
-- `~/.steam/steam/steamapps/common/Aethermancer/Aethermancer_Data/`
-- Or wherever Steam installed the game
+The app now uses JSON mapping files in the `data/` directory:
+- `data/monster-ids.json` - Monster ID to name mappings
+- `data/npc-ids.json` - NPC ID to name mappings
+- `data/event-ids.json` - Event ID to name mappings
 
-## Step 3: Create Extraction Script
-Create `scripts/extract-unity-ids.py`:
-```python
-#!/usr/bin/env python3
-import UnityPy
-import json
-import sys
-import os
+These files contain placeholder values that need to be manually populated.
 
-def extract_ids(assets_path, output_dir):
-    env = UnityPy.load(assets_path)
+## Known Monster Names (from wiki)
 
-    monsters = {}
-    npcs = {}
-    areas = {}
+29 playable monsters: Jotunn, Cherufe, Minokawa, Nixe, Ooze, Tatzelwurm, Wolpertinger, Mandragora, Orthrus, Wyrmling, Cockatrice, Warden, Ravager, Catzerker, Gargoyle, Nosferatu, Domovoy, Mephisto, Shambler, Grimoire, Star Spawn, Dark Elder, Naga, Sphinx, Djinn, Ammit, Medusa, Serket, Hecatoncheires
 
-    for obj in env.objects:
-        if obj.type.name == "MonoBehaviour":
-            try:
-                data = obj.read()
-                # Check for Monster
-                if hasattr(data, 'ID') and hasattr(data, 'Name'):
-                    if 'Monster' in str(type(data)):
-                        monsters[str(data.ID)] = data.Name
-                # Check for DialogueCharacter
-                if hasattr(data, 'ID') and hasattr(data, 'characterName'):
-                    npcs[str(data.ID)] = data.characterName
-                # Check for TilemapLevelBiome
-                if hasattr(data, 'LevelID') and hasattr(data, 'Name'):
-                    areas[str(data.LevelID)] = data.Name
-            except:
-                pass
+Boss: Chernobog (likely ID 7187)
 
-    os.makedirs(output_dir, exist_ok=True)
+Unreleased: Dullahan, Gama, Kullervo, Samebito
 
-    with open(f"{output_dir}/monster-ids.json", "w") as f:
-        json.dump(monsters, f, indent=2)
-    with open(f"{output_dir}/npc-ids.json", "w") as f:
-        json.dump(npcs, f, indent=2)
-    with open(f"{output_dir}/area-ids.json", "w") as f:
-        json.dump(areas, f, indent=2)
+## Known IDs (from save file analysis)
 
-    print(f"Extracted {len(monsters)} monsters, {len(npcs)} NPCs, {len(areas)} areas")
+Monster IDs found in save data:
+273, 278, 297, 323, 324, 325, 417, 428, 619, 687, 718, 950, 951, 994, 1007, 1010, 1011, 1017, 1042, 1248, 1276, 1316, 1317, 1318, 1340, 1446, 1525, 1633, 1647, 1672, 7187
 
-if __name__ == "__main__":
-    assets_path = sys.argv[1] if len(sys.argv) > 1 else "sharedassets0.assets"
-    extract_ids(assets_path, "./data")
-```
+NPC IDs found:
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 17, 19, 20, 21, 24, 25
 
-## Step 4: Run Extraction
-```bash
-cd /home/klappec/gitrepos/aethermancer-companion
-python scripts/extract-unity-ids.py ~/.steam/steam/steamapps/common/Aethermancer/Aethermancer_Data/sharedassets0.assets
-```
+## Manual Mapping Approaches
 
-## Step 5: Update Code to Use Mappings
-After extraction, update `src/utils/statisticsLookup.ts` to import and use the JSON mapping files:
-```typescript
-import monsterIds from '../../data/monster-ids.json';
-import npcIds from '../../data/npc-ids.json';
-import areaIds from '../../data/area-ids.json';
+### Option 1: Game Testing
+1. Start the game and recruit/encounter each monster
+2. Check your save file to see which IDs are associated with your active monsters
+3. Cross-reference with the nicknames you give monsters
 
-export function getMonsterName(id: number): string {
-  return monsterIds[id.toString()] ?? `Monster #${id}`;
+### Option 2: BepInEx Mod
+Create a BepInEx mod to dump the mappings at runtime:
+```csharp
+// BepInEx plugin to dump ID mappings
+foreach (var monster in MonsterManager.Instance.AllMonsters) {
+    Debug.Log($"Monster ID {monster.Key}: {monster.Value.GetName()}");
 }
 ```
+
+### Option 3: Community Data
+Check the Aethermancer community/wiki for existing ID mappings:
+- https://aethermancer.wiki.gg/wiki/Monsters
+- Steam community discussions
+
+## Extraction Scripts (for reference)
+
+The following scripts were created during extraction attempts:
+- `scripts/extract-unity-ids.py` - UnityPy-based extraction (limited success)
+- `scripts/scan-all-assets.py` - Asset scanning for MonoBehaviour types
+- `scripts/find-monster-ids.py` - Binary search for monster name strings
+
+## How to Update Mappings
+
+1. Edit the JSON files in `data/`:
+   ```json
+   {
+     "718": "Jotunn",
+     "323": "Cherufe",
+     ...
+   }
+   ```
+
+2. Run `npm run build` to verify the changes
+
+3. The app will display proper names for any IDs that are mapped
+
+## Future Work
+
+- Create a BepInEx mod for automatic extraction
+- Add a UI feature to help users identify and map IDs manually
+- Integrate with community databases once available

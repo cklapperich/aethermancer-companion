@@ -143,11 +143,20 @@ export const MONSTER_TYPE_NAMES: Record<number, string> = {
   10: 'Regeneration',
   11: 'Shield',
   12: 'Sidekick',
+  14: 'Starting', // Can't be learned, but starting actions can be used
   15: 'Tank',
   16: 'Terror',
   19: 'Weakness',
   20: 'Force',
   21: 'Summon',
+};
+
+// Area names for AreaVisitedCount
+export const AREA_NAMES: Record<number, string> = {
+  0: 'Pilgrimage Path',
+  3: 'Forbidden Fortress',
+  4: 'Garden District',
+  5: 'Tutorial',
 };
 
 // EPortalCustomization enum for MapZoneChoice

@@ -1,0 +1,53 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/klappec/gitrepos/aethermancer-companion/bepinex-plugin/IDDumper.csproj": {}
+  },
+  "projects": {
+    "/home/klappec/gitrepos/aethermancer-companion/bepinex-plugin/IDDumper.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/klappec/gitrepos/aethermancer-companion/bepinex-plugin/IDDumper.csproj",
+        "projectName": "AethermancerIDDumper",
+        "projectPath": "/home/klappec/gitrepos/aethermancer-companion/bepinex-plugin/IDDumper.csproj",
+        "packagesPath": "/home/klappec/.nuget/packages/",
+        "outputPath": "/home/klappec/gitrepos/aethermancer-companion/bepinex-plugin/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/klappec/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "targetAlias": "net48",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "targetAlias": "net48",
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.121/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

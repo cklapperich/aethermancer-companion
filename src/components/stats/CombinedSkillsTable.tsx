@@ -1,22 +1,20 @@
 import { useState, useMemo } from 'react';
-import { StatEntry } from '@/utils/statisticsLookup';
+import { CombinedSkillEntry } from '@/utils/statisticsLookup';
 import { formatNumber } from '@/utils/parseSaveFile';
 
-interface DictionaryStatTableProps {
-  data: StatEntry[];
-  title: string;
+interface CombinedSkillsTableProps {
+  data: CombinedSkillEntry[];
   description: string;
 }
 
-type SortField = 'name' | 'count';
+type SortField = 'name' | 'learned' | 'used';
 type SortDirection = 'asc' | 'desc';
 
-export function DictionaryStatTable({
+export function CombinedSkillsTable({
   data,
-  title,
   description,
-}: DictionaryStatTableProps) {
-  const [sortField, setSortField] = useState<SortField>('count');
+}: CombinedSkillsTableProps) {
+  const [sortField, setSortField] = useState<SortField>('learned');
   const [sortDirection, setSortDirection] = useState<SortDirection>('desc');
 
   const sortedData = useMemo(() => {
@@ -24,8 +22,10 @@ export function DictionaryStatTable({
       let cmp = 0;
       if (sortField === 'name') {
         cmp = a.name.localeCompare(b.name);
+      } else if (sortField === 'learned') {
+        cmp = a.learned - b.learned;
       } else {
-        cmp = a.value - b.value;
+        cmp = a.used - b.used;
       }
       return sortDirection === 'desc' ? -cmp : cmp;
     });
@@ -52,7 +52,7 @@ export function DictionaryStatTable({
   if (data.length === 0) {
     return (
       <div className="text-center py-8">
-        <p className="text-gray-400 font-figtree">No data available for {title}</p>
+        <p className="text-gray-400 font-figtree">No skill data available</p>
         <p className="text-gray-500 text-sm font-figtree mt-1">{description}</p>
       </div>
     );
@@ -65,16 +65,22 @@ export function DictionaryStatTable({
         <thead>
           <tr className="border-b border-gray-700">
             <th
-              className="py-2 pr-2 font-alegreya text-tier-basic text-sm cursor-pointer hover:text-tier-maverick w-3/4"
+              className="py-2 pr-2 font-alegreya text-tier-basic text-sm cursor-pointer hover:text-tier-maverick w-1/2"
               onClick={() => handleSort('name')}
             >
-              Name<SortIcon field="name" />
+              Type<SortIcon field="name" />
+            </th>
+            <th
+              className="py-2 px-2 font-alegreya text-tier-basic text-sm text-right cursor-pointer hover:text-tier-maverick w-1/4"
+              onClick={() => handleSort('learned')}
+            >
+              Learned<SortIcon field="learned" />
             </th>
             <th
               className="py-2 pl-2 font-alegreya text-tier-basic text-sm text-right cursor-pointer hover:text-tier-maverick w-1/4"
-              onClick={() => handleSort('count')}
+              onClick={() => handleSort('used')}
             >
-              Count<SortIcon field="count" />
+              Used<SortIcon field="used" />
             </th>
           </tr>
         </thead>
@@ -89,15 +95,18 @@ export function DictionaryStatTable({
               <td className="py-1.5 pr-2 font-figtree text-gray-200 text-sm truncate">
                 {entry.name}
               </td>
+              <td className="py-1.5 px-2 font-figtree text-gray-300 text-sm text-right tabular-nums">
+                {formatNumber(entry.learned)}
+              </td>
               <td className="py-1.5 pl-2 font-figtree text-gray-300 text-sm text-right tabular-nums">
-                {formatNumber(entry.value)}
+                {formatNumber(entry.used)}
               </td>
             </tr>
           ))}
         </tbody>
       </table>
       <p className="text-gray-500 text-xs font-figtree mt-2 text-right">
-        {data.length} {data.length === 1 ? 'entry' : 'entries'}
+        {data.length} {data.length === 1 ? 'type' : 'types'}
       </p>
     </div>
   );

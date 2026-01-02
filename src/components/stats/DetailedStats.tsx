@@ -7,10 +7,16 @@ import {
   getNameLookup,
   dictionaryToSortedArray,
   getAvailableStats,
+  getCombinedSkillData,
+  getCombinedMonsterData,
+  getExplorationData,
 } from '@/utils/statisticsLookup';
 import { StatCategorySelector } from './StatCategorySelector';
 import { DictionaryStatTable } from './DictionaryStatTable';
 import { SingleStatCard } from './SingleStatCard';
+import { CombinedSkillsTable } from './CombinedSkillsTable';
+import { CombinedMonsterTable } from './CombinedMonsterTable';
+import { ExplorationView } from './ExplorationView';
 
 interface DetailedStatsProps {
   statistics: SaveFileStatistic[];
@@ -42,8 +48,8 @@ export function DetailedStats({ statistics, monsters }: DetailedStatsProps) {
 
   // Get name lookup function based on stat type
   const nameLookup = useMemo(
-    () => getNameLookup(selectedStat, monsters),
-    [selectedStat, monsters]
+    () => getNameLookup(selectedStat),
+    [selectedStat]
   );
 
   // Prepare display data for dictionary stats
@@ -51,6 +57,25 @@ export function DetailedStats({ statistics, monsters }: DetailedStatsProps) {
     if (!currentStat || currentStat.IsSingleIntStat) return [];
     return dictionaryToSortedArray(currentStat, nameLookup);
   }, [currentStat, nameLookup]);
+
+  // Prepare combined skills data when skills tab is selected
+  const combinedSkillsData = useMemo(() => {
+    if (selectedStat !== EStatistic.SkillTypeLearned) return [];
+    return getCombinedSkillData(statistics, nameLookup);
+  }, [statistics, selectedStat, nameLookup]);
+
+  // Prepare combined monster data when monsters tab is selected
+  const combinedMonsterData = useMemo(() => {
+    if (selectedStat !== EStatistic.MonstersRevived) return [];
+    const monsterLookup = getNameLookup(EStatistic.MonstersRevived);
+    return getCombinedMonsterData(statistics, monsterLookup);
+  }, [statistics, selectedStat]);
+
+  // Prepare exploration data when exploration tab is selected
+  const explorationData = useMemo(() => {
+    if (selectedStat !== EStatistic.MapZoneChoice) return null;
+    return getExplorationData(statistics);
+  }, [statistics, selectedStat]);
 
   if (statistics.length === 0) {
     return null;
@@ -73,19 +98,35 @@ export function DetailedStats({ statistics, monsters }: DetailedStatsProps) {
       </div>
 
       <div className="bg-gray-800 rounded-lg p-4 md:p-6">
-        {statMeta && currentStat ? (
-          currentStat.IsSingleIntStat ? (
+        {statMeta ? (
+          currentStat?.IsSingleIntStat ? (
             <SingleStatCard
               title={statMeta.name}
               description={statMeta.description}
               value={currentStat.SingleStat}
             />
-          ) : (
+          ) : selectedStat === EStatistic.SkillTypeLearned ? (
+            <CombinedSkillsTable
+              data={combinedSkillsData}
+              description={statMeta.description}
+            />
+          ) : selectedStat === EStatistic.MonstersRevived ? (
+            <CombinedMonsterTable
+              data={combinedMonsterData}
+              description={statMeta.description}
+            />
+          ) : selectedStat === EStatistic.MapZoneChoice && explorationData ? (
+            <ExplorationView data={explorationData} />
+          ) : currentStat ? (
             <DictionaryStatTable
               title={statMeta.name}
               description={statMeta.description}
               data={displayData}
             />
+          ) : (
+            <p className="text-center text-gray-500 py-8 font-figtree">
+              No data available for this category
+            </p>
           )
         ) : (
           <p className="text-center text-gray-500 py-8 font-figtree">

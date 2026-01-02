@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "N0bLXDaXxJvlnJooZ/g7oYRkWnPpdlM5LFZeM228WcNSgWiK2u+HQddP779cLiAh5SLQ7WVhaKNodeY49fVjGg==",
+  "success": true,
+  "projectFilePath": "/home/klappec/gitrepos/aethermancer-companion/bepinex-plugin/IDDumper.csproj",
+  "expectedPackageFiles": [
+    "/home/klappec/.nuget/packages/microsoft.netframework.referenceassemblies/1.0.3/microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
+    "/home/klappec/.nuget/packages/microsoft.netframework.referenceassemblies.net48/1.0.3/microsoft.netframework.referenceassemblies.net48.1.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

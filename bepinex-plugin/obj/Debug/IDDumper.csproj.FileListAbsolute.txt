@@ -1,0 +1,10 @@
+/home/klappec/gitrepos/aethermancer-companion/bepinex-plugin/obj/Debug/IDDumper.csproj.AssemblyReference.cache
+/home/klappec/gitrepos/aethermancer-companion/bepinex-plugin/obj/Debug/IDDumper.GeneratedMSBuildEditorConfig.editorconfig
+/home/klappec/gitrepos/aethermancer-companion/bepinex-plugin/obj/Debug/IDDumper.AssemblyInfoInputs.cache
+/home/klappec/gitrepos/aethermancer-companion/bepinex-plugin/obj/Debug/IDDumper.AssemblyInfo.cs
+/home/klappec/gitrepos/aethermancer-companion/bepinex-plugin/obj/Debug/IDDumper.csproj.CoreCompileInputs.cache
+/home/klappec/gitrepos/aethermancer-companion/bepinex-plugin/obj/Debug/IDDumper.sourcelink.json
+/home/klappec/gitrepos/aethermancer-companion/bepinex-plugin/bin/AethermancerIDDumper.dll
+/home/klappec/gitrepos/aethermancer-companion/bepinex-plugin/bin/AethermancerIDDumper.pdb
+/home/klappec/gitrepos/aethermancer-companion/bepinex-plugin/obj/Debug/AethermancerIDDumper.dll
+/home/klappec/gitrepos/aethermancer-companion/bepinex-plugin/obj/Debug/AethermancerIDDumper.pdb

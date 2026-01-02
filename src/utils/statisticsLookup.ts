@@ -3,7 +3,44 @@ import {
   SaveFileStatistic,
   MONSTER_TYPE_NAMES,
   ZONE_NAMES,
+  AREA_NAMES,
 } from '../types/saveFile';
+
+// Import ID mapping files (extracted from game assets)
+// See docs/EXTRACT_ASSET_IDS_PLAN.md for how to update these mappings
+import monsterIds from '../../data/monster-ids.json';
+import npcIds from '../../data/npc-ids.json';
+import eventIds from '../../data/event-ids.json';
+
+// Type-safe ID lookups
+const MONSTER_ID_MAP: Record<string, string> = monsterIds as Record<string, string>;
+const NPC_ID_MAP: Record<string, string> = npcIds as Record<string, string>;
+const EVENT_ID_MAP: Record<string, string> = eventIds as Record<string, string>;
+
+// Lookup functions for ID-based statistics
+export function getMonsterName(id: number): string {
+  const name = MONSTER_ID_MAP[id.toString()];
+  if (name && name !== 'Unknown Monster') {
+    return name;
+  }
+  return `Monster #${id}`;
+}
+
+export function getNpcName(id: number): string {
+  const name = NPC_ID_MAP[id.toString()];
+  if (name && name !== 'Unknown NPC') {
+    return name;
+  }
+  return `NPC #${id}`;
+}
+
+export function getEventName(id: number): string {
+  const name = EVENT_ID_MAP[id.toString()];
+  if (name) {
+    return name;
+  }
+  return `Event #${id}`;
+}
 
 // Statistic category metadata
 export interface StatisticMeta {
@@ -18,17 +55,17 @@ export interface StatisticMeta {
 export const STATISTIC_META: StatisticMeta[] = [
   {
     id: EStatistic.MonstersRevived,
-    name: 'Monsters Revived',
-    shortName: 'Revived',
+    name: 'Monster Stats',
+    shortName: 'Monsters',
     isSingleInt: false,
-    description: 'Times each monster was revived',
+    description: 'Monster interactions across all runs',
   },
   {
     id: EStatistic.SkillTypeLearned,
-    name: 'Skills Learned by Type',
-    shortName: 'Skills Learned',
+    name: 'Skills by Type',
+    shortName: 'Skills',
     isSingleInt: false,
-    description: 'Number of skills learned by type',
+    description: 'Skills learned and used by type',
   },
   {
     id: EStatistic.MaverickSkillLearned,
@@ -43,6 +80,7 @@ export const STATISTIC_META: StatisticMeta[] = [
     shortName: 'Skills Used',
     isSingleInt: false,
     description: 'Number of times each skill type was used',
+    // Note: This is now combined with SkillTypeLearned in the UI
   },
   {
     id: EStatistic.TriggerTypeTriggered,
@@ -81,10 +119,10 @@ export const STATISTIC_META: StatisticMeta[] = [
   },
   {
     id: EStatistic.MapZoneChoice,
-    name: 'Zone Choices',
-    shortName: 'Zones',
+    name: 'Exploration',
+    shortName: 'Exploration',
     isSingleInt: false,
-    description: 'Times each zone type was chosen',
+    description: 'Zones, areas, and events visited',
   },
   {
     id: EStatistic.ItemsBoughtAtMerchant,
@@ -130,39 +168,6 @@ export const STATISTIC_META: StatisticMeta[] = [
   },
 ];
 
-// Category groups for dropdown organization (dictionary stats only - single-int stats are in Overview)
-export const STAT_CATEGORIES = {
-  monsters: {
-    label: 'Monster Stats',
-    stats: [
-      EStatistic.MonstersRevived,
-      EStatistic.EnemyMonsterKilled,
-      EStatistic.PlayerMonsterKilledByMonster,
-      EStatistic.RunDefeatedByEnemyMonster,
-    ],
-  },
-  skills: {
-    label: 'Skill Stats',
-    stats: [
-      EStatistic.SkillTypeLearned,
-      EStatistic.SkillTypeUsed,
-      EStatistic.TriggerTypeTriggered,
-    ],
-  },
-  exploration: {
-    label: 'Exploration',
-    stats: [
-      EStatistic.MapZoneChoice,
-      EStatistic.AreaVisitedCount,
-      EStatistic.SmallEventUsedCount,
-    ],
-  },
-  other: {
-    label: 'Other',
-    stats: [EStatistic.NPCInteraction],
-  },
-} as const;
-
 // Get statistic metadata by type
 export function getStatisticMeta(type: EStatistic): StatisticMeta | undefined {
   return STATISTIC_META.find((m) => m.id === type);
@@ -207,20 +212,22 @@ export function getNameLookup(
     return (id: number) => ZONE_NAMES[id] ?? `Zone #${id}`;
   }
 
-  // For these stats, we need to extract ID mappings from game assets
-  // For now, show raw IDs
+  // Area names are mapped
+  if (type === EStatistic.AreaVisitedCount) {
+    return (id: number) => AREA_NAMES[id] ?? `Area #${id}`;
+  }
+
+  // Use ID mapping files for these stats
   switch (type) {
     case EStatistic.MonstersRevived:
     case EStatistic.EnemyMonsterKilled:
     case EStatistic.PlayerMonsterKilledByMonster:
     case EStatistic.RunDefeatedByEnemyMonster:
-      return (id: number) => `Monster #${id}`;
+      return getMonsterName;
     case EStatistic.NPCInteraction:
-      return (id: number) => `NPC #${id}`;
-    case EStatistic.AreaVisitedCount:
-      return (id: number) => `Area #${id}`;
+      return getNpcName;
     case EStatistic.SmallEventUsedCount:
-      return (id: number) => `Event #${id}`;
+      return getEventName;
     case EStatistic.TriggerTypeTriggered:
       return (id: number) => `Trigger #${id}`;
     default:
@@ -259,9 +266,163 @@ export function dictionaryToSortedArray(
   return entries.sort((a, b) => b.value - a.value);
 }
 
-// Get all stats available in the save file
+// Stats that are combined into other views and shouldn't appear separately
+const COMBINED_STATS = [
+  EStatistic.SkillTypeUsed, // Combined with SkillTypeLearned
+  EStatistic.EnemyMonsterKilled, // Combined with MonstersRevived
+  EStatistic.PlayerMonsterKilledByMonster, // Combined with MonstersRevived
+  EStatistic.RunDefeatedByEnemyMonster, // Combined with MonstersRevived
+  EStatistic.AreaVisitedCount, // Combined with MapZoneChoice
+  EStatistic.SmallEventUsedCount, // Combined with MapZoneChoice
+];
+
+// Get all stats available in the save file (excluding combined stats)
 export function getAvailableStats(
   statistics: SaveFileStatistic[]
 ): EStatistic[] {
-  return statistics.map((s) => s.StatisticType as EStatistic);
+  return statistics
+    .map((s) => s.StatisticType as EStatistic)
+    .filter((s) => !COMBINED_STATS.includes(s));
+}
+
+// Combined skill entry for display
+export interface CombinedSkillEntry {
+  id: number;
+  name: string;
+  learned: number;
+  used: number;
+}
+
+// Combine skills learned and used into a single dataset
+export function getCombinedSkillData(
+  statistics: SaveFileStatistic[],
+  nameLookup: (id: number) => string
+): CombinedSkillEntry[] {
+  const learnedStat = getStatByType(statistics, EStatistic.SkillTypeLearned);
+  const usedStat = getStatByType(statistics, EStatistic.SkillTypeUsed);
+
+  // Collect all unique skill type IDs
+  const allIds = new Set<number>();
+  if (learnedStat && !learnedStat.IsSingleIntStat) {
+    learnedStat.IntDictionary.keys.forEach((k) => allIds.add(k));
+  }
+  if (usedStat && !usedStat.IsSingleIntStat) {
+    usedStat.IntDictionary.keys.forEach((k) => allIds.add(k));
+  }
+
+  // Build lookup maps
+  const learnedMap = new Map<number, number>();
+  const usedMap = new Map<number, number>();
+
+  if (learnedStat && !learnedStat.IsSingleIntStat) {
+    learnedStat.IntDictionary.keys.forEach((k, i) => {
+      learnedMap.set(k, learnedStat.IntDictionary.values[i]);
+    });
+  }
+  if (usedStat && !usedStat.IsSingleIntStat) {
+    usedStat.IntDictionary.keys.forEach((k, i) => {
+      usedMap.set(k, usedStat.IntDictionary.values[i]);
+    });
+  }
+
+  // Create combined entries
+  const entries: CombinedSkillEntry[] = [];
+  allIds.forEach((id) => {
+    entries.push({
+      id,
+      name: nameLookup(id),
+      learned: learnedMap.get(id) ?? 0,
+      used: usedMap.get(id) ?? 0,
+    });
+  });
+
+  // Sort by learned count descending by default
+  return entries.sort((a, b) => b.learned - a.learned);
+}
+
+// Combined monster entry for display
+export interface CombinedMonsterEntry {
+  id: number;
+  name: string;
+  revived: number;
+  killed: number;
+  deaths: number;
+  runEnders: number;
+}
+
+// Combine all monster stats into a single dataset
+export function getCombinedMonsterData(
+  statistics: SaveFileStatistic[],
+  nameLookup: (id: number) => string
+): CombinedMonsterEntry[] {
+  const revivedStat = getStatByType(statistics, EStatistic.MonstersRevived);
+  const killedStat = getStatByType(statistics, EStatistic.EnemyMonsterKilled);
+  const deathsStat = getStatByType(statistics, EStatistic.PlayerMonsterKilledByMonster);
+  const runEndersStat = getStatByType(statistics, EStatistic.RunDefeatedByEnemyMonster);
+
+  // Collect all unique monster IDs
+  const allIds = new Set<number>();
+  [revivedStat, killedStat, deathsStat, runEndersStat].forEach((stat) => {
+    if (stat && !stat.IsSingleIntStat) {
+      stat.IntDictionary.keys.forEach((k) => allIds.add(k));
+    }
+  });
+
+  // Build lookup maps
+  const buildMap = (stat: SaveFileStatistic | undefined) => {
+    const map = new Map<number, number>();
+    if (stat && !stat.IsSingleIntStat) {
+      stat.IntDictionary.keys.forEach((k, i) => {
+        map.set(k, stat.IntDictionary.values[i]);
+      });
+    }
+    return map;
+  };
+
+  const revivedMap = buildMap(revivedStat);
+  const killedMap = buildMap(killedStat);
+  const deathsMap = buildMap(deathsStat);
+  const runEndersMap = buildMap(runEndersStat);
+
+  // Create combined entries
+  const entries: CombinedMonsterEntry[] = [];
+  allIds.forEach((id) => {
+    entries.push({
+      id,
+      name: nameLookup(id),
+      revived: revivedMap.get(id) ?? 0,
+      killed: killedMap.get(id) ?? 0,
+      deaths: deathsMap.get(id) ?? 0,
+      runEnders: runEndersMap.get(id) ?? 0,
+    });
+  });
+
+  // Sort by killed count descending by default
+  return entries.sort((a, b) => b.killed - a.killed);
+}
+
+// Exploration data structure (3 separate tables)
+export interface ExplorationData {
+  zones: StatEntry[];
+  areas: StatEntry[];
+  events: StatEntry[];
+}
+
+// Get all exploration data for the combined view
+export function getExplorationData(
+  statistics: SaveFileStatistic[]
+): ExplorationData {
+  const zoneStat = getStatByType(statistics, EStatistic.MapZoneChoice);
+  const areaStat = getStatByType(statistics, EStatistic.AreaVisitedCount);
+  const eventStat = getStatByType(statistics, EStatistic.SmallEventUsedCount);
+
+  const zoneLookup = getNameLookup(EStatistic.MapZoneChoice);
+  const areaLookup = getNameLookup(EStatistic.AreaVisitedCount);
+  const eventLookup = getNameLookup(EStatistic.SmallEventUsedCount);
+
+  return {
+    zones: dictionaryToSortedArray(zoneStat, zoneLookup),
+    areas: dictionaryToSortedArray(areaStat, areaLookup),
+    events: dictionaryToSortedArray(eventStat, eventLookup),
+  };
 }
