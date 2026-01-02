@@ -21,12 +21,12 @@ export function DetailedStats({ statistics, monsters }: DetailedStatsProps) {
   // Get available stats from the save file
   const availableStats = useMemo(() => getAvailableStats(statistics), [statistics]);
 
-  // Default to first available stat, or EnemyMonsterKilled if available
+  // Default to first available stat, or SkillTypeLearned if available
   const defaultStat = useMemo(() => {
-    if (availableStats.includes(EStatistic.EnemyMonsterKilled)) {
-      return EStatistic.EnemyMonsterKilled;
+    if (availableStats.includes(EStatistic.SkillTypeLearned)) {
+      return EStatistic.SkillTypeLearned;
     }
-    return availableStats[0] ?? EStatistic.EnemyMonsterKilled;
+    return availableStats[0] ?? EStatistic.SkillTypeLearned;
   }, [availableStats]);
 
   const [selectedStat, setSelectedStat] = useState<EStatistic>(defaultStat);
