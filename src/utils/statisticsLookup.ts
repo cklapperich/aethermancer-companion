@@ -274,6 +274,11 @@ const COMBINED_STATS = [
   EStatistic.RunDefeatedByEnemyMonster, // Combined with MonstersRevived
   EStatistic.AreaVisitedCount, // Combined with MapZoneChoice
   EStatistic.SmallEventUsedCount, // Combined with MapZoneChoice
+  EStatistic.LurkerTeethSpent, // Shown in run stats overview
+  EStatistic.ElementalChallengeFailedCount, // Shown in run stats overview
+  EStatistic.GoldSpentAtMerchant, // Shown in run stats overview
+  EStatistic.ItemsBoughtAtMerchant, // Shown in run stats overview
+  EStatistic.MaverickSkillLearned, // Shown in run stats overview
 ];
 
 // Get all stats available in the save file (excluding combined stats)
