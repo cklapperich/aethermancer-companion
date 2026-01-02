@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Dumps ID-to-name mappings from Aethermancer for use in companion apps")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5fe408801a19a586d1c6f14436793378f4ae7f64")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+56d88edcb9ded9642e19bfba1803fd89fadd4942")]
 [assembly: System.Reflection.AssemblyProductAttribute("AethermancerIDDumper")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AethermancerIDDumper")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

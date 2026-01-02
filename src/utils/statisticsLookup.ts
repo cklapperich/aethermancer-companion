@@ -355,6 +355,9 @@ export interface CombinedMonsterEntry {
   runEnders: number;
 }
 
+// Monster IDs to exclude from stats (boss components, not real monsters)
+const EXCLUDED_MONSTER_IDS = new Set([1671, 1707, 1708]); // Chernobog Arms
+
 // Combine all monster stats into a single dataset
 export function getCombinedMonsterData(
   statistics: SaveFileStatistic[],
@@ -365,11 +368,15 @@ export function getCombinedMonsterData(
   const deathsStat = getStatByType(statistics, EStatistic.PlayerMonsterKilledByMonster);
   const runEndersStat = getStatByType(statistics, EStatistic.RunDefeatedByEnemyMonster);
 
-  // Collect all unique monster IDs
+  // Collect all unique monster IDs (excluding boss components)
   const allIds = new Set<number>();
   [revivedStat, killedStat, deathsStat, runEndersStat].forEach((stat) => {
     if (stat && !stat.IsSingleIntStat) {
-      stat.IntDictionary.keys.forEach((k) => allIds.add(k));
+      stat.IntDictionary.keys.forEach((k) => {
+        if (!EXCLUDED_MONSTER_IDS.has(k)) {
+          allIds.add(k);
+        }
+      });
     }
   });
 
