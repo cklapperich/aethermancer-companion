@@ -99,7 +99,7 @@ export interface PreviousRun {
 }
 
 export interface SaveFileStatistic {
-  StatisticType: StatisticType;
+  StatisticType: number; // EStatistic enum value
   IsSingleIntStat: boolean;
   IntDictionary: {
     keys: number[];
@@ -108,20 +108,63 @@ export interface SaveFileStatistic {
   SingleStat: number;
 }
 
-// Known statistic types from save file analysis
-export enum StatisticType {
-  MonsterUsage = 0,
-  BiomeVisits = 1,
-  TotalGoldEarned = 2,
-  DamageByBiome = 3,
-  CombatRoundsPerMonster = 5,
-  MonsterDeaths = 6,
-  MonsterPermadeaths = 7,
-  NPCInteractions = 8,
-  TotalCombatsWon = 10,
-  TotalDamageDealt = 11,
-  WinsPerDifficulty = 12,
+// EStatistic enum from game - matches save file StatisticType values
+export enum EStatistic {
+  MonstersRevived = 0,
+  SkillTypeLearned = 1,
+  MaverickSkillLearned = 2,
+  SkillTypeUsed = 3,
+  TriggerTypeTriggered = 4,
+  EnemyMonsterKilled = 5,
+  PlayerMonsterKilledByMonster = 6,
+  RunDefeatedByEnemyMonster = 7,
+  NPCInteraction = 8,
+  MapZoneChoice = 9,
+  ItemsBoughtAtMerchant = 10,
+  GoldSpentAtMerchant = 11,
+  AreaVisitedCount = 12,
+  SmallEventUsedCount = 13,
+  ElementalChallengeFailedCount = 14,
+  LurkerTeethSpent = 15,
 }
+
+// EMonsterType enum for SkillTypeLearned/SkillTypeUsed
+export const MONSTER_TYPE_NAMES: Record<number, string> = {
+  0: 'Aether',
+  1: 'Affliction',
+  2: 'Age',
+  3: 'Burn',
+  4: 'Critical',
+  5: 'Dodge',
+  6: 'Heal',
+  7: 'Poison',
+  8: 'Power',
+  9: 'Purge',
+  10: 'Regeneration',
+  11: 'Shield',
+  12: 'Sidekick',
+  15: 'Tank',
+  16: 'Terror',
+  19: 'Weakness',
+  20: 'Force',
+  21: 'Summon',
+};
+
+// EPortalCustomization enum for MapZoneChoice
+export const ZONE_NAMES: Record<number, string> = {
+  0: 'None',
+  1: 'Witch',
+  2: 'Knight',
+  3: 'Merchant',
+  4: 'Aether Springs',
+  5: 'Gold',
+  6: 'Aether Drop',
+  7: 'Mystery NPC',
+  8: 'Cook',
+  9: 'Envoy',
+  10: 'Epic Loot',
+  11: 'Rare Loot',
+};
 
 // EDifficulty enum from game
 // 0 = Undefined, 1 = Normal, 2 = Heroic, 3 = Mythic

@@ -1,10 +1,15 @@
-import { SaveFile, DIFFICULTY_NAMES } from '../types/saveFile';
+import { useMemo } from 'react';
+import { SaveFile, DIFFICULTY_NAMES, EStatistic } from '../types/saveFile';
 import {
   getWinsByDifficulty,
   getRunsByDifficulty,
   getRecentRuns,
   formatNumber,
 } from '../utils/parseSaveFile';
+import { loadMonsters } from '../utils/loadMonsters';
+import { DetailedStats } from './stats';
+import { getStatByType } from '../utils/statisticsLookup';
+import monstersData from '../../data/monsters.json';
 
 interface StatsDisplayProps {
   saveFile: SaveFile;
@@ -14,6 +19,27 @@ export function StatsDisplay({ saveFile }: StatsDisplayProps) {
   const winsByDifficulty = getWinsByDifficulty(saveFile);
   const runsByDifficulty = getRunsByDifficulty(saveFile);
   const recentRuns = getRecentRuns(saveFile, 20);
+
+  // Load monsters data for stat lookups
+  const monsters = useMemo(() => loadMonsters(monstersData), []);
+
+  // Extract single-int stats for the overview
+  const singleIntStats = useMemo(() => {
+    if (!saveFile.SaveFileStatistics) return null;
+
+    const getSingleStat = (type: EStatistic) => {
+      const stat = getStatByType(saveFile.SaveFileStatistics, type);
+      return stat?.IsSingleIntStat ? stat.SingleStat : 0;
+    };
+
+    return {
+      maverickSkills: getSingleStat(EStatistic.MaverickSkillLearned),
+      itemsBought: getSingleStat(EStatistic.ItemsBoughtAtMerchant),
+      goldSpent: getSingleStat(EStatistic.GoldSpentAtMerchant),
+      teethSpent: getSingleStat(EStatistic.LurkerTeethSpent),
+      challengesFailed: getSingleStat(EStatistic.ElementalChallengeFailedCount),
+    };
+  }, [saveFile.SaveFileStatistics]);
 
   return (
     <div className="space-y-8">
@@ -46,6 +72,42 @@ export function StatsDisplay({ saveFile }: StatsDisplayProps) {
               </p>
             </div>
           </div>
+
+          {/* Economy Stats Row */}
+          {singleIntStats && (
+            <div className="grid grid-cols-5 gap-3 mt-4">
+              <div className="text-center p-3 rounded-lg bg-gray-700/60">
+                <p className="text-xs font-figtree text-gray-400 mb-1">Items Bought</p>
+                <p className="text-lg font-figtree font-bold text-gray-200">
+                  {formatNumber(singleIntStats.itemsBought)}
+                </p>
+              </div>
+              <div className="text-center p-3 rounded-lg bg-gray-700/60">
+                <p className="text-xs font-figtree text-gray-400 mb-1">Gold Spent</p>
+                <p className="text-lg font-figtree font-bold text-yellow-400">
+                  {formatNumber(singleIntStats.goldSpent)}
+                </p>
+              </div>
+              <div className="text-center p-3 rounded-lg bg-gray-700/60">
+                <p className="text-xs font-figtree text-gray-400 mb-1">Teeth Spent</p>
+                <p className="text-lg font-figtree font-bold text-tier-basic">
+                  {formatNumber(singleIntStats.teethSpent)}
+                </p>
+              </div>
+              <div className="text-center p-3 rounded-lg bg-gray-700/60">
+                <p className="text-xs font-figtree text-gray-400 mb-1">Maverick Skills</p>
+                <p className="text-lg font-figtree font-bold text-tier-maverick">
+                  {formatNumber(singleIntStats.maverickSkills)}
+                </p>
+              </div>
+              <div className="text-center p-3 rounded-lg bg-gray-700/60">
+                <p className="text-xs font-figtree text-gray-400 mb-1">Challenges Failed</p>
+                <p className="text-lg font-figtree font-bold text-red-400">
+                  {formatNumber(singleIntStats.challengesFailed)}
+                </p>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
@@ -95,6 +157,14 @@ export function StatsDisplay({ saveFile }: StatsDisplayProps) {
           })()}
         </div>
       </section>
+
+      {/* Detailed Statistics */}
+      {saveFile.SaveFileStatistics && saveFile.SaveFileStatistics.length > 0 && (
+        <DetailedStats
+          statistics={saveFile.SaveFileStatistics}
+          monsters={monsters}
+        />
+      )}
 
       {/* Run History */}
       <section>
